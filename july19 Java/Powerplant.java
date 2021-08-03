@@ -1,5 +1,7 @@
-public class Powerplant extends Storeitem {
-    public Powerplant(float price, String name, String description, int itemNum) {
+public class Powerplant extends Storeitem 
+{
+    public Powerplant(float price, String name, String description, int itemNum) 
+    {
         super(price, name, description, itemNum);
         //TODO Auto-generated constructor stub
     }
