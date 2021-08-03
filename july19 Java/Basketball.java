@@ -1,31 +1,35 @@
 public class Basketball extends Storeitem {
 
-private String Date;
-private String Section;
-private String Seat;
-public Basketball(float price, String name, String description, int itemNum) {
-    super(price, name, description, itemNum);
-    //TODO Auto-generated constructor stub
-}
-public String date() {
-    return date; {
-    this.date = date;
-}
+    private String Date;
+    private String Section;
+    private String Seat;
 
-public void settickets(String price) {
-    this.price = price;
+    public Basketball(float price, String name, String description, int itemNum) {
+        super(price, name, description, itemNum);
+        // TODO Auto-generated constructor stub
+    }
 
-public void name(String name) {
-        this.name = name;    
-}
+    public String getSeat() {
+        return Seat;
+    }
 
-public void Section(String section) {
-        this.section = section;
-}
-    public void seat(String seat) {
-        this.seat = seat;    
-}
-    public void itemNum(String itemnum) {
-        this.itemNum = itemNum;    
-}
+    public void setSeat(String seat) {
+        this.Seat = seat;
+    }
+
+    public String getSection() {
+        return Section;
+    }
+
+    public void setSection(String section) {
+        this.Section = section;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        this.Date = date;
+    }
 }
