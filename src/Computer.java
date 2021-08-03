@@ -1,11 +1,12 @@
-public class Computer extends Storeitem {
+public class Computer extends WeightItem 
+{
 
     private String computerBrand;
     private String releaseDate;
     private String color;
-    public Computer(String name, String color, float price, String computerBrand, String description, String releaseDate, int itemNum) {
-        super(price, name, description, itemNum);
-        //TODO Auto-generated constructor stub
+    public Computer(String name, String color, float price, String computerBrand, String description, String releaseDate, int itemNum, int weight) {
+        super(price, name, description, itemNum, weight);
+        
     }
     
     public String getColor() {

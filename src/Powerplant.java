@@ -1,12 +1,12 @@
-public class Powerplant extends Storeitem 
+public class Powerplant extends WeightItem
 {
-    public Powerplant(float price, String name, String description, int itemNum) 
+    public Powerplant(float price, String name, String description, int itemNum, int weight) 
     {
-        super(price, name, description, itemNum);
-        //TODO Auto-generated constructor stub
+        super(price, name, description, itemNum, weight);
+    
     }
     public String GetData(){
-        return "Product: " + name + ", Price: " + price + ", Item Number: " + itemNum;
+        return "Product: " + name + ", Price: " + price + ", Item Number: " + itemNum + ",weight:" + weight;
     }  
     
 }

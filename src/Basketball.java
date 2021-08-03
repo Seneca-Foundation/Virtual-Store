@@ -1,12 +1,13 @@
-public class Basketball extends Storeitem {
+public class Basketball extends WeightItem 
+{
 
     private String Date;
     private String Section;
     private String Seat;
 
-    public Basketball(float price, String name, String description, int itemNum) {
-        super(price, name, description, itemNum);
-        // TODO Auto-generated constructor stub
+    public Basketball(float price, String name, String description, int itemNum, int weight) {
+        super(price, name, description, itemNum, weight);
+        
     }
 
     public String getSeat() {
