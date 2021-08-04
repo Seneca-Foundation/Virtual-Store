@@ -1,41 +1,41 @@
 public class Basketball extends WeightItem 
 {
 
-    private String Date;
-    private int Section;
-    private int Seat;
+    private String date;
+    private int section;
+    private int seat;
 
     public Basketball(String name, double price, int section, int seat, String description, String date, double weight, int itemNum) {
         super(name, price, description, weight, itemNum);
-        this.Date = date;
-        this.Section = section;
-        this.Seat = seat;
+        this.date = date;
+        this.section = section;
+        this.seat = seat;
     }
 
     public int getSeat() {
-        return Seat;
+        return seat;
     }
 
     public void setSeat(int seat) {
-        this.Seat = seat;
+        this.seat = seat;
     }
 
     public int getSection() {
-        return Section;
+        return section;
     }
 
     public void setSection(int section) {
-        this.Section = section;
+        this.section = section;
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        this.Date = date;
+        this.date = date;
     }
     public String GetData(){
-        return "Match: " + name + ", Price: $" + price + ", Date: " + Date + ", Section: " + Section + ", Seat: " + Seat + ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Match: " + name + ", Price: $" + price + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
     }
 }
