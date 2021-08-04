@@ -6,7 +6,9 @@ public class Computer extends WeightItem
     private String color;
     public Computer(String name, String color, float price, String computerBrand, String description, String releaseDate, int weight, int itemNum) {
         super(price, name, description, weight, itemNum);
-        
+        this.computerBrand = computerBrand;
+        this.releaseDate = releaseDate;
+        this.color = color;
     }
     
     public String getColor() {
