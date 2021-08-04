@@ -1,9 +1,9 @@
-public class Book extends Storeitem {
-    protected string cover; 
-    protected string author;
+public class Book extends WeightItem {
+    protected String cover; 
+    protected String author;
 
-    public Book(float price, String name, String description, int itemNum) {
-        super(price, name, description, itemNum);
+    public Book(float price, String name, String description, int weight, int itemNum) {
+        super(price, name, description, weight, itemNum);
     }
     public String getCover() {
         return cover;

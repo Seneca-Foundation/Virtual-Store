@@ -4,8 +4,8 @@ public class Computer extends WeightItem
     private String computerBrand;
     private String releaseDate;
     private String color;
-    public Computer(String name, String color, float price, String computerBrand, String description, String releaseDate, int itemNum, int weight) {
-        super(price, name, description, itemNum, weight);
+    public Computer(String name, String color, float price, String computerBrand, String description, String releaseDate, int weight, int itemNum) {
+        super(price, name, description, weight, itemNum);
         
     }
     

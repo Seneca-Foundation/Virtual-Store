@@ -1,8 +1,8 @@
 public class Powerplant extends WeightItem
 {
-    public Powerplant(float price, String name, String description, int itemNum, int weight) 
+    public Powerplant(float price, String name, String description, int weight, int itemNum) 
     {
-        super(price, name, description, itemNum, weight);
+        super(price, name, description, weight, itemNum);
     
     }
     public String GetData(){

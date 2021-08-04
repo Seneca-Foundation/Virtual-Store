@@ -3,7 +3,7 @@ public class App {
     {
         System.out.println("Hello, World!");
 
-        Computer tempcomp = new Computer("mac" ,"Red",500,"Apple", "M1 Chip,","2021" ,1);
+        Computer tempcomp = new Computer("mac" ,"Red",500,"Apple", "M1 Chip,","2021" , 2, 1);
         System.out.println(tempcomp.GetData());
 
     }
