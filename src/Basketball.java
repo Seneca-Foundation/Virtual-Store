@@ -5,9 +5,9 @@ public class Basketball extends WeightItem
     private String Section;
     private String Seat;
 
-    public Basketball(String name, double price, String description, int weight, int itemNum) {
+    public Basketball(String name, double price, String description, String date, int weight, int itemNum) {
         super(name, price, description, weight, itemNum);
-        
+        this.Date = date;
     }
 
     public String getSeat() {
@@ -34,6 +34,6 @@ public class Basketball extends WeightItem
         this.Date = date;
     }
     public String GetData(){
-        return "Match: " + name + ", Price: " + price + ", Date: " + Date + ", Section: " + Section + ", Seat: " + Seat + ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Match: " + name + ", Price: $" + price + ", Date: " + Date + ", Section: " + Section + ", Seat: " + Seat + ", Weight: " + weight + ", Item Number: " + itemNum;
     }
 }

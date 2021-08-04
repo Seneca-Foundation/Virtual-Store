@@ -51,6 +51,6 @@ public class Storeitem {
     }
     public String GetData()
     {
-        return "Product: " + name  + "," + "Price: " + price + ", " + ", Description: " + description +  ", " + " Item Number: " + itemNum;
+        return "Product: " + name  + ", Price: $" + price + ", " + ", Description: " + description +  ", " + " Item Number: " + itemNum;
     }
 }

@@ -36,7 +36,7 @@ public class Computer extends WeightItem
     }
     public String GetData()
     {
-        return "Product: " + name  + ", Color: " + color + ", Price: " + price + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + ", Item Number: " + itemNum;
+        return "Computer: " + name  +  ", Price: $" + price + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + ", Item Number: " + itemNum;
     }
     
 }

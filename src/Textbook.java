@@ -3,14 +3,15 @@ import java.util.List;
 
 public class Textbook extends Book {
     List<String> authors = new ArrayList<String>();
-    public Textbook(String name, double price, String description, List<String> authors, int weight, int itemNum) {
-        super(name, price, description, weight, itemNum);
+    public Textbook(String name, double price, String author, String cover, String description, List<String> authors, int weight, int itemNum) {
+        ////inherited name, price, description, weight, itemNum, author, cover
+        super(name, price, author, cover, description, weight, itemNum);
         this.authors = authors;
     }
     public String GetData() {
 
-        //return "Title: " + name + ", Author: " + String.join(",", authors) + ", Cover: " + cover + ", Price: " + price + ", Weight: " + weight + ", Item Number: " + itemNum;
-        return "Do a little dance make a little noise";
+        return "Title: " + name + ", Price: $" + price + ", Authors: " + String.join(",", authors) + ", Cover: " + cover + ", Weight: " + weight + ", Item Number: " + itemNum;
+        
     }
     
 }
