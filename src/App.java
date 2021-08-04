@@ -37,21 +37,22 @@ public class App {
         //books
         //String name, double price, String author,String cover, String description, double weight, int itemNum
         allItems.add(new Book("Hunger Games", 15.00, "Suzanne Collins", "hardcover", "24 teens fight each other until one is left standing", 0.7,16)); 
-        allItems.add(new Book("The Book Thief", 11, "Markus Zusak", "paperback", "a girl steals books during WWII", 0.97, 17)); 
-        allItems.add(new Book("To Kill a Mockingbird", 14, "Harper Lee", "paperback",18)); 
-        allItems.add(new Book("The Great Gatsby", 9, "F Scott Fitzgerald", "hardcover",19)); 
-        allItems.add(new Book("Things Fall Apart", 14, "Chinua Achebe", "paperback",20)); 
-        allItems.add(new Book("The Color Purple", 12, "Alice Walker", "paperback",21)); 
-        allItems.add(new Book("Lord of the Flies ", 11, "William Colding", "paperback",22)); 
-        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20, "Douglas Adams", "hardcover",23)); 
-        allItems.add(new Book("Giovanni's Room", 30, "James Baldwin","paperback",24)); 
-        allItems.add(new Book("The Hate U Give" , 11, "Angie Thomas","hardcover",25)); 
+        allItems.add(new Book("The Book Thief", 11.99, "Markus Zusak", "paperback", "a girl steals books during WWII", 0.97, 17)); 
+        allItems.add(new Book("To Kill a Mockingbird", 14.00, "Harper Lee", "paperback", "a lawyer defends a black man who was falsely accused by racists",0.37,18)); 
+        allItems.add(new Book("The Great Gatsby", 9.50, "F Scott Fitzgerald", "hardcover","a millionare is obsessed with reuniting with his former love", 0.34,19)); 
+        allItems.add(new Book("Things Fall Apart", 14.00, "Chinua Achebe", "hardcover","depicts pre-colonial life in Nigeria", 1.36,20)); 
+        allItems.add(new Book("The Color Purple", 12.99, "Alice Walker", "paperback","a black woman suffers abuse in the South", 0.55, 21)); 
+        allItems.add(new Book("Lord of the Flies ", 11.30, "William Colding", "paperback","young boys are stranded on an island & chaos ensues", 0.3, 22)); 
+        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling galaxy", 0.25, 23)); 
+        allItems.add(new Book("Giovanni's Room", 30.00, "James Baldwin","paperback", "young, engaged man has an affair with a bartender", 0.51, 24)); 
+        allItems.add(new Book("The Hate U Give" , 11.99, "Angie Thomas","hardcover", "a girl witnesses the tragic death of her friend, sparking protests", 0.95, 25)); 
 
         //energy          
-        allItems.add(new PowerPlant("100 KWh of energy", 200, 26, "test"));
-        allItems.add(new PowerPlant("150 KWh of energy",250, 27, "test"));
-        allItems.add(new PowerPlant("200 KWh of energy", 300, 28, "test"));
-        allItems.add(new PowerPlant("250 KWh of energy", 350, 29, "test"));
-        allItems.add(new PowerPlant("300 Kwh of energy", 400, 30, "test"));
+        //String name, double price,  String description, double weight, int itemNum
+        allItems.add(new PowerPlant("100 KWh", 200.00, "provides enough energy", 0.0, 26));
+        allItems.add(new PowerPlant("150 KWh",250, "provides enough energy", 0.0, 27));
+        allItems.add(new PowerPlant("200 KWh of energy", 300, "provides enough energy", 0.0, 28));
+        allItems.add(new PowerPlant("250 KWh of energy", 350, "provides enough energy", 0.0, 29));
+        allItems.add(new PowerPlant("300 Kwh of energy", 400, "provides enough energy", 0.0, 30));
     }
 }

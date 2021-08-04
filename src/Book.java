@@ -24,7 +24,7 @@ public class Book extends WeightItem {
     }
 
     public String GetData() {
-        return "Title: " + name +  ", Price: $" + price + ", Author: " + author + ", Cover: " + cover + ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Title: " + name +  ", Price: $" + price + ", Author: " + author + ", Cover: " + cover + ", Description:" + description+", Weight: " + weight + ", Item Number: " + itemNum;
     }
 
 }
