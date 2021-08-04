@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-public class App {
+public class App 
+{
     public static void main(String[] args) throws Exception 
     {
         Cart shopCart = new Cart();
@@ -54,5 +55,178 @@ public class App {
         allItems.add(new Powerplant("200 KWh of energy", 300, "provides enough energy", 0.0, 28));
         allItems.add(new Powerplant("250 KWh of energy", 350, "provides enough energy", 0.0, 29));
         allItems.add(new Powerplant("300 Kwh of energy", 400, "provides enough energy", 0.0, 30));
+
+        //password
+        System.out.println("Create password");
+        String password = Console.ReadLine();
+        System.out.println("Enter password");
+        String userInput = Console.ReadLine();
+        if (userInput == password)
+        {
+            System.out.println("Correct password");
+        }
+        else 
+        {
+            System.out.println("Incorrect password");
+        }
+
+        // Menu
+        System.out.println("Welcome! This is what we offer");
+        System.out.println("Books");
+        System.out.println("Computers");
+        System.out.println("Basketball tickets");
+        System.out.println("Energy");
+        String userCategoryInput; 
+        boolean userIsStillShopping = true;
+        boolean userIsStillSearching;
+        String userSearchInput;
+       
+        while (userIsStillShopping)
+        {
+            System.out.println("Which item category do you want? Type b for books, c for computers, e for energy, or t for basketball tickets. You can also press s to search a specific product.");
+            userCategoryInput = Console.ReadLine();
+            if (userCategoryInput == "s")
+            {
+                userIsStillSearching = true;
+                while (userIsStillSearching)
+                {
+                    System.out.println("What would you like to search?");
+                    userSearchInput = Console.ReadLine();
+               
+                    Storeitem itemFoundInSearch = allItems.Find(comp => comp.Keywords.Contains(userSearchInput));
+
+                    if (itemFoundInSearch != null)
+                    {
+                        System.out.println("Found it: " + itemFoundInSearch.GetData());
+                        System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
+
+                        String InputCart = Console.ReadLine();
+                        if (InputCart == "y")
+                        {
+                            shopCart.AddToCart(itemFoundInSearch);
+                            System.out.println("Item has been added to your cart.");
+                        }
+                        else if (InputCart == "n")
+                        {
+                            System.out.println("This item has not been added to your cart.");
+                        }
+                        else 
+                        {
+                            System.out.println("Incorrect input.  The item was not added to your cart.");
+                        }
+                    }
+                    else
+                    { 
+                        System.out.println("The item was not found.  Nothing was added to your cart.");
+                    }
+
+                    System.out.println("Would you like to keep searching? Type y for yes or n for no");
+                    boolean didUserEnterValidInputForCartItem = false;
+                    while (didUserEnterValidInputForCartItem == false)
+                    {
+                        String InputSearch = Console.ReadLine();
+                        if (InputSearch == "n")
+                        {
+                            userIsStillSearching = false;
+                            didUserEnterValidInputForCartItem = true;
+                        }
+                        else if (InputSearch == "y")
+                        {
+                            userIsStillSearching = true;
+                            didUserEnterValidInputForCartItem = true;
+                        }
+                        else 
+                        {
+                            System.out.println("Incorrect input. Would you like to keep searching? Type y for yes or n for no.");
+                            didUserEnterValidInputForCartItem = false;
+                        }
+                    }
+                }
+            }
+            else if (userCategoryInput == "b" || userCategoryInput == "c" || userCategoryInput == "e" || userCategoryInput == "t")
+            {
+                boolean userIsStillAddingItemsFromMenu = true;
+                while (userIsStillAddingItemsFromMenu)
+                {
+                    foreach (var item in allItems)
+                    {
+                        if (userCategoryInput == "b" && item is Book) {
+                            var tempBook = (Book)item;
+                            System.out.println(tempBook.GetData());
+                        }
+                        else if (userCategoryInput == "c" && item is Computer) {
+                            var tempComputer = (Computer)item;
+                            System.out.println(tempComputer.GetData());
+                        }
+                        else if (userCategoryInput == "e" && item is Powerplant) {
+                            var tempPower = (Powerplant)item;
+                            System.out.println(tempPower.GetData());
+                        }
+                        else if (userCategoryInput == "t" && item is Basketball) {
+                            var tempBasketball = (Basketball)item;
+                            System.out.println(tempBasketball.GetData());
+                        }
+                    }
+                    System.out.println("What would you like to buy? Please write an item number.");
+                    String itemNumberTheUserChose = Console.ReadLine();
+                    var foundItem = allItems.Find(itemToSearch => itemToSearch.ItemNum.ToString() == itemNumberTheUserChose);
+                    if (foundItem != null) {
+                        shopCart.AddToCart(foundItem);
+                        
+                        System.out.println("This item has been added to cart: " + foundItem.Name); 
+                        System.out.println("Would you like to add another item to the cart? Type y for yes or n for no.");
+                        
+                        boolean didUserEnterValidInputForFoundItem = false;
+                        while (didUserEnterValidInputForFoundItem == false)
+                        {
+                            String doesUserWantToAddAnotherItem = Console.ReadLine();
+                            if (doesUserWantToAddAnotherItem == "n")
+                            {
+                                didUserEnterValidInputForFoundItem = true;
+                                userIsStillAddingItemsFromMenu = false;
+                            }
+                            else if (doesUserWantToAddAnotherItem == "y")
+                            {
+                                didUserEnterValidInputForFoundItem = true;
+                                userIsStillAddingItemsFromMenu = true;
+                            }
+                            else 
+                            {
+                                System.out.println("Incorrect input. Would you like to add another item to the cart? Type y for yes or n for no.");
+                                didUserEnterValidInputForFoundItem = false;
+                            }
+                        }
+                    }
+                    else {
+                        System.out.println("Incorrect input. Please write a valid item number from a book.");
+                    }
+                }
+            }
+            else {
+                System.out.println("You did not make a valid selection.");
+            }
+            System.out.println("Are you done shopping for today? Type y for yes or n for no.");
+            boolean didUserEnterValidInput = false;
+            while (didUserEnterValidInput == false) {
+                String doneShoppingInput = Console.ReadLine();
+                if (doneShoppingInput == "y")
+                {
+                    shopCart.PrintItems();
+                    didUserEnterValidInput = true;
+                    userIsStillShopping = false;
+                }
+                else if (doneShoppingInput == "n")
+                {
+                    didUserEnterValidInput = true;
+                    userIsStillShopping = true;
+                }
+                else 
+                {
+                    System.out.println("Incorrect input. Are you done shopping for today? Type y for yes or n for no");
+                    didUserEnterValidInput = true;
+                }
+            }
+        }
+
     }
 }
