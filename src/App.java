@@ -35,22 +35,23 @@ public class App {
         allItems.add(new Basketball("Oklahoma City Thunder vs LA Clippers", 192, ,102, 43,"empty","January 3", 0.2,14));
         allItems.add(new Basketball("San Antoinio Spurs vs Memphis Grizzles",195, 34, 193,"empty", "January 5",0.2,15)); 
         //books
-        allItems.Add(new Book("Hunger Games", 15, "Suzanne Collins", "hardcover",16)); 
-        allItems.Add(new Book("The Book Thief", 11, "Markus Zusak", "paperback",17)); 
-        allItems.Add(new Book("To Kill a Mockingbird", 14, "Harper Lee", "paperback",18)); 
-        allItems.Add(new Book("The Great Gatsby", 9, "F Scott Fitzgerald", "hardcover",19)); 
-        allItems.Add(new Book("Things Fall Apart", 14, "Chinua Achebe", "paperback",20)); 
-        allItems.Add(new Book("The Color Purple", 12, "Alice Walker", "paperback",21)); 
-        allItems.Add(new Book("Lord of the Flies ", 11, "William Colding", "paperback",22)); 
-        allItems.Add(new Book("The Hitchhiker's Guide to the Galaxy", 20, "Douglas Adams", "hardcover",23)); 
-        allItems.Add(new Book("Giovanni's Room", 30, "James Baldwin","paperback",24)); 
-        allItems.Add(new Book("The Hate U Give" , 11, "Angie Thomas","hardcover",25)); 
+        //String name, double price, String author,String cover, String description, double weight, int itemNum
+        allItems.add(new Book("Hunger Games", 15.00, "Suzanne Collins", "hardcover", "24 teens fight each other until one is left standing", 0.7,16)); 
+        allItems.add(new Book("The Book Thief", 11, "Markus Zusak", "paperback", "a girl steals books during WWII", 0.97, 17)); 
+        allItems.add(new Book("To Kill a Mockingbird", 14, "Harper Lee", "paperback",18)); 
+        allItems.add(new Book("The Great Gatsby", 9, "F Scott Fitzgerald", "hardcover",19)); 
+        allItems.add(new Book("Things Fall Apart", 14, "Chinua Achebe", "paperback",20)); 
+        allItems.add(new Book("The Color Purple", 12, "Alice Walker", "paperback",21)); 
+        allItems.add(new Book("Lord of the Flies ", 11, "William Colding", "paperback",22)); 
+        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20, "Douglas Adams", "hardcover",23)); 
+        allItems.add(new Book("Giovanni's Room", 30, "James Baldwin","paperback",24)); 
+        allItems.add(new Book("The Hate U Give" , 11, "Angie Thomas","hardcover",25)); 
 
         //energy          
-        allItems.Add(new PowerPlant("100 KWh of energy", 200, 26, "test"));
-        allItems.Add(new PowerPlant("150 KWh of energy",250, 27, "test"));
-        allItems.Add(new PowerPlant("200 KWh of energy", 300, 28, "test"));
-        allItems.Add(new PowerPlant("250 KWh of energy", 350, 29, "test"));
-        allItems.Add(new PowerPlant("300 Kwh of energy", 400, 30, "test"));
+        allItems.add(new PowerPlant("100 KWh of energy", 200, 26, "test"));
+        allItems.add(new PowerPlant("150 KWh of energy",250, 27, "test"));
+        allItems.add(new PowerPlant("200 KWh of energy", 300, 28, "test"));
+        allItems.add(new PowerPlant("250 KWh of energy", 350, 29, "test"));
+        allItems.add(new PowerPlant("300 Kwh of energy", 400, 30, "test"));
     }
 }
