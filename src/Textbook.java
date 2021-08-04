@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Textbook extends Book {
     List<String> authors = new ArrayList<String>();
-    public Textbook(float price, String name, String description, List<String> authors, int weight, int itemNum) {
-        super(price, name, description, weight, itemNum);
+    public Textbook(String name, double price, String description, List<String> authors, int weight, int itemNum) {
+        super(name, price, description, weight, itemNum);
         this.authors = authors;
     }
     public String GetData() {

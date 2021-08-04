@@ -5,8 +5,8 @@ public class Basketball extends WeightItem
     private String Section;
     private String Seat;
 
-    public Basketball(float price, String name, String description, int weight, int itemNum) {
-        super(price, name, description, weight, itemNum);
+    public Basketball(String name, double price, String description, int weight, int itemNum) {
+        super(name, price, description, weight, itemNum);
         
     }
 

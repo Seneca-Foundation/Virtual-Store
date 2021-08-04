@@ -2,8 +2,8 @@ public class Book extends WeightItem {
     protected String cover; 
     protected String author;
 
-    public Book(float price, String name, String description, int weight, int itemNum) {
-        super(price, name, description, weight, itemNum);
+    public Book(String name, double price, String description, int weight, int itemNum) {
+        super(name, price, description, weight, itemNum);
     }
     public String getCover() {
         return cover;

@@ -1,7 +1,7 @@
 public class ComicBook extends Book {
     protected String artist;
-    public ComicBook(float price, String name, String description, String artist, int weight, int itemNum) {
-        super(price, name, description, weight, itemNum);
+    public ComicBook(String name, double price, String description, String artist, int weight, int itemNum) {
+        super(name, price, description, weight, itemNum);
         this.artist = artist;
     }
     public String GetData() {

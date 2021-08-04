@@ -37,7 +37,7 @@ public class Storeitem {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Storeitem(float price, String name, String description, int itemNum) {
+    public Storeitem( String name, double price, String description, int itemNum) {
         this.price = price;
         this.name = name; 
         this.description = description;

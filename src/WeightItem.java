@@ -1,8 +1,8 @@
 public class WeightItem extends Storeitem
 {
     protected int weight;
-    public WeightItem(float price, String name, String description, int weight, int itemNum) {
-        super(price, name, description, itemNum);
+    public WeightItem(String name, double price, String description, int weight, int itemNum) {
+        super(name, price, description, itemNum);
         this.weight = weight;
         
         
