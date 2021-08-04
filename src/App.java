@@ -49,10 +49,10 @@ public class App {
 
         //energy          
         //String name, double price,  String description, double weight, int itemNum
-        allItems.add(new PowerPlant("100 KWh", 200.00, "provides enough energy", 0.0, 26));
-        allItems.add(new PowerPlant("150 KWh",250, "provides enough energy", 0.0, 27));
-        allItems.add(new PowerPlant("200 KWh of energy", 300, "provides enough energy", 0.0, 28));
-        allItems.add(new PowerPlant("250 KWh of energy", 350, "provides enough energy", 0.0, 29));
-        allItems.add(new PowerPlant("300 Kwh of energy", 400, "provides enough energy", 0.0, 30));
+        allItems.add(new Powerplant("100 KWh", 200.00, "provides enough energy", 0.0, 26));
+        allItems.add(new Powerplant("150 KWh",250, "provides enough energy", 0.0, 27));
+        allItems.add(new Powerplant("200 KWh of energy", 300, "provides enough energy", 0.0, 28));
+        allItems.add(new Powerplant("250 KWh of energy", 350, "provides enough energy", 0.0, 29));
+        allItems.add(new Powerplant("300 Kwh of energy", 400, "provides enough energy", 0.0, 30));
     }
 }
