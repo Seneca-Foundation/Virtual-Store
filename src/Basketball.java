@@ -33,4 +33,7 @@ public class Basketball extends WeightItem
     public void setDate(String date) {
         this.Date = date;
     }
+    public String GetData(){
+        return "Match: " + name + ", Price: " + price + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
+    }
 }
