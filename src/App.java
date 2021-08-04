@@ -22,17 +22,18 @@ public class App {
         allItems.add(new Computer("Razer Blade 15", 700.00, "blue", "Windows","Advanced laptop w/ Nvidia RTX 2070", "2021",4.63, 4)); 
         allItems.add(new Computer("HP Envy", 1000.99 , "silver", "Window", "11th Generation Intel", "2019", 2.71, 5)); 
         allItems.add(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5, 6));          
-        allItems[5].Keywords = new List<string>() {"silver", "Windows", "M1", "black", "red", "rose gold", "blue", "pink", "Apple", "Intel", "AMD","Nvidia" }; //no limit
+        allItems[5].Keywords = new List<String>() {"silver", "Windows", "M1", "black", "red", "rose gold", "blue", "pink", "Apple", "Intel", "AMD","Nvidia" }; //no limit
         //basketball game tickets
-        allItems.add(new Basketball("Chicago Bulls vs Phoenix Suns", 250, "July 30", 109, 30, 7));
-        allItems.Add(new Basketball("Phoenix Suns vs Bucks", 150, "August 2", 80, 20, 8));
-        allItems.Add(new Basketball("LA Lakers vs Boston Celtics", 250, "September 24", 48, 15, 9));
-        allItems.Add(new Basketball("Brooklyn Nets vs Denver Nuggets",100,"October 11",50, 24, 10)); 
-        allItems.Add(new Basketball("New York Knicks vs Philadelphia 76ers", 183, "July 3",140, 49, 11)); 
-        allItems.Add(new Basketball("Indiana Pacers vs Milwaukee Bucks" , 194, "June 3" , 103, 53, 12));
-        allItems.Add(new Basketball("Denver Nuggets vs Utah Jazz", 139, "April 6" ,194, 49, 13));
-        allItems.Add(new Basketball("Oklahoma City Thunder vs LA Clippers", 192, "January 3" ,102, 43, 14));
-        allItems.Add(new Basketball("San Antoinio Spurs vs Memphis Grizzles", 193, "January 5", 195, 34 ,15)); 
+        //String name, double price, int section, int seat, String description, String date, double weight, int itemNum
+        allItems.add(new Basketball("Chicago Bulls vs Phoenix Suns", 250.00,109, 30, "section is selling out fast","July 30", 0.2, 7));
+        allItems.add(new Basketball("Phoenix Suns vs Bucks", 150, 80, 20, "empty","August 2", 0.2, 8));
+        allItems.add(new Basketball("LA Lakers vs Boston Celtics", 250.00,48, 15, "empty","September 24",0.2, 9));
+        allItems.add(new Basketball("Brooklyn Nets vs Denver Nuggets",100,50, 24,"empty","October 11",0.2,10)); 
+        allItems.add(new Basketball("New York Knicks vs Philadelphia 76ers", 183,140, 49, "empty", "July 3",0.2, 11)); 
+        allItems.add(new Basketball("Indiana Pacers vs Milwaukee Bucks", 194, 103, 53,"empty", "June 3", 0.2, 12));
+        allItems.add(new Basketball("Denver Nuggets vs Utah Jazz", 139,194, 49,"empty", "April 6", 0.2,13));
+        allItems.add(new Basketball("Oklahoma City Thunder vs LA Clippers", 192, ,102, 43,"empty","January 3", 0.2,14));
+        allItems.add(new Basketball("San Antoinio Spurs vs Memphis Grizzles",195, 34, 193,"empty", "January 5",0.2,15)); 
         //books
         allItems.Add(new Book("Hunger Games", 15, "Suzanne Collins", "hardcover",16)); 
         allItems.Add(new Book("The Book Thief", 11, "Markus Zusak", "paperback",17)); 
