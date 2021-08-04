@@ -1,6 +1,6 @@
 public class ComicBook extends Book {
     protected String artist;
-    public ComicBook(String name, double price, String author, String cover, String description, String artist, int weight, int itemNum) {
+    public ComicBook(String name, double price, String author, String cover, String description, String artist, double weight, int itemNum) {
         //inherited name, price, description, weight, itemNum, author, cover
         super(name, price, author, cover, description, weight, itemNum);
         this.artist = artist;

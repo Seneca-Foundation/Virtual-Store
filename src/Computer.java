@@ -4,7 +4,7 @@ public class Computer extends WeightItem
     private String computerBrand;
     private String releaseDate;
     private String color;
-    public Computer(String name, double price, String color, String computerBrand, String description, String releaseDate, int weight, int itemNum) {
+    public Computer(String name, double price, String color, String computerBrand, String description, String releaseDate, double weight, int itemNum) {
         super(name, price, description, weight, itemNum);
         this.computerBrand = computerBrand;
         this.releaseDate = releaseDate;
@@ -36,7 +36,7 @@ public class Computer extends WeightItem
     }
     public String GetData()
     {
-        return "Computer: " + name  +  ", Price: $" + price + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + ", Item Number: " + itemNum;
+        return "Computer: " + name  +  ", Price: $" + price + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
     }
     
 }

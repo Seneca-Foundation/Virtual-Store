@@ -1,6 +1,6 @@
 public class Powerplant extends WeightItem
 {
-    public Powerplant(String name, double price,  String description, int weight, int itemNum) 
+    public Powerplant(String name, double price,  String description, double weight, int itemNum) 
     {
         super(name,price,description, weight, itemNum);
     

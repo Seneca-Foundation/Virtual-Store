@@ -2,7 +2,7 @@ public class Book extends WeightItem {
     protected String cover; 
     protected String author;
 
-    public Book(String name, double price, String author,String cover, String description, int weight, int itemNum) {
+    public Book(String name, double price, String author,String cover, String description, double weight, int itemNum) {
         //inherited ame, price, description, weight, itemNum
         super(name, price, description, weight, itemNum);
         this.author = author;

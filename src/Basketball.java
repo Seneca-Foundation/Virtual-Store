@@ -5,7 +5,7 @@ public class Basketball extends WeightItem
     private String Section;
     private String Seat;
 
-    public Basketball(String name, double price, String description, String date, int weight, int itemNum) {
+    public Basketball(String name, double price, String description, String date, double weight, int itemNum) {
         super(name, price, description, weight, itemNum);
         this.Date = date;
     }
