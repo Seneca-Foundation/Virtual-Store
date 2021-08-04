@@ -8,11 +8,11 @@ public class Cart {
     
     public Cart()
     {
-        storeItemsToPurchase = new List<StoreItem>();
+        storeItemsToPurchase = new ArrayList<Storeitem>();
     }
 
-    public void AddToCart(StoreItem itemToAdd) {
-        storeItemsToPurchase.Add(itemToAdd);
+    public void AddToCart(Storeitem itemToAdd) {
+        storeItemsToPurchase.add(itemToAdd);
     }
 
     public void PrintItems() {
@@ -22,8 +22,8 @@ public class Cart {
         System.out.println("--------------------------------------------------------");
         foreach (var i in storeItemsToPurchase)
         {
-            System.out.println(String.Format("{0,-45} | {1,-10}", i.Name , "$" + i.Price ));
-            total = total + i.Price;
+            System.out.println(String.Format("{0,-45} | {1,-10}", i.name , "$" + i.price ));
+            total = total + i.price;
         }
         System.out.println("--------------------------------------------------------");
         System.out.println("Total: $" + total);
