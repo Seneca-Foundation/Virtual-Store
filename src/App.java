@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 public class App 
 {
     public static void main(String[] args) throws Exception 
@@ -23,7 +24,7 @@ public class App
         allItems.add(new Computer("Razer Blade 15", 700.00, "blue", "Windows","Advanced laptop w/ Nvidia RTX 2070", "2021",4.63, 4)); 
         allItems.add(new Computer("HP Envy", 1000.99 , "silver", "Window", "11th Generation Intel", "2019", 2.71, 5)); 
         allItems.add(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5, 6));          
-        allItems[5].Keywords = new ArrayList<String>(){"silver", "Windows", "M1", "black", "red", "rose gold", "blue", "pink", "Apple", "Intel", "AMD","Nvidia" }; //no limit
+        //allItems[5].Keywords = new ArrayList<String>(){"silver", "Windows", "M1", "black", "red", "rose gold", "blue", "pink", "Apple", "Intel", "AMD","Nvidia" }; //no limit
         //basketball game tickets
         //String name, double price, int section, int seat, String description, String date, double weight, int itemNum
         allItems.add(new Basketball("Chicago Bulls vs Phoenix Suns", 250.00,109, 30, "section is selling out fast","July 30", 0.2, 7));
@@ -58,10 +59,12 @@ public class App
 
         //password
         System.out.println("Create password");
-        String password = Console.ReadLine();
+        Scanner password = new Scanner(System.in);
+        String passwordscanned = password.next();
         System.out.println("Enter password");
-        String userInput = Console.ReadLine();
-        if (userInput == password)
+        Scanner userInput = new Scanner(System.in);
+        String userInputscanned = userInput.next();
+        if (userInputscanned == passwordscanned)
         {
             System.out.println("Correct password");
         }
@@ -84,14 +87,16 @@ public class App
         while (userIsStillShopping)
         {
             System.out.println("Which item category do you want? Type b for books, c for computers, e for energy, or t for basketball tickets. You can also press s to search a specific product.");
-            userCategoryInput = Console.ReadLine();
+            Scanner userCategory = new Scanner(System.in);
+            userCategoryInput = userCategory.next();
             if (userCategoryInput == "s")
             {
                 userIsStillSearching = true;
                 while (userIsStillSearching)
                 {
                     System.out.println("What would you like to search?");
-                    userSearchInput = Console.ReadLine();
+                    Scanner userSearch  = new Scanner(System.in);
+                    userSearchInput  = userSearch.next();
                
                     Storeitem itemFoundInSearch = allItems.Find(comp => comp.Keywords.Contains(userSearchInput));
 
@@ -99,8 +104,8 @@ public class App
                     {
                         System.out.println("Found it: " + itemFoundInSearch.GetData());
                         System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
-
-                        String InputCart = Console.ReadLine();
+                        Scanner userCart  = new Scanner(System.in);
+                        String InputCart = userCart.next();
                         if (InputCart == "y")
                         {
                             shopCart.AddToCart(itemFoundInSearch);
@@ -124,7 +129,8 @@ public class App
                     boolean didUserEnterValidInputForCartItem = false;
                     while (didUserEnterValidInputForCartItem == false)
                     {
-                        String InputSearch = Console.ReadLine();
+                        Scanner scannerSearch  = new Scanner(System.in);
+                        String InputSearch = scannerSearch.next();
                         if (InputSearch == "n")
                         {
                             userIsStillSearching = false;
@@ -168,18 +174,20 @@ public class App
                         }
                     }
                     System.out.println("What would you like to buy? Please write an item number.");
-                    String itemNumberTheUserChose = Console.ReadLine();
+                    Scanner userItemNum  = new Scanner(System.in);
+                    String itemNumberTheUserChose  = userItemNum.next();
                     var foundItem = allItems.Find(itemToSearch => itemToSearch.ItemNum.ToString() == itemNumberTheUserChose);
                     if (foundItem != null) {
                         shopCart.AddToCart(foundItem);
                         
-                        System.out.println("This item has been added to cart: " + foundItem.Name); 
+                        System.out.println("This item has been added to cart: " + foundItem.name); 
                         System.out.println("Would you like to add another item to the cart? Type y for yes or n for no.");
                         
                         boolean didUserEnterValidInputForFoundItem = false;
                         while (didUserEnterValidInputForFoundItem == false)
                         {
-                            String doesUserWantToAddAnotherItem = Console.ReadLine();
+                            Scanner anotherItemScanner = new Scanner(System.in);
+                            String doesUserWantToAddAnotherItem = anotherItemScanner.next();
                             if (doesUserWantToAddAnotherItem == "n")
                             {
                                 didUserEnterValidInputForFoundItem = true;
@@ -207,8 +215,10 @@ public class App
             }
             System.out.println("Are you done shopping for today? Type y for yes or n for no.");
             boolean didUserEnterValidInput = false;
-            while (didUserEnterValidInput == false) {
-                String doneShoppingInput = Console.ReadLine();
+            while (didUserEnterValidInput == false) 
+            {
+                Scanner doneShopScanner = new Scanner(System.in);
+                String doneShoppingInput = doneShopScanner.next();
                 if (doneShoppingInput == "y")
                 {
                     shopCart.PrintItems();
@@ -227,6 +237,5 @@ public class App
                 }
             }
         }
-
     }
 }
