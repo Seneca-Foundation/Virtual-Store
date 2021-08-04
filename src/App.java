@@ -1,8 +1,10 @@
 import java.util.ArrayList;
-//import java.util.List;
+import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception 
     {
+        Cart shopCart = new Cart();
+        List<Storeitem> allItems = new ArrayList<Storeitem>();
         System.out.println("Hello, World!");
 
         Computer tempcomp = new Computer("mac" ,500.0, "red","Apple", "M1 Chip","2021" , 2, 1);
