@@ -24,8 +24,6 @@ public class App
         allItems.add(new Computer("Surface Book 3",1599.99,"black", "Windows", "Touch screen ", "2020", 4.2, 5)); 
         allItems.add(new Computer("Surface Pro 7",700.00,"red", "Windows", "laptop and tablet in one","2021",1.74, 6)); 
        
-         
-        
                   
         //allItems[5].Keywords = new ArrayList<String>(){"silver", "Windows", "M1", "black", "red", "rose gold", "blue", "pink", "Apple", "Intel", "AMD","Nvidia" }; //no limit
         //basketball game tickets
