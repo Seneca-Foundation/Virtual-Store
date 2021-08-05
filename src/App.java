@@ -59,13 +59,10 @@ public class App
 
         //password
         System.out.println("Create password");
-        Scanner password = new Scanner(System.in);
-        String passwordscanned = password.next();
-        password.close();
+        Scanner userInputScanner = new Scanner(System.in); //one scanner
+        String passwordscanned = userInputScanner.nextLine();
         System.out.println("Enter password");
-        Scanner userInput = new Scanner(System.in);
-        String userInputscanned = userInput.next();
-        userInput.close();
+        String userInputscanned = userInputScanner.nextLine();
         if (userInputscanned == passwordscanned)
         {
             System.out.println("Correct password");
@@ -89,18 +86,18 @@ public class App
         while (userIsStillShopping)
         {
             System.out.println("Which item category do you want? Type b for books, c for computers, e for energy, or t for basketball tickets. You can also press s to search a specific product.");
-            Scanner userCategory = new Scanner(System.in);
-            String userCategoryInput = userCategory.nextLine();
+           // Scanner userInputScanner= new Scanner(System.in);
+            String userCategoryInput = userInputScanner.nextLine();
             if (userCategoryInput == "s")
             {
-                userCategory.close();
+                
                 userIsStillSearching = true;
                 while (userIsStillSearching)
                 {
                     System.out.println("What would you like to search?");
-                    Scanner userSearch  = new Scanner(System.in);
-                    String userSearchInput  = userSearch.next();
-                    userSearch.close();
+                    //Scanner userSearch  = new Scanner(System.in);
+                    String userSearchInput  = userInputScanner.nextLine();
+                    
                     var itemFoundInSearch = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(userSearchInput)).findAny().orElse(null);
                     //Storeitem itemFoundInSearch;
                     //Search.findItem(userSearchInput, itemFoundInSearch, allItems);
@@ -108,9 +105,9 @@ public class App
                     {
                         System.out.println("Found it: " + itemFoundInSearch.GetData());
                         System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
-                        Scanner userCart  = new Scanner(System.in);
-                        String InputCart = userCart.next();
-                        userCart.close();
+                        //Scanner userCart  = new Scanner(System.in);
+                        String InputCart = userInputScanner.nextLine();
+                       
                         if (InputCart == "y")
                         {
                             shopCart.AddToCart(itemFoundInSearch);
@@ -134,9 +131,9 @@ public class App
                     boolean didUserEnterValidInputForCartItem = false;
                     while (didUserEnterValidInputForCartItem == false)
                     {
-                        Scanner scannerSearch  = new Scanner(System.in);
-                        String InputSearch = scannerSearch.next();
-                        scannerSearch.close();
+                        //Scanner scannerSearch  = new Scanner(System.in);
+                        String InputSearch = userInputScanner.nextLine();
+                        
                         if (InputSearch == "n")
                         {
                             userIsStillSearching = false;
@@ -157,7 +154,7 @@ public class App
             }
             else if (userCategoryInput == "b" || userCategoryInput == "c" || userCategoryInput == "e" || userCategoryInput == "t")
             {
-                userCategory.close();
+                
                 boolean userIsStillAddingItemsFromMenu = true;
                 while (userIsStillAddingItemsFromMenu)
                 {
@@ -182,9 +179,9 @@ public class App
                     
                     }
                     System.out.println("What would you like to buy? Please write an item number.");
-                    Scanner userItemNum  = new Scanner(System.in);
-                    String itemNumberTheUserChose  = userItemNum.next();
-                    userItemNum.close();
+                    //Scanner userItemNum  = new Scanner(System.in);
+                    String itemNumberTheUserChose  = userInputScanner.nextLine();
+                    
                     //var foundItem = allItems.stream().filter(item -> itemNumberTheUserChose.equals(item.getItemNum())).findAny().orElse(null);
                     var foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
                     if (foundItem != null) {
@@ -196,9 +193,9 @@ public class App
                         boolean didUserEnterValidInputForFoundItem = false;
                         while (didUserEnterValidInputForFoundItem == false)
                         {
-                            Scanner anotherItemScanner = new Scanner(System.in);
-                            String doesUserWantToAddAnotherItem = anotherItemScanner.next();
-                            anotherItemScanner.close();
+                            //Scanner anotherItemScanner = new Scanner(System.in);
+                            String doesUserWantToAddAnotherItem = userInputScanner.nextLine();
+                            
                             if (doesUserWantToAddAnotherItem == "n")
                             {
                                 didUserEnterValidInputForFoundItem = true;
@@ -228,9 +225,9 @@ public class App
             boolean didUserEnterValidInput = false;
             while (didUserEnterValidInput == false) 
             {
-                Scanner doneShopScanner = new Scanner(System.in);
-                String doneShoppingInput = doneShopScanner.next();
-                doneShopScanner.close();
+                //Scanner doneShopScanner = new Scanner(System.in);
+                String doneShoppingInput = userInputScanner.nextLine();
+               
                 if (doneShoppingInput == "y")
                 {
                     shopCart.PrintItems();
