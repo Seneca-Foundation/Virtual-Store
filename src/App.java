@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.Scanner;
 public class App 
 {
@@ -97,9 +98,8 @@ public class App
                     System.out.println("What would you like to search?");
                     Scanner userSearch  = new Scanner(System.in);
                     userSearchInput  = userSearch.next();
-               
-                    Storeitem itemFoundInSearch = allItems.Find(comp => comp.Contains(userSearchInput));
-
+                    List<Storeitem> itemFoundInSearch = allItems.stream().filter(item -> item.equals(userSearchInput)).collect(Collectors.toList());
+                    //Storeitem itemFoundInSearch = allItems.Find(comp => comp.Contains(userSearchInput));
                     if (itemFoundInSearch != null)
                     {
                         System.out.println("Found it: " + itemFoundInSearch.GetData());
@@ -177,7 +177,8 @@ public class App
                     System.out.println("What would you like to buy? Please write an item number.");
                     Scanner userItemNum  = new Scanner(System.in);
                     String itemNumberTheUserChose  = userItemNum.next();
-                    var foundItem = allItems.Find(itemToSearch => itemToSearch.ItemNum.ToString() == itemNumberTheUserChose);
+                    //List<Storeitem> itemFoundInSearch = list.stream().filter(item -> item.equals(userSearchInput)).collect(Collectors.toList());
+                    var foundItem = allItems.stream().filter(itemToSearch -> itemToSearch.ItemNum.ToString().equals(itemNumberTheUserChose).collect(Collectors.toList()));
                     if (foundItem != null) {
                         shopCart.AddToCart(foundItem);
                         
