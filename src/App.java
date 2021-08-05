@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.Scanner;
 public class App 
 {
@@ -35,7 +34,7 @@ public class App
         allItems.add(new Basketball("New York Knicks vs Philadelphia 76ers", 183,140, 49, "empty", "July 3",0.2, 11)); 
         allItems.add(new Basketball("Indiana Pacers vs Milwaukee Bucks", 194, 103, 53,"empty", "June 3", 0.2, 12));
         allItems.add(new Basketball("Denver Nuggets vs Utah Jazz", 139,194, 49,"empty", "April 6", 0.2,13));
-        allItems.add(new Basketball("Oklahoma City Thunder vs LA Clippers", 192, ,102, 43,"empty","January 3", 0.2,14));
+        allItems.add(new Basketball("Oklahoma City Thunder vs LA Clippers", 192, 102, 43,"empty","January 3", 0.2,14));
         allItems.add(new Basketball("San Antoinio Spurs vs Memphis Grizzles",195, 34, 193,"empty", "January 5",0.2,15)); 
         //books
         //String name, double price, String author,String cover, String description, double weight, int itemNum
@@ -62,9 +61,11 @@ public class App
         System.out.println("Create password");
         Scanner password = new Scanner(System.in);
         String passwordscanned = password.next();
+        password.close();
         System.out.println("Enter password");
         Scanner userInput = new Scanner(System.in);
         String userInputscanned = userInput.next();
+        userInput.close();
         if (userInputscanned == passwordscanned)
         {
             System.out.println("Correct password");
@@ -80,32 +81,36 @@ public class App
         System.out.println("Computers");
         System.out.println("Basketball tickets");
         System.out.println("Energy");
-        String userCategoryInput; 
+        //String userCategoryInput; 
         boolean userIsStillShopping = true;
         boolean userIsStillSearching;
-        String userSearchInput;
+       // String userSearchInput;
        
         while (userIsStillShopping)
         {
             System.out.println("Which item category do you want? Type b for books, c for computers, e for energy, or t for basketball tickets. You can also press s to search a specific product.");
             Scanner userCategory = new Scanner(System.in);
-            userCategoryInput = userCategory.next();
+            String userCategoryInput = userCategory.nextLine();
             if (userCategoryInput == "s")
             {
+                userCategory.close();
                 userIsStillSearching = true;
                 while (userIsStillSearching)
                 {
                     System.out.println("What would you like to search?");
                     Scanner userSearch  = new Scanner(System.in);
-                    userSearchInput  = userSearch.next();
-                    List<Storeitem> itemFoundInSearch = allItems.stream().filter(item -> item.equals(userSearchInput)).collect(Collectors.toList());
-                    //Storeitem itemFoundInSearch = allItems.Find(comp => comp.Contains(userSearchInput));
+                    String userSearchInput  = userSearch.next();
+                    userSearch.close();
+                    var itemFoundInSearch = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(userSearchInput)).findAny().orElse(null);
+                    //Storeitem itemFoundInSearch;
+                    //Search.findItem(userSearchInput, itemFoundInSearch, allItems);
                     if (itemFoundInSearch != null)
                     {
                         System.out.println("Found it: " + itemFoundInSearch.GetData());
                         System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
                         Scanner userCart  = new Scanner(System.in);
                         String InputCart = userCart.next();
+                        userCart.close();
                         if (InputCart == "y")
                         {
                             shopCart.AddToCart(itemFoundInSearch);
@@ -131,6 +136,7 @@ public class App
                     {
                         Scanner scannerSearch  = new Scanner(System.in);
                         String InputSearch = scannerSearch.next();
+                        scannerSearch.close();
                         if (InputSearch == "n")
                         {
                             userIsStillSearching = false;
@@ -151,6 +157,7 @@ public class App
             }
             else if (userCategoryInput == "b" || userCategoryInput == "c" || userCategoryInput == "e" || userCategoryInput == "t")
             {
+                userCategory.close();
                 boolean userIsStillAddingItemsFromMenu = true;
                 while (userIsStillAddingItemsFromMenu)
                 {
@@ -177,8 +184,9 @@ public class App
                     System.out.println("What would you like to buy? Please write an item number.");
                     Scanner userItemNum  = new Scanner(System.in);
                     String itemNumberTheUserChose  = userItemNum.next();
-                    //List<Storeitem> itemFoundInSearch = list.stream().filter(item -> item.equals(userSearchInput)).collect(Collectors.toList());
-                    var foundItem = allItems.stream().filter(itemToSearch -> itemToSearch.ItemNum.ToString().equals(itemNumberTheUserChose).collect(Collectors.toList()));
+                    userItemNum.close();
+                    //var foundItem = allItems.stream().filter(item -> itemNumberTheUserChose.equals(item.getItemNum())).findAny().orElse(null);
+                    var foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
                     if (foundItem != null) {
                         shopCart.AddToCart(foundItem);
                         
@@ -190,6 +198,7 @@ public class App
                         {
                             Scanner anotherItemScanner = new Scanner(System.in);
                             String doesUserWantToAddAnotherItem = anotherItemScanner.next();
+                            anotherItemScanner.close();
                             if (doesUserWantToAddAnotherItem == "n")
                             {
                                 didUserEnterValidInputForFoundItem = true;
@@ -221,6 +230,7 @@ public class App
             {
                 Scanner doneShopScanner = new Scanner(System.in);
                 String doneShoppingInput = doneShopScanner.next();
+                doneShopScanner.close();
                 if (doneShoppingInput == "y")
                 {
                     shopCart.PrintItems();
