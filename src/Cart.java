@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cart {
+public class Cart{
+
 
     List<Storeitem> storeItemsToPurchase;
     protected double total;
@@ -10,6 +11,7 @@ public class Cart {
     {
         storeItemsToPurchase = new ArrayList<Storeitem>();
     }
+    
 
     public void AddToCart(Storeitem itemToAdd) {
         storeItemsToPurchase.add(itemToAdd);
@@ -18,11 +20,11 @@ public class Cart {
     public void PrintItems() {
         System.out.println("Thank you for shopping with us. Here are your items and total:");
         System.out.println("--------------------------------------------------------");
-        System.out.printf("%2d. %-20s $%.2f%n", "Item" , "Price" );
+        System.out.println("Item, Price" );
         System.out.println("--------------------------------------------------------");
         for (var item : storeItemsToPurchase)
         {
-            System.out.printf("%2d. %-20s $%.2f%n", item.name, "$" + item.price);
+            System.out.println(item.name + " $" + item.price);
             //System.out.println(String.format("{0,-45} | {1,-10}", item.name , "$" + item.price ));
             total = total + item.price;
         }

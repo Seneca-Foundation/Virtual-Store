@@ -63,7 +63,7 @@ public class App
         String passwordscanned = userInputScanner.nextLine();
         System.out.println("Enter password");
         String userInputscanned = userInputScanner.nextLine();
-        if (userInputscanned == passwordscanned)
+        if (userInputscanned.equals(passwordscanned))
         {
             System.out.println("Correct password");
         }
@@ -88,7 +88,7 @@ public class App
             System.out.println("Which item category do you want? Type b for books, c for computers, e for energy, or t for basketball tickets. You can also press s to search a specific product.");
            // Scanner userInputScanner= new Scanner(System.in);
             String userCategoryInput = userInputScanner.nextLine();
-            if (userCategoryInput == "s")
+            if (userCategoryInput.equals("s"))
             {
                 
                 userIsStillSearching = true;
@@ -98,7 +98,7 @@ public class App
                     //Scanner userSearch  = new Scanner(System.in);
                     String userSearchInput  = userInputScanner.nextLine();
                     
-                    var itemFoundInSearch = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(userSearchInput)).findAny().orElse(null);
+                    var itemFoundInSearch = allItems.stream().filter(item -> item.name.equals(userSearchInput)).findAny().orElse(null);
                     //Storeitem itemFoundInSearch;
                     //Search.findItem(userSearchInput, itemFoundInSearch, allItems);
                     if (itemFoundInSearch != null)
@@ -108,12 +108,12 @@ public class App
                         //Scanner userCart  = new Scanner(System.in);
                         String InputCart = userInputScanner.nextLine();
                        
-                        if (InputCart == "y")
+                        if (InputCart.equals("y"))
                         {
                             shopCart.AddToCart(itemFoundInSearch);
                             System.out.println("Item has been added to your cart.");
                         }
-                        else if (InputCart == "n")
+                        else if (InputCart.equals("n"))
                         {
                             System.out.println("This item has not been added to your cart.");
                         }
@@ -134,12 +134,12 @@ public class App
                         //Scanner scannerSearch  = new Scanner(System.in);
                         String InputSearch = userInputScanner.nextLine();
                         
-                        if (InputSearch == "n")
+                        if (InputSearch.equals("n"))
                         {
                             userIsStillSearching = false;
                             didUserEnterValidInputForCartItem = true;
                         }
-                        else if (InputSearch == "y")
+                        else if (InputSearch.equals("y"))
                         {
                             userIsStillSearching = true;
                             didUserEnterValidInputForCartItem = true;
@@ -152,7 +152,7 @@ public class App
                     }
                 }
             }
-            else if (userCategoryInput == "b" || userCategoryInput == "c" || userCategoryInput == "e" || userCategoryInput == "t")
+            else if (userCategoryInput.equals("b") || userCategoryInput.equals("c") || userCategoryInput.equals("e") || userCategoryInput.equals("t"))
             {
                 
                 boolean userIsStillAddingItemsFromMenu = true;
@@ -160,19 +160,19 @@ public class App
                 {
                     for (var item : allItems) 
                     {
-                        if (userCategoryInput == "b" && item instanceof Book) {
+                        if (userCategoryInput.equals("b") && item instanceof Book) {
                             var tempBook = (Book)item;
                             System.out.println(tempBook.GetData());
                         }
-                        else if (userCategoryInput == "c" && item instanceof Computer) {
+                        else if (userCategoryInput.equals("c") && item instanceof Computer) {
                             var tempComputer = (Computer)item;
                             System.out.println(tempComputer.GetData());
                         }
-                        else if (userCategoryInput == "e" && item instanceof Powerplant) {
+                        else if (userCategoryInput.equals("e") && item instanceof Powerplant) {
                             var tempPower = (Powerplant)item;
                             System.out.println(tempPower.GetData());
                         }
-                        else if (userCategoryInput == "t" && item instanceof Basketball) {
+                        else if (userCategoryInput.equals("t") && item instanceof Basketball) {
                             var tempBasketball = (Basketball)item;
                             System.out.println(tempBasketball.GetData());
                         }
@@ -196,12 +196,12 @@ public class App
                             //Scanner anotherItemScanner = new Scanner(System.in);
                             String doesUserWantToAddAnotherItem = userInputScanner.nextLine();
                             
-                            if (doesUserWantToAddAnotherItem == "n")
+                            if (doesUserWantToAddAnotherItem.equals("n"))
                             {
                                 didUserEnterValidInputForFoundItem = true;
                                 userIsStillAddingItemsFromMenu = false;
                             }
-                            else if (doesUserWantToAddAnotherItem == "y")
+                            else if (doesUserWantToAddAnotherItem.equals("y"))
                             {
                                 didUserEnterValidInputForFoundItem = true;
                                 userIsStillAddingItemsFromMenu = true;
@@ -228,13 +228,13 @@ public class App
                 //Scanner doneShopScanner = new Scanner(System.in);
                 String doneShoppingInput = userInputScanner.nextLine();
                
-                if (doneShoppingInput == "y")
+                if (doneShoppingInput.equals("y"))
                 {
                     shopCart.PrintItems();
                     didUserEnterValidInput = true;
                     userIsStillShopping = false;
                 }
-                else if (doneShoppingInput == "n")
+                else if (doneShoppingInput.equals("n"))
                 {
                     didUserEnterValidInput = true;
                     userIsStillShopping = true;
