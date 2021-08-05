@@ -98,7 +98,7 @@ public class App
                     Scanner userSearch  = new Scanner(System.in);
                     userSearchInput  = userSearch.next();
                
-                    Storeitem itemFoundInSearch = allItems.Find(comp => comp.Keywords.Contains(userSearchInput));
+                    Storeitem itemFoundInSearch = allItems.Find(comp => comp.Contains(userSearchInput));
 
                     if (itemFoundInSearch != null)
                     {
@@ -154,24 +154,25 @@ public class App
                 boolean userIsStillAddingItemsFromMenu = true;
                 while (userIsStillAddingItemsFromMenu)
                 {
-                    foreach (var item in allItems)
+                    for (var item : allItems) 
                     {
-                        if (userCategoryInput == "b" && item is Book) {
+                        if (userCategoryInput == "b" && item instanceof Book) {
                             var tempBook = (Book)item;
                             System.out.println(tempBook.GetData());
                         }
-                        else if (userCategoryInput == "c" && item is Computer) {
+                        else if (userCategoryInput == "c" && item instanceof Computer) {
                             var tempComputer = (Computer)item;
                             System.out.println(tempComputer.GetData());
                         }
-                        else if (userCategoryInput == "e" && item is Powerplant) {
+                        else if (userCategoryInput == "e" && item instanceof Powerplant) {
                             var tempPower = (Powerplant)item;
                             System.out.println(tempPower.GetData());
                         }
-                        else if (userCategoryInput == "t" && item is Basketball) {
+                        else if (userCategoryInput == "t" && item instanceof Basketball) {
                             var tempBasketball = (Basketball)item;
                             System.out.println(tempBasketball.GetData());
                         }
+                    
                     }
                     System.out.println("What would you like to buy? Please write an item number.");
                     Scanner userItemNum  = new Scanner(System.in);

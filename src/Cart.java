@@ -18,13 +18,15 @@ public class Cart {
     public void PrintItems() {
         System.out.println("Thank you for shopping with us. Here are your items and total:");
         System.out.println("--------------------------------------------------------");
-        System.out.println(String.Format("{0,-45} | {1,-10}", "Item" , "Price" ));
+        System.out.printf("%2d. %-20s $%.2f%n", "Item" , "Price" );
         System.out.println("--------------------------------------------------------");
-        foreach (var i in storeItemsToPurchase)
+        for (var item : storeItemsToPurchase)
         {
-            System.out.println(String.Format("{0,-45} | {1,-10}", i.name , "$" + i.price ));
-            total = total + i.price;
+            System.out.printf("%2d. %-20s $%.2f%n", item.name, "$" + item.price);
+            //System.out.println(String.format("{0,-45} | {1,-10}", item.name , "$" + item.price ));
+            total = total + item.price;
         }
         System.out.println("--------------------------------------------------------");
         System.out.println("Total: $" + total);
     }
+}
