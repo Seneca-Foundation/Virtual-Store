@@ -65,15 +65,15 @@ public class App
         allItems.get(24).setKeywords(new ArrayList<String>() {{ add("To Kill A Mockingbird");add("mockingbird");add("Harper Lee");add("$14");}});
 
         //energy          
-        allItems.add(new Powerplant("100 kWh", 200.00, "provides enough energy", 0.0, 26));
+        allItems.add(new Powerplant("100 kWh of energy", 200.00, "provides enough energy", 0.0, 26));
         allItems.get(25).setKeywords(new ArrayList<String>() {{ add("100 kWh");add("100 kWh of energy");add("$200");}}); 
-        allItems.add(new Powerplant("150 kWh",250, "provides enough energy", 0.0, 27));
+        allItems.add(new Powerplant("150 kWh of energy",250, "provides enough energy", 0.0, 27));
         allItems.get(26).setKeywords(new ArrayList<String>() {{ add("150 kWh");add("150 kWh of energy");add("$250");}}); 
-        allItems.add(new Powerplant("200 kWh", 300, "provides enough energy", 0.0, 28));
+        allItems.add(new Powerplant("200 kWh of energy", 300, "provides enough energy", 0.0, 28));
         allItems.get(27).setKeywords(new ArrayList<String>() {{ add("200 kWh");add("200 kWh of energy");add("$300");}});
-        allItems.add(new Powerplant("250 kWh", 350, "provides enough energy", 0.0, 29));
+        allItems.add(new Powerplant("250 kWh of energy", 350, "provides enough energy", 0.0, 29));
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
-        allItems.add(new Powerplant("300 kwh", 400, "provides enough energy", 0.0, 30));
+        allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0, 30));
         allItems.get(29).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
         
         //password

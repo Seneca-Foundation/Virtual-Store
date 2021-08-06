@@ -5,7 +5,7 @@ public class Powerplant extends WeightItem
         super(name,price,description, weight, itemNum);
     }
     public String GetData(){
-        return "Product: " + name + " of energy, Price: $" + price + ", Weight:" + weight + ", Item Number: " + itemNum;
+        return "Product: " + name + ", Price: $" + price + ", Weight:" + weight + ", Item Number: " + itemNum;
     }  
     
 }
