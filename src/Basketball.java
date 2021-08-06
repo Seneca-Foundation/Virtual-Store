@@ -1,3 +1,5 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 public class Basketball extends WeightItem
 {
 
@@ -36,6 +38,8 @@ public class Basketball extends WeightItem
         this.date = date;
     }
     public String GetData(){
-        return "Match: " + name + ", Price: $" + price + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        return "Match: " + name + ", Price: $" + df.format(price) + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
     }
 }

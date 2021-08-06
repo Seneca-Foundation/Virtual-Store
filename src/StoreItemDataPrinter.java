@@ -9,6 +9,7 @@ public class StoreItemDataPrinter {
     }
 
     public String PrintData() {
+        
         this.taxToAdd.AddTaxToItem(itemToPrint);
         return this.itemToPrint.GetData();
     }

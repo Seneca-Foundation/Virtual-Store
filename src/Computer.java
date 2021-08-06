@@ -1,3 +1,5 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 public class Computer extends WeightItem 
 {
 
@@ -36,7 +38,9 @@ public class Computer extends WeightItem
     }
     public String GetData()
     {
-        return "Computer: " + name  +  ", Price: $" + price + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        return "Computer: " + name  +  ", Price: $" + df.format(price) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
     }
     
 }

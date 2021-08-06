@@ -1,3 +1,5 @@
+//import java.math.RoundingMode;
+//import java.text.DecimalFormat;
 public class RateTax implements IAddTax {
 
     @Override

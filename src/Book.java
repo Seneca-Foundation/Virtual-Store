@@ -1,3 +1,5 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 public class Book extends WeightItem {
     protected String cover; 
     protected String author;
@@ -24,7 +26,9 @@ public class Book extends WeightItem {
     }
 
     public String GetData() {
-        return "Title: " + name +  ", Price: $" + price + ", Author: " + author + ", Cover: " + cover + ", Description:" + description+", Weight: " + weight + ", Item Number: " + itemNum;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        return "Title: " + name +  ", Price: $" + df.format(price) + ", Author: " + author + ", Cover: " + cover + ", Description:" + description+", Weight: " + weight + ", Item Number: " + itemNum;
     }
 
 }
