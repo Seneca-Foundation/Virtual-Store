@@ -6,7 +6,7 @@ public class App
     public static void main(String[] args) throws Exception 
     {
         Cart shopCart = new Cart();
-        List<Storeitem> allItems = new ArrayList<Storeitem>();
+        List<StoreItem> allItems = new ArrayList<StoreItem>();
 
         //computers
         allItems.add(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5, 1));
@@ -113,7 +113,7 @@ public class App
                     System.out.println("What would you like to search?");
                     String userSearchInput  = userInputScanner.nextLine();
                     
-                    Storeitem itemFoundInSearch = allItems.stream().filter(item -> item.keywords.contains(userSearchInput)).findAny().orElse(null);
+                    StoreItem itemFoundInSearch = allItems.stream().filter(item -> item.keywords.contains(userSearchInput)).findAny().orElse(null);
 
                     if (itemFoundInSearch != null)
                     {
@@ -166,27 +166,23 @@ public class App
             }
             else if (userCategoryInput.equals("b") || userCategoryInput.equals("c") || userCategoryInput.equals("e") || userCategoryInput.equals("t"))
             {
-                
                 boolean userIsStillAddingItemsFromMenu = true;
                 while (userIsStillAddingItemsFromMenu)
                 {
                     for (var item : allItems) 
                     {
-                        if (userCategoryInput.equals("b") && item instanceof Book) {
-                            var tempBook = (Book)item;
-                            System.out.println(tempBook.GetData());
+                        StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(item, new RateTax());
+                        if (userCategoryInput.equals("b") && item instanceof Book) {                          
+                            System.out.println(itemToPrint.PrintData());
                         }
                         else if (userCategoryInput.equals("c") && item instanceof Computer) {
-                            var tempComputer = (Computer)item;
-                            System.out.println(tempComputer.GetData());
+                            System.out.println(itemToPrint.PrintData());
                         }
                         else if (userCategoryInput.equals("e") && item instanceof Powerplant) {
-                            var tempPower = (Powerplant)item;
-                            System.out.println(tempPower.GetData());
+                            System.out.println(itemToPrint.PrintData());
                         }
                         else if (userCategoryInput.equals("t") && item instanceof Basketball) {
-                            var tempBasketball = (Basketball)item;
-                            System.out.println(tempBasketball.GetData());
+                            System.out.println(itemToPrint.PrintData());
                         }
                     
                     }

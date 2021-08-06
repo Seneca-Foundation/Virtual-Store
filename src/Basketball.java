@@ -1,4 +1,4 @@
-public class Basketball extends WeightItem 
+public class Basketball extends WeightItem
 {
 
     private String date;

@@ -4,16 +4,16 @@ import java.util.List;
 public class Cart{
 
 
-    List<Storeitem> storeItemsToPurchase;
+    List<StoreItem> storeItemsToPurchase;
     protected double total;
     
     public Cart()
     {
-        storeItemsToPurchase = new ArrayList<Storeitem>();
+        storeItemsToPurchase = new ArrayList<StoreItem>();
     }
     
 
-    public void AddToCart(Storeitem itemToAdd) {
+    public void AddToCart(StoreItem itemToAdd) {
         storeItemsToPurchase.add(itemToAdd);
     }
 
