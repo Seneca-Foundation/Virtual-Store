@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Storeitem {
+public class StoreItem implements ITextFormatter {
     protected double price;
     protected  String name;
     protected String description;
@@ -25,7 +25,7 @@ public class Storeitem {
     public String getDescription() {
         return description;
     }
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
     public void setItemNum(int itemNum) {
@@ -37,7 +37,7 @@ public class Storeitem {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Storeitem( String name, double price, String description, int itemNum) {
+    public StoreItem( String name, double price, String description, int itemNum) {
         this.price = price;
         this.name = name; 
         this.description = description;
