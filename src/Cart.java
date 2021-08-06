@@ -1,3 +1,5 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,9 +24,11 @@ public class Cart{
         System.out.println("--------------------------------------------------------");
         System.out.println("Item, Price" );
         System.out.println("--------------------------------------------------------");
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
         for (var item : storeItemsToPurchase)
         {
-            System.out.println(item.name + " $" + item.price);
+            System.out.println(item.name + " $" + df.format(item.price));
             //System.out.println(String.format("{0,-45} | {1,-10}", item.name , "$" + item.price ));
             total = total + item.price;
         }
