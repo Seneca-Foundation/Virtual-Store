@@ -33,6 +33,6 @@ public class Cart{
             total = total + item.price;
         }
         System.out.println("--------------------------------------------------------");
-        System.out.println("Total: $" + total);
+        System.out.println("Total: $" + df.format(total));
     }
 }
