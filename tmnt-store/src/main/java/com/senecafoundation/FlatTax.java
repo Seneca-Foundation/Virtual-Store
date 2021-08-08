@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public class FlatTax implements IAddTax {
 
     @Override

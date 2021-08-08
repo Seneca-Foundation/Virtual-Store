@@ -1,5 +1,8 @@
+package com.senecafoundation;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+
 public class Powerplant extends WeightItem
 {
     public Powerplant(String name, double price,  String description, double weight, int itemNum) 

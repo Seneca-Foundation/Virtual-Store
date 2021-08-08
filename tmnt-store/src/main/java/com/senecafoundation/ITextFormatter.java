@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public interface ITextFormatter {
     public String GetData();
     public double getPrice();

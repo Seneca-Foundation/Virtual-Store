@@ -1,10 +1,12 @@
+package com.senecafoundation;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class App 
 {
-    public static void main(String[] args) throws Exception 
+    public static void main( String[] args )
     {
         Cart shopCart = new Cart();
         List<StoreItem> allItems = new ArrayList<StoreItem>();
@@ -174,7 +176,7 @@ public class App
                 boolean userIsStillAddingItemsFromMenu = true;
                 while (userIsStillAddingItemsFromMenu)
                 {
-                    for (var item : allItems) 
+                    for (StoreItem item : allItems) 
                     {
                         StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(item, new RateTax());
                         if (userCategoryInput.equals("b") && item instanceof Book) {                          
@@ -199,8 +201,8 @@ public class App
                     System.out.println("What would you like to buy? Please write an item number.");
                     String itemNumberTheUserChose  = userInputScanner.nextLine();
                     
-                    var foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
-                   // String userValidItem = validItem.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
+                    StoreItem foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
+                    // String userValidItem = validItem.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
                     Integer userItemNum = validItem.stream().filter(value -> value.intValue() == foundItem.itemNum).findAny().orElse(null);
                     if (foundItem != null && userItemNum != null) {
                         shopCart.AddToCart(foundItem);

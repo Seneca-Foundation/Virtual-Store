@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public class ComicBook extends Book {
     protected String artist;
     public ComicBook(String name, double price, String author, String cover, String description, String artist, double weight, int itemNum) {

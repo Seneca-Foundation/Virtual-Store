@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ public class Cart{
         System.out.println("--------------------------------------------------------");
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        for (var item : storeItemsToPurchase)
+        for (StoreItem item : storeItemsToPurchase)
         {
             System.out.println(item.name + " $" + df.format(item.price));
             //System.out.println(String.format("{0,-45} | {1,-10}", item.name , "$" + item.price ));

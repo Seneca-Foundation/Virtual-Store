@@ -1,5 +1,5 @@
-//import java.math.RoundingMode;
-//import java.text.DecimalFormat;
+package com.senecafoundation;
+
 public class RateTax implements IAddTax {
 
     @Override

@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public class ThingsWithTheStuff implements ITextFormatter {
 
     @Override

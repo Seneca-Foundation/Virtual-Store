@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 import java.util.ArrayList;
 
 public class StoreItem implements ITextFormatter {

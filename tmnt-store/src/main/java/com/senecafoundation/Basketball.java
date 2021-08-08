@@ -1,5 +1,8 @@
+package com.senecafoundation;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+
 public class Basketball extends WeightItem
 {
 
