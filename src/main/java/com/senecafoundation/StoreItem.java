@@ -39,7 +39,7 @@ public class StoreItem implements ITextFormatter {
     public void setDescription(String description) {
         this.description = description;
     }
-    public StoreItem( String name, double price, String description, int itemNum) {
+    public StoreItem(String name, double price, String description, int itemNum) {
         this.price = price;
         this.name = name; 
         this.description = description;
