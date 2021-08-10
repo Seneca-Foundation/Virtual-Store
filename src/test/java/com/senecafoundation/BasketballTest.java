@@ -25,6 +25,7 @@ public class BasketballTest {
         assertEquals(8, this.systemUnderTest.getItemNum());
         assertEquals("July 30", this.systemUnderTest.getDate());
     }
+    
     @Test
     void getData() {
         assertEquals("Match: Chicago Bulls vs Phoenix Suns, Price: $250, Date: July 30, Section: 109, Seat: 30, Weight: 0.2, Item Number: 8", this.systemUnderTest.GetData());
