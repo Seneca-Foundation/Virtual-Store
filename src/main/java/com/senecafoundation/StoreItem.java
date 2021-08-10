@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class StoreItem implements ITextFormatter {
     protected double price;
-    protected  String name;
+    protected String name;
     protected String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
     protected int itemNum;
