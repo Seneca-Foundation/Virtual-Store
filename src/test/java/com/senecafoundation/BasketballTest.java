@@ -2,7 +2,6 @@ package com.senecafoundation;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import jdk.jfr.Timestamp;
 
 public class BasketballTest {
     
@@ -11,14 +10,12 @@ private Basketball systemUnderTest;
 
 @BeforeEach
 void assignMonster() {
-    this.systemUnderTest = new Basketball ("Chicago Bulls vs Phoenix Suns", "250""July 30", "109","ToughMatch", "30", "7" )
-    "ChicagoBulls vs PhoenixSuns",
-}   "250"
-    "July 30"
-    "109"
-    "Toughmatch"
-    "30"
-    "7"
+   // this.systemUnderTest = new Basketball (
+
+}
+
+
+
 
 
 
@@ -49,4 +46,5 @@ void testBasketballCreate() {
 void getData() {
 
 
+    }
 }
