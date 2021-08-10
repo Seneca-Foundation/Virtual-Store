@@ -6,9 +6,11 @@ import java.text.DecimalFormat;
 public class Basketball extends WeightItem
 {
 
+    public static final Object Section = null;
     private String date;
     private int section;
     private int seat;
+    public Object Releasedate;
 
     public Basketball(String name, double price, int section, int seat, String description, String date, double weight, int itemNum) {
         super(name, price, description, weight, itemNum);
