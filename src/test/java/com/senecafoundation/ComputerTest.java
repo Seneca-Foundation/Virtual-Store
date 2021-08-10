@@ -10,16 +10,7 @@ public class ComputerTest {
 
         @BeforeEach
         void assignMonster() {
-            this.systemUnderTest = new Computer(
-                "iMac",
-                200.95,
-                "Apple",
-                "Cyan",
-                "cool",
-                2012,
-                1,
-                3
-            );
+            this.systemUnderTest = new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8, 3);
         }
 
         @Test
