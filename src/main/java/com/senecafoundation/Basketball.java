@@ -5,8 +5,6 @@ import java.text.DecimalFormat;
 
 public class Basketball extends WeightItem
 {
-
-    public static final Object Section = null;
     private String date;
     private int section;
     private int seat;

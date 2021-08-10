@@ -112,7 +112,6 @@ public class App
             {
                 if (userCategoryInput.equals("s"))
                 {
-                
                     userIsStillSearching = true;
                     while (userIsStillSearching)
                     {
