@@ -13,8 +13,8 @@ public class ComputerTest {
             this.systemUnderTest = new Computer(
                 "iMac",
                 200.95,
-                "Cyan",
                 "Apple",
+                "Cyan",
                 "cool",
                 2012,
                 1,
