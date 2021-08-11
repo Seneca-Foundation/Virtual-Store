@@ -1,6 +1,8 @@
 package com.senecafoundation;
 
 import java.util.ArrayList;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class StoreItemFormatter implements ITextFormatter {
 
@@ -20,7 +22,9 @@ public class StoreItemFormatter implements ITextFormatter {
 
     @Override
     public String GetData() {
-        return "Product: " + name  + ", Price: $" + price + ", " + ", Description: " + description +  ", " + " Item Number: " + itemNum;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        return "Product: " + name  + ", Price: $" + df.format(price) + ", Description: " + description +  ", Item Number: " + itemNum;
     }
 
     @Override
