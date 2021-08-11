@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation; //this is the package
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -8,7 +8,8 @@ public class Computer extends WeightItem
 
     private String computerBrand;
     private String releaseDate;
-    private String color;
+    private String color; 
+    //if you were to remove private/public/protected, then the default visibility is anything inside the package. Only package can see
     public Computer(String name, double price, String color, String computerBrand, String description, String releaseDate, double weight, int itemNum) {
         super(name, price, description, weight, itemNum);
         this.computerBrand = computerBrand;
