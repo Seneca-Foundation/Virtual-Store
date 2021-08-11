@@ -44,7 +44,7 @@ public class Computer extends WeightItem
     {
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Computer: " + name  +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
+        return "Computer: " + name  +  ", Price: $" + df.format(price) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
     }
     
 }

@@ -30,10 +30,10 @@ void testEnergycreate() {
     assertEquals(26, systemUnderTest.itemNum);
 }
 @Test
-void GetData() {
+void testPowerPlantGetData() {
     assertEquals(
-        "Product: 100 kWh, Price: $200, Description: Provides enough energy, Weight: 0.0, Item Number: 26",
-        systemUnderTest.GetData()
+        "Product: 100 kWh, Price: $200, Weight:0.0, Item Number: 26",
+        this.systemUnderTest.GetData()
     );    
 
     }

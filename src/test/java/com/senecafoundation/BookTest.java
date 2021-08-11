@@ -35,8 +35,8 @@ public class BookTest {
     @Test
     void getData() {
         assertEquals(
-            "Title: Wuthering Heights, Price: $19.99, Author: Emily Bronte, Cover: Something cool, Description:Gothic romance set in the moors of Haworth, Weight: 0.5, Item Number: 5",
-            systemUnderTest.GetData()
+            "Title: Wuthering Heights, Price: $19.99, Author: Emily Bronte, Cover: Something cool, Description: Gothic romance set in the moors of Haworth, Weight: 0.5, Item Number: 5",
+            this.systemUnderTest.GetData()
         );
     }
 }
