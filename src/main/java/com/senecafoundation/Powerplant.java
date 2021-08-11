@@ -9,10 +9,11 @@ public class Powerplant extends WeightItem
     {
         super(name,price,description, weight, itemNum);
     }
+
     public String GetData(){
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Product: " + name + ", Price: $" + df.format(price) + ", Weight:" + weight + ", Item Number: " + itemNum;
+        return "Product: " + name + ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Weight:" + weight + ", Item Number: " + itemNum;
     }  
     
 }
