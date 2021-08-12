@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Cart{
 
-
     protected List<StoreItem> storeItemsToPurchase;
     protected double total;
     
@@ -16,7 +15,6 @@ public class Cart{
         storeItemsToPurchase = new ArrayList<StoreItem>();
     }
     
-
     public void AddToCart(StoreItem itemToAdd) {
         storeItemsToPurchase.add(itemToAdd);
     }
