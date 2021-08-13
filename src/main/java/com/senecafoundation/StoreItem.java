@@ -69,4 +69,6 @@ public class StoreItem {
         this.textFormatter = userTextFormatter;
         return this.textFormatter.GetData();
     }
+    //dependency injection is that you're depending on another class (or interface), and injecting, passing, the dependncy in as parameter
+    //hard coded is if you cannot change the value of a variable
 }
