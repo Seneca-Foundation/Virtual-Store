@@ -216,7 +216,7 @@ public class App
                         {
                             shopCart.AddToCart(foundItem);
                             System.out.println("This item has been added to cart: " + foundItem.name); 
-                            System.out.println("Would you like to add another item to the cart? Type y for yes or n for no.");
+                            System.out.println("Would you like to add another item from the respective category to the cart? Type y for yes or n for no.");
                         
                             boolean didUserEnterValidInputForFoundItem = false;
                             while (didUserEnterValidInputForFoundItem == false)
