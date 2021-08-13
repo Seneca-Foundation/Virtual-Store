@@ -139,7 +139,7 @@ public class App
                             }
                             else 
                             {
-                                System.out.println("Incorrect input.  The item was not added to your cart.");
+                                System.out.println("Invalid input.  The item was not added to your cart.");
                             }
                         }
                         else
@@ -165,7 +165,7 @@ public class App
                             }
                             else 
                             {
-                                System.out.println("Incorrect input. Would you like to keep searching? Type y for yes or n for no.");
+                                System.out.println("Invalid input. Would you like to keep searching? Type y for yes or n for no.");
                                 didUserEnterValidInputForCartItem = false;
                             }
                         }
@@ -235,7 +235,7 @@ public class App
                                 }
                                 else 
                                 {
-                                    System.out.println("Incorrect input. Would you like to add another item to the cart? Type y for yes or n for no.");
+                                    System.out.println("Invalid input. Would you like to add another item to the cart? Type y for yes or n for no.");
                                     didUserEnterValidInputForFoundItem = false;
                                 }
                             }
@@ -243,7 +243,7 @@ public class App
                         else 
                         {
                             System.out.println("");
-                            System.out.println("Incorrect input. Please write a valid item number from the category you selected.");
+                            System.out.println("Invalid input. Please write a valid item number from the category you selected.");
                             System.out.println("");
                         }
                     }
@@ -266,14 +266,14 @@ public class App
                     }
                     else 
                     {
-                        System.out.println("Incorrect input. Are you done shopping for today? Type y for yes or n for no");
+                        System.out.println("Invalid input. Are you done shopping for today? Type y for yes or n for no");
                         didUserEnterValidInput = false;
                     }
                 }
             }
             else 
             {
-                System.out.println("Invalid input");
+                System.out.println("Invalid input.");
             }
         }
         userInputScanner.close();
