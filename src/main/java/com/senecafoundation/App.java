@@ -189,6 +189,7 @@ public class App
                                 ), 
                                 new RateTax()
                             );
+                            
                             if (userCategoryInput.equals("b") && item instanceof Book) {                          
                                 System.out.println(itemToPrint.PrintData());
                             }

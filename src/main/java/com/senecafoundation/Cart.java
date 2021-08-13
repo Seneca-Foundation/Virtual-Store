@@ -28,10 +28,21 @@ public class Cart{
         df.setRoundingMode(RoundingMode.CEILING);
         for (StoreItem item : storeItemsToPurchase)
         {
-            System.out.println(item.name + " $" + df.format(item.price));
-            total = total + item.price;
+            StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
+                                new StoreItemFormatter(
+                                    item.getName(),
+                                    item.getPrice(),
+                                    item.getDescription(),
+                                    item.getItemNum(),
+                                    item.getKeywords()
+                                ), 
+                                new RateTax()
+                            );
+            
+            System.out.println(itemToPrint.PrintDataForCart());
+            total = total + itemToPrint.getPrice();
         }
         System.out.println("--------------------------------------------------------");
-        System.out.println("Total: $" + df.format(total));
+        System.out.println("Total w/ Tax: $" + df.format(total));
     }
 }

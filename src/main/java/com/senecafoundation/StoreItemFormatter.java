@@ -37,4 +37,14 @@ public class StoreItemFormatter implements ITextFormatter {
         this.price = newPrice;        
     }
 
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public void setName(String newName) {
+       this.name = newName;
+    }
+
 }
