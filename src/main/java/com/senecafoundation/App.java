@@ -122,7 +122,7 @@ public class App
 
                         if (itemFoundInSearch != null)
                         {
-                            System.out.println("Found it: " + itemFoundInSearch.GetData(
+                            System.out.println("Found it! " + itemFoundInSearch.GetData(
                                 new StoreItemFormatter(itemFoundInSearch.name, itemFoundInSearch.price, itemFoundInSearch.description, itemFoundInSearch.itemNum, itemFoundInSearch.keywords)
                             ));
                             System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
