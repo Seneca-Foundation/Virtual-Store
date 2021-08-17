@@ -3,6 +3,7 @@ package com.senecafoundation;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class App 
 {
@@ -78,7 +79,12 @@ public class App
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0, 30));
         allItems.get(29).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
-        
+        List<Integer> itemNumList = new ArrayList<Integer>(); //needs work
+        itemNumList.add(1);itemNumList.add(2);itemNumList.add(3);itemNumList.add(4);itemNumList.add(5);itemNumList.add(6);
+        itemNumList.add(7);itemNumList.add(8);itemNumList.add(9);itemNumList.add(10);itemNumList.add(11);itemNumList.add(12);itemNumList.add(13);
+        itemNumList.add(14);itemNumList.add(15);itemNumList.add(16);itemNumList.add(17);itemNumList.add(18);itemNumList.add(19);itemNumList.add(20);
+        itemNumList.add(21);itemNumList.add(22);itemNumList.add(23);itemNumList.add(24);itemNumList.add(25);itemNumList.add(26);itemNumList.add(27);
+        itemNumList.add(28);itemNumList.add(29);itemNumList.add(30);
         //password
         System.out.println("Create password");
         Scanner userInputScanner = new Scanner(System.in);
@@ -93,6 +99,8 @@ public class App
         {
             System.out.println("Incorrect password");
         }
+        int maximum = Collections.max(itemNumList);
+        int newItemNum = maximum + 1;
         //testing csv
         CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
@@ -111,7 +119,8 @@ public class App
             double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
-            CreateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,35,"src/main/java/com/senecafoundation/Books.csv");
+            itemNumList.add(newItemNum);
+            CreateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
             CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         // Menu

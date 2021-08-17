@@ -2,8 +2,6 @@ package com.senecafoundation;
 import java.io.*;
 
 import javax.swing.JOptionPane;
-//import java.io.File;
-//import java.io.PrintWriter;
 public class CreateCSV {
     public static String file = "";
     public static void readCSV(String newFile)
