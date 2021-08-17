@@ -95,9 +95,25 @@ public class App
         }
         //testing csv
         CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
-
-
-
+        System.out.print("Would you like to sell a product to the store? Type y for yes or n for no. ");
+        String userInputAddProduct = userInputScanner.nextLine();
+        if (userInputAddProduct.equals("y"))
+        {
+            System.out.println("What is the book's title?");
+            String userInputTitle = userInputScanner.nextLine();
+            System.out.println("What is the book's price in USD?");
+            double userInputPrice = Double.parseDouble(userInputScanner.nextLine());
+            System.out.println("Who is the book's author?");
+            String userInputAuthor= userInputScanner.nextLine();
+            System.out.println("What is the book's cover type?");
+            String userInputCover = userInputScanner.nextLine();
+            System.out.println("What is the book's weight in pounds?");
+            double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
+            System.out.println("Provide a brief plot summary of the book:");
+            String userInputDescription = userInputScanner.nextLine();
+            CreateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,35,"src/main/java/com/senecafoundation/Books.csv");
+            CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+        }
         // Menu
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
