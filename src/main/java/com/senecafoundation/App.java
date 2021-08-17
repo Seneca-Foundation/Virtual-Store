@@ -112,6 +112,7 @@ public class App
         }
         
         ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+        
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
         if (userInputAddProduct.equals("y"))
