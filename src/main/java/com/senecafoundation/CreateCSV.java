@@ -1,6 +1,5 @@
 package com.senecafoundation;
-//import java.io.*;
-//import java.io.FileWriter;
+
 import java.io.File;  
 import java.io.IOException;
 

@@ -1,4 +1,5 @@
 package com.senecafoundation;
+
 import java.io.*;
 
 public class ReadCSV {
