@@ -95,7 +95,7 @@ public class App
         }
         //testing csv
         CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
-        System.out.print("Would you like to sell a product to the store? Type y for yes or n for no. ");
+        System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
         if (userInputAddProduct.equals("y"))
         {
