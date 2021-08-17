@@ -2,7 +2,7 @@ package com.senecafoundation;
 import java.io.*;
 
 import javax.swing.JOptionPane;
-public class CreateCSV {
+public class CRUD_CSV {
     public static String file = "";
     public static void readCSV(String newFile)
     {

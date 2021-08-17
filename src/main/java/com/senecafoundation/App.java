@@ -102,7 +102,7 @@ public class App
         int maximum = Collections.max(itemNumList);
         int newItemNum = maximum + 1;
         //testing csv
-        CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+        CRUD_CSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
         if (userInputAddProduct.equals("y"))
@@ -120,8 +120,8 @@ public class App
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
             itemNumList.add(newItemNum);
-            CreateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
-            CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+            CRUD_CSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
+            CRUD_CSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         // Menu
         System.out.println("Welcome! This is what we offer");
