@@ -93,6 +93,10 @@ public class App
         {
             System.out.println("Incorrect password");
         }
+        //testing csv
+        CreateCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+
+
 
         // Menu
         System.out.println("Welcome! This is what we offer");

@@ -3,11 +3,10 @@ import java.io.*;
 //import java.io.File;
 //import java.io.PrintWriter;
 public class CreateCSV {
-    String file;
-    public void readCSV(String file)
+    public static String file = "";
+    public static void readCSV(String newFile)
     {
-        //src/main/java/com/senecafoundation/Books.csv"
-        this.file = file;
+        file = newFile;
         BufferedReader reader = null;
         String line = "";
         try 
@@ -18,7 +17,7 @@ public class CreateCSV {
                 String[] row = line.split("");
                 for(String index : row)
                 {
-                    System.out.printf("%-10s", index);
+                    System.out.print(index);
                 }
                 System.out.println();
             }
