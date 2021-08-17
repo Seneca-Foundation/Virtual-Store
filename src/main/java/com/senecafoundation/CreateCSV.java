@@ -3,9 +3,11 @@ import java.io.*;
 //import java.io.File;
 //import java.io.PrintWriter;
 public class CreateCSV {
-    public void readCSV()
+    String file;
+    public void readCSV(String file)
     {
-        String file = "src/main/java/com/senecafoundation/Books.csv";
+        //src/main/java/com/senecafoundation/Books.csv"
+        this.file = file;
         BufferedReader reader = null;
         String line = "";
         try 
