@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -5,8 +7,7 @@ import java.util.List;
 
 public class Cart{
 
-
-    List<StoreItem> storeItemsToPurchase;
+    protected List<StoreItem> storeItemsToPurchase;
     protected double total;
     
     public Cart()
@@ -14,7 +15,6 @@ public class Cart{
         storeItemsToPurchase = new ArrayList<StoreItem>();
     }
     
-
     public void AddToCart(StoreItem itemToAdd) {
         storeItemsToPurchase.add(itemToAdd);
     }
@@ -26,13 +26,23 @@ public class Cart{
         System.out.println("--------------------------------------------------------");
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        for (var item : storeItemsToPurchase)
+        for (StoreItem item : storeItemsToPurchase)
         {
-            System.out.println(item.name + " $" + df.format(item.price));
-            //System.out.println(String.format("{0,-45} | {1,-10}", item.name , "$" + item.price ));
-            total = total + item.price;
+            StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
+                                new StoreItemFormatter(
+                                    item.getName(),
+                                    item.getPrice(),
+                                    item.getDescription(),
+                                    item.getItemNum(),
+                                    item.getKeywords()
+                                ), 
+                                new RateTax()
+                            );
+            
+            System.out.println(itemToPrint.PrintDataForCart());
+            total = total + itemToPrint.getPrice();
         }
         System.out.println("--------------------------------------------------------");
-        System.out.println("Total: $" + df.format(total));
+        System.out.println("Total w/ Tax: $" + df.format(total));
     }
 }
