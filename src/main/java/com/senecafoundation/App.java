@@ -99,10 +99,19 @@ public class App
         {
             System.out.println("Incorrect password");
         }
-        int maximum = Collections.max(itemNumList);
-        int newItemNum = maximum + 1;
-        //testing csv
-        CRUD_CSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+
+
+        //testing CRUD
+        System.out.println("Would you like to make a new csv file? Type y for yes or n for no. ");
+        String userInputNewFile = userInputScanner.nextLine();
+        if (userInputNewFile.equals("y"))
+        {
+            System.out.println("What would you like the new file name to be?");
+            String userInputFileName = userInputScanner.nextLine();
+            CreateCSV.createCSV(userInputFileName);
+        }
+        
+        ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
         if (userInputAddProduct.equals("y"))
@@ -119,10 +128,14 @@ public class App
             double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
+            int maximum = Collections.max(itemNumList);
+            int newItemNum = maximum + 1;
             itemNumList.add(newItemNum);
-            CRUD_CSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
-            CRUD_CSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+            UpdateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
+            ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
+
+
         // Menu
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
