@@ -132,7 +132,7 @@ public class App
             int maximum = Collections.max(itemNumList);
             int newItemNum = maximum + 1;
             itemNumList.add(newItemNum);
-            UpdateCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
+            ExpandCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
             ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
 

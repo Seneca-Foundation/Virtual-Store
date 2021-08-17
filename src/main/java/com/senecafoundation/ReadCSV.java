@@ -3,6 +3,7 @@ package com.senecafoundation;
 import java.io.*;
 
 public class ReadCSV {
+    //ability to read csv file
     public static String file = "";
 
     public static void readCSV(String newFile)
