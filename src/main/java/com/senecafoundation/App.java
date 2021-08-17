@@ -50,7 +50,7 @@ public class App
         allItems.get(15).setKeywords(new ArrayList<String>() {{ add("Giovanni");add("room");add("James Baldwin");add("$30");}});
         allItems.add(new Book("Hunger Games", 15.00, "Suzanne Collins", "hardcover", "24 teens fight each other until one is left standing", 0.7,17)); 
         allItems.get(16).setKeywords(new ArrayList<String>() {{ add("Hunger");add("games");add("Suzanne Collins");add("$15");}});
-        allItems.add(new Book("Lord of the Flies ", 11.30, "William Colding", "paperback","young boys are stranded on an island & chaos ensues", 0.3, 18));
+        allItems.add(new Book("Lord of the Flies", 11.30, "William Colding", "paperback","young boys are stranded on an island & chaos ensues", 0.3, 18));
         allItems.get(17).setKeywords(new ArrayList<String>() {{ add("Lord of the Flies");add("lord of the flies");add("William Colding");add("$11.30");}});
         allItems.add(new Book("The Book Thief", 11.99, "Markus Zusak", "paperback", "a girl steals books during WWII", 0.97, 19)); 
         allItems.get(18).setKeywords(new ArrayList<String>() {{ add("Book Thief");add("book");add("Markus Zusak");add("$11.99");add("thief");}});
@@ -60,7 +60,7 @@ public class App
         allItems.get(20).setKeywords(new ArrayList<String>() {{ add("The Great Gatsby");add("gatsby");add("F Scott Fitzgerald");add("$9.50");}});
         allItems.add(new Book("The Hate U Give" , 11.99, "Angie Thomas","hardcover", "a girl witnesses the tragic death of her friend, sparking protests", 0.95, 22));
         allItems.get(21).setKeywords(new ArrayList<String>() {{ add("The Hate U Give");add("hate");add("Angie Thomas");add("$11.99");}});
-        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling galaxy", 0.25, 23)); 
+        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling the galaxy", 0.25, 23)); 
         allItems.get(22).setKeywords(new ArrayList<String>() {{ add("The Hitchhiker's Guide to the Galaxy");add("for");add("Guide");add("$20");add("galaxy");}});
         allItems.add(new Book("Things Fall Apart", 14.50, "Chinua Achebe", "hardcover","depicts pre-colonial life in Nigeria", 1.36,24));
         allItems.get(23).setKeywords(new ArrayList<String>() {{ add("Things Fall Apart");add("Chinua Achebe");add("$14.50");add("fall");add("apart");}});
