@@ -12,7 +12,7 @@ public class Textbook extends Book {
     }
     public String GetData() {
 
-        return "Title: " + name + ", Price: $" + price + ", Authors: " + String.join(",", authors) + ", Cover: " + cover + ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Title: " + name + ", Price: $" + this.textFormatter.getPrice() + ", Authors: " + String.join(",", authors) + ", Cover: " + cover + ", Weight: " + weight + ", Item Number: " + itemNum;
         
     }
     

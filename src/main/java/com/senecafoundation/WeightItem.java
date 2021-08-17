@@ -7,5 +7,12 @@ public class WeightItem extends StoreItem
         super(name, price, description, itemNum);
         this.weight = weight;
     }
+
+    public double getWeight() {
+        return weight;
+    }
     
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }

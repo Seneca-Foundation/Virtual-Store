@@ -6,6 +6,7 @@ public class FlatTax implements IAddTax {
     public double AddTaxToItem(ITextFormatter item) {
         item.setPrice(5 + item.getPrice());
         return item.getPrice();
+        //$5
     }
 
 }

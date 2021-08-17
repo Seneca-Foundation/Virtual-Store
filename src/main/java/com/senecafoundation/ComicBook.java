@@ -7,7 +7,14 @@ public class ComicBook extends Book {
         super(name, price, author, cover, description, weight, itemNum);
         this.artist = artist;
     }
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
     public String GetData() {
-        return "Title: " + name + ", Price: $" + price + ", Author: " + author + ", Cover: " + cover + ", Artist: " + artist+ ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Title: " + name + ", Price: $" + this.textFormatter.getPrice() + ", Author: " + author + ", Cover: " + cover + ", Artist: " + artist+ ", Weight: " + weight + ", Item Number: " + itemNum;
     }
 }

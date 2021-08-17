@@ -5,7 +5,6 @@ import java.text.DecimalFormat;
 
 public class Basketball extends WeightItem
 {
-
     private String date;
     private int section;
     private int seat;
@@ -43,6 +42,6 @@ public class Basketball extends WeightItem
     public String GetData(){
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Match: " + name + ", Price: $" + df.format(price) + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Match: " + name + ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + itemNum;
     }
 }

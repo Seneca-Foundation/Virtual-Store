@@ -110,166 +110,170 @@ public class App
             String userCategoryInput = userInputScanner.nextLine();
             if (userCategoryInput.equals("s") || userCategoryInput.equals("b")|| userCategoryInput.equals("t") || userCategoryInput.equals("c") || userCategoryInput.equals("e"))
             {
-            if (userCategoryInput.equals("s"))
-            {
-                
-                userIsStillSearching = true;
-                while (userIsStillSearching)
+                if (userCategoryInput.equals("s"))
                 {
-                    System.out.println("What would you like to search?");
-                    String userSearchInput  = userInputScanner.nextLine();
-                    
-                    StoreItem itemFoundInSearch = allItems.stream().filter(item -> item.keywords.contains(userSearchInput)).findAny().orElse(null);
-
-                    if (itemFoundInSearch != null)
+                    userIsStillSearching = true;
+                    while (userIsStillSearching)
                     {
-                        System.out.println("Found it: " + itemFoundInSearch.GetData());
-                        System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
-                        String InputCart = userInputScanner.nextLine();
+                        System.out.println("What would you like to search?");
+                        String userSearchInput  = userInputScanner.nextLine();
+                    
+                        StoreItem itemFoundInSearch = allItems.stream().filter(item -> item.keywords.contains(userSearchInput)).findAny().orElse(null);
+
+                        if (itemFoundInSearch != null)
+                        {
+                            System.out.println("Found it! " + itemFoundInSearch.GetData(
+                                new StoreItemFormatter(itemFoundInSearch.name, itemFoundInSearch.price, itemFoundInSearch.description, itemFoundInSearch.itemNum, itemFoundInSearch.keywords)
+                            ));
+                            System.out.println("Would you like to add this item to your cart? Type y for yes or n for no.");
+                            String InputCart = userInputScanner.nextLine();
                        
-                        if (InputCart.equals("y"))
-                        {
-                            shopCart.AddToCart(itemFoundInSearch);
-                            System.out.println("Item has been added to your cart.");
-                        }
-                        else if (InputCart.equals("n"))
-                        {
-                            System.out.println("This item has not been added to your cart.");
-                        }
-                        else 
-                        {
-                            System.out.println("Incorrect input.  The item was not added to your cart.");
-                        }
-                    }
-                    else
-                    { 
-                        System.out.println("The item was not found.  Nothing was added to your cart.");
-                    }
-
-                    System.out.println("Would you like to keep searching? Type y for yes or n for no");
-                    boolean didUserEnterValidInputForCartItem = false;
-                    while (didUserEnterValidInputForCartItem == false)
-                    {
-                        String InputSearch = userInputScanner.nextLine();
-                        
-                        if (InputSearch.equals("n"))
-                        {
-                            userIsStillSearching = false;
-                            didUserEnterValidInputForCartItem = true;
-                        }
-                        else if (InputSearch.equals("y"))
-                        {
-                            userIsStillSearching = true;
-                            didUserEnterValidInputForCartItem = true;
-                        }
-                        else 
-                        {
-                            System.out.println("Incorrect input. Would you like to keep searching? Type y for yes or n for no.");
-                            didUserEnterValidInputForCartItem = false;
-                        }
-                    }
-                }
-            }
-            else if (userCategoryInput.equals("b") || userCategoryInput.equals("c") || userCategoryInput.equals("e") || userCategoryInput.equals("t"))
-            {
-                validItem.clear();
-                boolean userIsStillAddingItemsFromMenu = true;
-                while (userIsStillAddingItemsFromMenu)
-                {
-                    for (StoreItem item : allItems) 
-                    {
-                        StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(item, new RateTax());
-                        if (userCategoryInput.equals("b") && item instanceof Book) {                          
-                            System.out.println(itemToPrint.PrintData());
-                        }
-                        else if (userCategoryInput.equals("c") && item instanceof Computer) {
-                            System.out.println(itemToPrint.PrintData());
-                        }
-                        else if (userCategoryInput.equals("e") && item instanceof Powerplant) {
-                            System.out.println(itemToPrint.PrintData());
-                            
-                        }
-                        else if (userCategoryInput.equals("t") && item instanceof Basketball) {
-                            System.out.println(itemToPrint.PrintData());
-                        }
-                    
-                    } 
-                    if (userCategoryInput.equals("b")){validItem.add(16);validItem.add(17);validItem.add(18);validItem.add(19);validItem.add(20);validItem.add(21);validItem.add(22);validItem.add(23);validItem.add(24);validItem.add(25);}
-                    else if (userCategoryInput.equals("t")){validItem.add(7);validItem.add(8);validItem.add(9);validItem.add(10);validItem.add(11);validItem.add(12);validItem.add(13);validItem.add(14);validItem.add(15);}
-                    else if (userCategoryInput.equals("c")){validItem.add(1);validItem.add(2);validItem.add(3);validItem.add(4);validItem.add(5);validItem.add(6);}
-                    else if (userCategoryInput.equals("e")){validItem.add(26);validItem.add(27);validItem.add(27);validItem.add(28);validItem.add(29);validItem.add(30);}
-                    System.out.println("What would you like to buy? Please write an item number.");
-                    String itemNumberTheUserChose  = userInputScanner.nextLine();
-                    
-                    StoreItem foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
-                    // String userValidItem = validItem.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
-                    Integer userItemNum = validItem.stream().filter(value -> value.intValue() == foundItem.itemNum).findAny().orElse(null);
-                    if (foundItem != null && userItemNum != null) {
-                        shopCart.AddToCart(foundItem);
-                        
-                        System.out.println("This item has been added to cart: " + foundItem.name); 
-                        System.out.println("Would you like to add another item to the cart? Type y for yes or n for no.");
-                        
-                        boolean didUserEnterValidInputForFoundItem = false;
-                        while (didUserEnterValidInputForFoundItem == false)
-                        {
-                            String doesUserWantToAddAnotherItem = userInputScanner.nextLine();
-                            
-                            if (doesUserWantToAddAnotherItem.equals("n"))
+                            if (InputCart.equals("y"))
                             {
-                                didUserEnterValidInputForFoundItem = true;
-                                userIsStillAddingItemsFromMenu = false;
+                                shopCart.AddToCart(itemFoundInSearch);
+                                System.out.println("Item has been added to your cart.");
                             }
-                            else if (doesUserWantToAddAnotherItem.equals("y"))
+                            else if (InputCart.equals("n"))
                             {
-                                didUserEnterValidInputForFoundItem = true;
-                                userIsStillAddingItemsFromMenu = true;
+                                System.out.println("This item has not been added to your cart.");
                             }
                             else 
                             {
-                                System.out.println("Incorrect input. Would you like to add another item to the cart? Type y for yes or n for no.");
-                                didUserEnterValidInputForFoundItem = false;
+                                System.out.println("Invalid input.  The item was not added to your cart.");
+                            }
+                        }
+                        else
+                        { 
+                            System.out.println("The item was not found.  Nothing was added to your cart.");
+                        }
+
+                        System.out.println("Would you like to keep searching? Type y for yes or n for no");
+                        boolean didUserEnterValidInputForCartItem = false;
+                        while (didUserEnterValidInputForCartItem == false)
+                        {
+                            String InputSearch = userInputScanner.nextLine();
+                        
+                            if (InputSearch.equals("n"))
+                            {
+                                userIsStillSearching = false;
+                                didUserEnterValidInputForCartItem = true;
+                            }
+                            else if (InputSearch.equals("y"))
+                            {
+                                userIsStillSearching = true;
+                                didUserEnterValidInputForCartItem = true;
+                            }
+                            else 
+                            {
+                                System.out.println("Invalid input. Would you like to keep searching? Type y for yes or n for no.");
+                                didUserEnterValidInputForCartItem = false;
                             }
                         }
                     }
+                }
+                else if (userCategoryInput.equals("b") || userCategoryInput.equals("c") || userCategoryInput.equals("e") || userCategoryInput.equals("t"))
+                {
+                    validItem.clear();
+                    boolean userIsStillAddingItemsFromMenu = true;
+                    while (userIsStillAddingItemsFromMenu)
+                    {
+                        for (StoreItem item : allItems) 
+                        {
+                            StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
+                                new StoreItemFormatter(
+                                    item.getName(),
+                                    item.getPrice(),
+                                    item.getDescription(),
+                                    item.getItemNum(),
+                                    item.getKeywords()
+                                ), 
+                                new RateTax()
+                            );
+                            
+                            if (userCategoryInput.equals("b") && item instanceof Book) {                          
+                                System.out.println(itemToPrint.PrintData());
+                            }
+                            else if (userCategoryInput.equals("c") && item instanceof Computer) {
+                            System.out.println(itemToPrint.PrintData());
+                            }
+                            else if (userCategoryInput.equals("e") && item instanceof Powerplant) {
+                                System.out.println(itemToPrint.PrintData());
+                            
+                            }
+                            else if (userCategoryInput.equals("t") && item instanceof Basketball) {
+                                System.out.println(itemToPrint.PrintData());
+                            }
+                        } 
+                        if (userCategoryInput.equals("b")){validItem.add(16);validItem.add(17);validItem.add(18);validItem.add(19);validItem.add(20);validItem.add(21);validItem.add(22);validItem.add(23);validItem.add(24);validItem.add(25);}
+                        else if (userCategoryInput.equals("t")){validItem.add(7);validItem.add(8);validItem.add(9);validItem.add(10);validItem.add(11);validItem.add(12);validItem.add(13);validItem.add(14);validItem.add(15);}
+                        else if (userCategoryInput.equals("c")){validItem.add(1);validItem.add(2);validItem.add(3);validItem.add(4);validItem.add(5);validItem.add(6);}
+                        else if (userCategoryInput.equals("e")){validItem.add(26);validItem.add(27);validItem.add(27);validItem.add(28);validItem.add(29);validItem.add(30);}
+                        System.out.println("What would you like to buy? Please write an item number.");
+                        String itemNumberTheUserChose  = userInputScanner.nextLine();
+                        StoreItem foundItem = allItems.stream().filter(item -> item.itemNum == Integer.parseInt(itemNumberTheUserChose)).findAny().orElse(null);
+                        Integer userItemNum = validItem.stream().filter(value -> value.intValue() == foundItem.itemNum).findAny().orElse(null);
+                        if (foundItem != null && userItemNum != null) 
+                        {
+                            shopCart.AddToCart(foundItem);
+                            System.out.println("This item has been added to cart: " + foundItem.name); 
+                            System.out.println("Would you like to add another item from the current category to the cart? Type y for yes or n for no.");
+                        
+                            boolean didUserEnterValidInputForFoundItem = false;
+                            while (didUserEnterValidInputForFoundItem == false)
+                            {
+                                String doesUserWantToAddAnotherItem = userInputScanner.nextLine();
+                            
+                                if (doesUserWantToAddAnotherItem.equals("n"))
+                                {
+                                    didUserEnterValidInputForFoundItem = true;
+                                    userIsStillAddingItemsFromMenu = false;
+                                }
+                                else if (doesUserWantToAddAnotherItem.equals("y"))
+                                {
+                                    didUserEnterValidInputForFoundItem = true;
+                                    userIsStillAddingItemsFromMenu = true;
+                                }
+                                else 
+                                {
+                                    System.out.println("Invalid input. Would you like to add another item to the cart? Type y for yes or n for no.");
+                                    didUserEnterValidInputForFoundItem = false;
+                                }
+                            }
+                        }
+                        else 
+                        {
+                            System.out.println("");
+                            System.out.println("Invalid input. Please write a valid item number from the category you selected.");
+                            System.out.println("");
+                        }
+                    }
+                }
+                System.out.println("Are you done shopping for today? Type y for yes or n for no.");
+                boolean didUserEnterValidInput = false;
+                while (didUserEnterValidInput == false) 
+                {
+                    String doneShoppingInput = userInputScanner.nextLine();
+                    if (doneShoppingInput.equals("y"))
+                    {
+                        shopCart.PrintItems();
+                        didUserEnterValidInput = true;
+                        userIsStillShopping = false;
+                    }
+                    else if (doneShoppingInput.equals("n"))
+                    {
+                        didUserEnterValidInput = true;
+                        userIsStillShopping = true;
+                    }
                     else 
                     {
-                        System.out.println("");
-                        System.out.println("Incorrect input. Please write a valid item number from the category you selected.");
-                        System.out.println("");
+                        System.out.println("Invalid input. Are you done shopping for today? Type y for yes or n for no");
+                        didUserEnterValidInput = false;
                     }
                 }
             }
-            else
+            else 
             {
-                System.out.println("You did not make a valid selection.");
-            }
-            System.out.println("Are you done shopping for today? Type y for yes or n for no.");
-            boolean didUserEnterValidInput = false;
-            while (didUserEnterValidInput == false) 
-            {
-                String doneShoppingInput = userInputScanner.nextLine();
-               
-                if (doneShoppingInput.equals("y"))
-                {
-                    shopCart.PrintItems();
-                    didUserEnterValidInput = true;
-                    userIsStillShopping = false;
-                }
-                else if (doneShoppingInput.equals("n"))
-                {
-                    didUserEnterValidInput = true;
-                    userIsStillShopping = true;
-                }
-                else 
-                {
-                    System.out.println("Incorrect input. Are you done shopping for today? Type y for yes or n for no");
-                    didUserEnterValidInput = false;
-                }
-            }
-            }
-            else {
-                System.out.println("Invalid input");
+                System.out.println("Invalid input.");
             }
         }
         userInputScanner.close();

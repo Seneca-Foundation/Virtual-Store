@@ -6,6 +6,7 @@ public class RateTax implements IAddTax {
     public double AddTaxToItem(ITextFormatter item) {
         item.setPrice(item.getPrice() + (item.getPrice() * .02));
         return item.getPrice();
+        //2%
     }
 
 }
