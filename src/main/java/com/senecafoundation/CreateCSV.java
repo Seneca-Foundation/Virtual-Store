@@ -48,7 +48,7 @@ public class CreateCSV {
             FileWriter fw = new FileWriter(filepath, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            
+            System.out.println("");
             pw.println(name+","+price+","+author+","+cover+","+description+","+weight+","+itemNum);
             pw.flush();
             pw.close();
