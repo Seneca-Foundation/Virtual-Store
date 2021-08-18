@@ -60,8 +60,6 @@ public class App
         allItems.get(20).setKeywords(new ArrayList<String>() {{ add("The Great Gatsby");add("gatsby");add("F Scott Fitzgerald");add("$9.50");}});
         allItems.add(new Book("The Hate U Give" , 11.99, "Angie Thomas","hardcover", "a girl witnesses the tragic death of her friend, sparking protests", 0.95));
         allItems.get(21).setKeywords(new ArrayList<String>() {{ add("The Hate U Give");add("hate");add("Angie Thomas");add("$11.99");}});
-        //allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling the galaxy", 0.25)); 
-        //allItems.get(22).setKeywords(new ArrayList<String>() {{ add("The Hitchhiker's Guide to the Galaxy");add("for");add("Guide");add("$20");add("galaxy");}});
         allItems.add(new Book("Things Fall Apart", 14.50, "Chinua Achebe", "hardcover","depicts pre-colonial life in Nigeria", 1.36));
         allItems.get(22).setKeywords(new ArrayList<String>() {{ add("Things Fall Apart");add("Chinua Achebe");add("$14.50");add("fall");add("apart");}});
         allItems.add(new Book("To Kill a Mockingbird", 14.00, "Harper Lee", "paperback", "a lawyer defends a black man who was falsely accused by racists",0.37));
@@ -78,12 +76,6 @@ public class App
         allItems.get(27).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
-        //List<Integer> itemNumList = new ArrayList<Integer>(); //needs work
-        //itemNumList.add(1);itemNumList.add(2);itemNumList.add(3);itemNumList.add(4);itemNumList.add(5);itemNumList.add(6);
-        //itemNumList.add(7);itemNumList.add(8);itemNumList.add(9);itemNumList.add(10);itemNumList.add(11);itemNumList.add(12);itemNumList.add(13);
-        //itemNumList.add(14);itemNumList.add(15);itemNumList.add(16);itemNumList.add(17);itemNumList.add(18);itemNumList.add(19);itemNumList.add(20);
-        //itemNumList.add(21);itemNumList.add(22);itemNumList.add(23);itemNumList.add(24);itemNumList.add(25);itemNumList.add(26);itemNumList.add(27);
-        //itemNumList.add(28);itemNumList.add(29);itemNumList.add(30);
         //password
         System.out.println("Create password");
         Scanner userInputScanner = new Scanner(System.in);
@@ -117,9 +109,6 @@ public class App
         }
         ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         
-        //int maximum = Collections.max(itemNumList);
-        //int newItemNum = maximum + 1;
-        //itemNumList.add(newItemNum);
         System.out.println("");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
@@ -140,7 +129,7 @@ public class App
             ExpandCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,"src/main/java/com/senecafoundation/Books.csv");
             ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
-        System.out.print("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
+        System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
 
         // Menu
         System.out.println("Welcome! This is what we offer");
@@ -150,7 +139,6 @@ public class App
         System.out.println("Energy");
         boolean userIsStillShopping = true;
         boolean userIsStillSearching;
-        //List<Integer> validItem = new ArrayList<Integer>();
        
         while (userIsStillShopping)
         {
@@ -253,11 +241,7 @@ public class App
                             else if (userCategoryInput.equals("t")){ //&& item instanceof Basketball) {
                                 ReadCSV.readCSV("src/main/java/com/senecafoundation/Basketball.csv");
                             }
-                        //} 
-                        //if (userCategoryInput.equals("b")){validItem.add(16);validItem.add(17);validItem.add(18);validItem.add(19);validItem.add(20);validItem.add(21);validItem.add(22);validItem.add(23);validItem.add(24);validItem.add(25);}
-                       // else if (userCategoryInput.equals("t")){validItem.add(7);validItem.add(8);validItem.add(9);validItem.add(10);validItem.add(11);validItem.add(12);validItem.add(13);validItem.add(14);validItem.add(15);}
-                       // else if (userCategoryInput.equals("c")){validItem.add(1);validItem.add(2);validItem.add(3);validItem.add(4);validItem.add(5);validItem.add(6);}
-                        //else if (userCategoryInput.equals("e")){validItem.add(26);validItem.add(27);validItem.add(27);validItem.add(28);validItem.add(29);validItem.add(30);}
+                        //}
                         System.out.println("What would you like to buy? Please write an item number.");
                         String itemNumberTheUserChose  = userInputScanner.nextLine();
                         StoreItem foundItem = allItems.stream().filter(item -> item.ID.toString().equals(itemNumberTheUserChose)).findAny().orElse(null);
