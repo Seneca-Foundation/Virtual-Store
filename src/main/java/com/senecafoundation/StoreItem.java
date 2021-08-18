@@ -7,7 +7,7 @@ public class StoreItem {
     protected String name;
     protected String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
-    protected int itemNum;
+    protected int itemNum; //ID , GUID OR UUID
     protected ITextFormatter textFormatter;
 
     public double getPrice() {
