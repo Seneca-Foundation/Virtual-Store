@@ -1,9 +1,9 @@
 package com.senecafoundation;
 
-public class FlatTax implements IAddTax {
+public class FlatTax implements IChangePrice {
 
     @Override
-    public double AddTaxToItem(ITextFormatter item) {
+    public double ChangePriceToItem(ITextFormatter item) {
         item.setPrice(5 + item.getPrice());
         return item.getPrice();
         //$5
