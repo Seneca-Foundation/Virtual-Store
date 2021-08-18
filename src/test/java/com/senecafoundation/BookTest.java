@@ -16,8 +16,7 @@ public class BookTest {
             "Emily Bronte", 
             "Something cool", 
             "Gothic romance set in the moors of Haworth", 
-            .5, 
-            5
+            .5
         );
     }
 
@@ -29,7 +28,6 @@ public class BookTest {
         assertEquals("Something cool", this.systemUnderTest.cover);
         assertEquals("Gothic romance set in the moors of Haworth", this.systemUnderTest.description);
         assertEquals(.5, this.systemUnderTest.weight);
-        assertEquals(5, this.systemUnderTest.itemNum);
     }
 
     @Test

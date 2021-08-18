@@ -33,7 +33,7 @@ public class Cart{
                                     item.getName(),
                                     item.getPrice(),
                                     item.getDescription(),
-                                    item.getItemNum(),
+                                    item.getID(),
                                     item.getKeywords()
                                 ), 
                                 new RateTax()

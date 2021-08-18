@@ -10,8 +10,8 @@ public class Computer extends WeightItem
     private String releaseDate;
     private String color; 
     //if you were to remove private/public/protected, then the default visibility is anything inside the package. Only package can see
-    public Computer(String name, double price, String color, String computerBrand, String description, String releaseDate, double weight, int itemNum) {
-        super(name, price, description, weight, itemNum);
+    public Computer(String name, double price, String color, String computerBrand, String description, String releaseDate, double weight) {
+        super(name, price, description, weight);
         this.computerBrand = computerBrand;
         this.releaseDate = releaseDate;
         this.color = color;
@@ -44,7 +44,7 @@ public class Computer extends WeightItem
     {
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Computer: " + name  +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + itemNum;
+        return "Computer: " + name  +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + getID();
     }
     
 }

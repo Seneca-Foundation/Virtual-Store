@@ -7,9 +7,9 @@ public class Book extends WeightItem {
     protected String cover; 
     protected String author;
 
-    public Book(String name, double price, String author,String cover, String description, double weight, int itemNum) {
+    public Book(String name, double price, String author,String cover, String description, double weight) {
         //inherited ame, price, description, weight, itemNum
-        super(name, price, description, weight, itemNum);
+        super(name, price, description, weight);
         this.author = author;
         this.cover = cover;
     }
@@ -31,7 +31,7 @@ public class Book extends WeightItem {
     public String GetData() {
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Title: " + name +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Author: " + author + ", Cover: " + cover + ", Description: " + description+", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Title: " + name +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Author: " + author + ", Cover: " + cover + ", Description: " + description+", Weight: " + weight + ", Item Number: " + getID();
     }
 
 }

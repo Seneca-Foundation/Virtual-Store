@@ -2,9 +2,9 @@ package com.senecafoundation;
 
 public class ComicBook extends Book {
     protected String artist;
-    public ComicBook(String name, double price, String author, String cover, String description, String artist, double weight, int itemNum) {
+    public ComicBook(String name, double price, String author, String cover, String description, String artist, double weight) {
         //inherited name, price, description, weight, itemNum, author, cover
-        super(name, price, author, cover, description, weight, itemNum);
+        super(name, price, author, cover, description, weight);
         this.artist = artist;
     }
     public String getArtist() {
@@ -15,6 +15,6 @@ public class ComicBook extends Book {
         this.artist = artist;
     }
     public String GetData() {
-        return "Title: " + name + ", Price: $" + this.textFormatter.getPrice() + ", Author: " + author + ", Cover: " + cover + ", Artist: " + artist+ ", Weight: " + weight + ", Item Number: " + itemNum;
+        return "Title: " + name + ", Price: $" + this.textFormatter.getPrice() + ", Author: " + author + ", Cover: " + cover + ", Artist: " + artist+ ", Weight: " + weight + ", Item Number: " + getID();
     }
 }

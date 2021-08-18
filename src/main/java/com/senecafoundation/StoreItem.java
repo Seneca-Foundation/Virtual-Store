@@ -1,13 +1,14 @@
 package com.senecafoundation;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class StoreItem {
     protected double price;
     protected String name;
     protected String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
-    protected int itemNum; //ID , GUID OR UUID
+    public UUID ID = UUID.randomUUID();
     protected ITextFormatter textFormatter;
 
     public double getPrice() {
@@ -22,8 +23,8 @@ public class StoreItem {
         this.keywords = keywords;
     }
 
-    public int getItemNum() {
-        return itemNum;
+    public UUID getID() {
+        return ID;
     }
 
     public String getName() {
@@ -38,8 +39,8 @@ public class StoreItem {
         this.price = price;
     }
 
-    public void setItemNum(int itemNum) {
-        this.itemNum = itemNum;
+    public void setID() {
+        ID = UUID.randomUUID();
     }
 
     public void setName(String name) {
@@ -50,11 +51,11 @@ public class StoreItem {
         this.description = description;
     }
 
-    public StoreItem(String name, double price, String description, int itemNum) {
+    public StoreItem(String name, double price, String description) {
         this.price = price;
         this.name = name; 
         this.description = description;
-        this.itemNum = itemNum;
+        this.ID = UUID.randomUUID();
         this.keywords = new ArrayList<String>();
     }
 

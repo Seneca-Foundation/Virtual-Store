@@ -1,6 +1,7 @@
 package com.senecafoundation;
 
 import java.util.ArrayList;
+import java.util.UUID;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
@@ -11,12 +12,13 @@ public class StoreItemFormatter implements ITextFormatter {
     protected String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
     protected int itemNum;
+    public UUID ID = UUID.randomUUID();
 
-    public StoreItemFormatter(String name, double price, String description, int itemNum, ArrayList<String> keywords) {
+    public StoreItemFormatter(String name, double price, String description, UUID ID, ArrayList<String> keywords) {
         this.name = name;
         this.price = price;
         this.description = description;
-        this.itemNum = itemNum;
+        this.ID = ID;
         this.keywords = keywords;
     }
 
@@ -24,7 +26,7 @@ public class StoreItemFormatter implements ITextFormatter {
     public String GetData() {
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        return "Product: " + name  + ", Price: $" + df.format(price) + ", Description: " + description +  ", Item Number: " + itemNum;
+        return "Product: " + name  + ", Price: $" + df.format(price) + ", Description: " + description +  ", Item Number: " + ID;
     }
 
     @Override

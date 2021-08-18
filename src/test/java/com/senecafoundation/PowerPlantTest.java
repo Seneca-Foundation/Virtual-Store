@@ -14,8 +14,7 @@ public class PowerPlantTest {
     "100 kWh",
     200, //price
     "Provides enough energy", 
-    0.0, //weight
-    26 //item number
+    0.0 //weight
     );
 }
 
@@ -25,7 +24,6 @@ void testEnergycreate() {
     assertEquals(200, systemUnderTest.price);
     assertEquals("Provides enough energy", systemUnderTest.description);
     assertEquals(0.0, systemUnderTest.weight);
-    assertEquals(26, systemUnderTest.itemNum);
 }
 @Test
 void testPowerPlantGetData() {

@@ -12,9 +12,6 @@ public class StoreItemDataPrinter {
         this.taxToAdd = taxToAdd;
     }
 
-    public StoreItemDataPrinter(StoreItemFormatter itemToPrint2, RateTax taxToAdd2) {
-    }
-
     public String PrintData() {
         this.taxToAdd.ChangePriceToItem(itemToPrint);
         return this.itemToPrint.GetData();
