@@ -1,12 +1,11 @@
 package com.senecafoundation;
 
-public class RateTax implements IChangePrice {
+public class FlatDiscount implements IChangePrice {
 
     @Override
     public double ChangePriceToItem(ITextFormatter item) {
-        item.setPrice(item.getPrice() + (item.getPrice() * .02));
+        item.setPrice(5 - item.getPrice());
         return item.getPrice();
-        //2%
+        //$5
     }
-
 }
