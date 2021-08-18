@@ -16,10 +16,10 @@ public class ReadCSV {
             reader = new BufferedReader(new FileReader(file));
             while((line = reader.readLine()) != null)
             {
-                String[] row = line.split("");
+                String[] row = line.split(",");
                 for(String index : row)
                 {
-                    System.out.print(index);
+                    System.out.printf("%-25s", index);
                 }
                 System.out.println();
             }

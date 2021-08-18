@@ -60,24 +60,24 @@ public class App
         allItems.get(20).setKeywords(new ArrayList<String>() {{ add("The Great Gatsby");add("gatsby");add("F Scott Fitzgerald");add("$9.50");}});
         allItems.add(new Book("The Hate U Give" , 11.99, "Angie Thomas","hardcover", "a girl witnesses the tragic death of her friend, sparking protests", 0.95));
         allItems.get(21).setKeywords(new ArrayList<String>() {{ add("The Hate U Give");add("hate");add("Angie Thomas");add("$11.99");}});
-        allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling the galaxy", 0.25)); 
-        allItems.get(22).setKeywords(new ArrayList<String>() {{ add("The Hitchhiker's Guide to the Galaxy");add("for");add("Guide");add("$20");add("galaxy");}});
+        //allItems.add(new Book("The Hitchhiker's Guide to the Galaxy", 20.00, "Douglas Adams", "hardcover","a guy gets into trouble while travelling the galaxy", 0.25)); 
+        //allItems.get(22).setKeywords(new ArrayList<String>() {{ add("The Hitchhiker's Guide to the Galaxy");add("for");add("Guide");add("$20");add("galaxy");}});
         allItems.add(new Book("Things Fall Apart", 14.50, "Chinua Achebe", "hardcover","depicts pre-colonial life in Nigeria", 1.36));
-        allItems.get(23).setKeywords(new ArrayList<String>() {{ add("Things Fall Apart");add("Chinua Achebe");add("$14.50");add("fall");add("apart");}});
+        allItems.get(22).setKeywords(new ArrayList<String>() {{ add("Things Fall Apart");add("Chinua Achebe");add("$14.50");add("fall");add("apart");}});
         allItems.add(new Book("To Kill a Mockingbird", 14.00, "Harper Lee", "paperback", "a lawyer defends a black man who was falsely accused by racists",0.37));
-        allItems.get(24).setKeywords(new ArrayList<String>() {{ add("To Kill A Mockingbird");add("mockingbird");add("Harper Lee");add("$14");}});
+        allItems.get(23).setKeywords(new ArrayList<String>() {{ add("To Kill A Mockingbird");add("mockingbird");add("Harper Lee");add("$14");}});
 
         //energy          
         allItems.add(new Powerplant("100 kWh of energy", 200.00, "provides enough energy", 0.0));
-        allItems.get(25).setKeywords(new ArrayList<String>() {{ add("100 kWh");add("100 kWh of energy");add("$200");}}); 
+        allItems.get(24).setKeywords(new ArrayList<String>() {{ add("100 kWh");add("100 kWh of energy");add("$200");}}); 
         allItems.add(new Powerplant("150 kWh of energy",250, "provides enough energy", 0.0));
-        allItems.get(26).setKeywords(new ArrayList<String>() {{ add("150 kWh");add("150 kWh of energy");add("$250");}}); 
+        allItems.get(25).setKeywords(new ArrayList<String>() {{ add("150 kWh");add("150 kWh of energy");add("$250");}}); 
         allItems.add(new Powerplant("200 kWh of energy", 300, "provides enough energy", 0.0));
-        allItems.get(27).setKeywords(new ArrayList<String>() {{ add("200 kWh");add("200 kWh of energy");add("$300");}});
+        allItems.get(26).setKeywords(new ArrayList<String>() {{ add("200 kWh");add("200 kWh of energy");add("$300");}});
         allItems.add(new Powerplant("250 kWh of energy", 350, "provides enough energy", 0.0));
-        allItems.get(28).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
+        allItems.get(27).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));
-        allItems.get(29).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
+        allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
         //List<Integer> itemNumList = new ArrayList<Integer>(); //needs work
         //itemNumList.add(1);itemNumList.add(2);itemNumList.add(3);itemNumList.add(4);itemNumList.add(5);itemNumList.add(6);
         //itemNumList.add(7);itemNumList.add(8);itemNumList.add(9);itemNumList.add(10);itemNumList.add(11);itemNumList.add(12);itemNumList.add(13);
