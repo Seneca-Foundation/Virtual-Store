@@ -3,7 +3,6 @@ package com.senecafoundation;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Collections;
 
 public class App 
 {
@@ -79,12 +78,12 @@ public class App
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));
         allItems.get(29).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
-        List<Integer> itemNumList = new ArrayList<Integer>(); //needs work
-        itemNumList.add(1);itemNumList.add(2);itemNumList.add(3);itemNumList.add(4);itemNumList.add(5);itemNumList.add(6);
-        itemNumList.add(7);itemNumList.add(8);itemNumList.add(9);itemNumList.add(10);itemNumList.add(11);itemNumList.add(12);itemNumList.add(13);
-        itemNumList.add(14);itemNumList.add(15);itemNumList.add(16);itemNumList.add(17);itemNumList.add(18);itemNumList.add(19);itemNumList.add(20);
-        itemNumList.add(21);itemNumList.add(22);itemNumList.add(23);itemNumList.add(24);itemNumList.add(25);itemNumList.add(26);itemNumList.add(27);
-        itemNumList.add(28);itemNumList.add(29);itemNumList.add(30);
+        //List<Integer> itemNumList = new ArrayList<Integer>(); //needs work
+        //itemNumList.add(1);itemNumList.add(2);itemNumList.add(3);itemNumList.add(4);itemNumList.add(5);itemNumList.add(6);
+        //itemNumList.add(7);itemNumList.add(8);itemNumList.add(9);itemNumList.add(10);itemNumList.add(11);itemNumList.add(12);itemNumList.add(13);
+        //itemNumList.add(14);itemNumList.add(15);itemNumList.add(16);itemNumList.add(17);itemNumList.add(18);itemNumList.add(19);itemNumList.add(20);
+        //itemNumList.add(21);itemNumList.add(22);itemNumList.add(23);itemNumList.add(24);itemNumList.add(25);itemNumList.add(26);itemNumList.add(27);
+        //itemNumList.add(28);itemNumList.add(29);itemNumList.add(30);
         //password
         System.out.println("Create password");
         Scanner userInputScanner = new Scanner(System.in);
@@ -102,20 +101,25 @@ public class App
 
 
         //testing CRUD
-        System.out.println("Would you like to make a new csv file? Type y for yes or n for no. ");
-        String userInputNewFile = userInputScanner.nextLine();
-        if (userInputNewFile.equals("y"))
-        {
-            System.out.println("What would you like the new file name to be?");
-            String userInputFileName = userInputScanner.nextLine();
-            CreateCSV.createCSV(userInputFileName);
+        boolean userIsMakingNewFiles = true;
+        while (userIsMakingNewFiles){
+            System.out.println("Would you like to make a new csv file? Type y for yes or n for no. ");
+            String userInputNewFile = userInputScanner.nextLine();
+            if (userInputNewFile.equals("y"))
+            {
+                System.out.println("What would you like the new file name to be?");
+                String userInputFileName = userInputScanner.nextLine();
+                CreateCSV.createCSV(userInputFileName);
+            }
+            else {
+                userIsMakingNewFiles = false;
+            }
         }
-        
         ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         
-        int maximum = Collections.max(itemNumList);
-        int newItemNum = maximum + 1;
-        itemNumList.add(newItemNum);
+        //int maximum = Collections.max(itemNumList);
+        //int newItemNum = maximum + 1;
+        //itemNumList.add(newItemNum);
         System.out.println("");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
         String userInputAddProduct = userInputScanner.nextLine();
@@ -221,8 +225,9 @@ public class App
                     boolean userIsStillAddingItemsFromMenu = true;
                     while (userIsStillAddingItemsFromMenu)
                     {
-                        for (StoreItem item : allItems) 
-                        {
+                        //for (StoreItem item : allItems) 
+                        //{
+                            /*
                             StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
                                 new StoreItemFormatter(
                                     item.getName(),
@@ -233,21 +238,22 @@ public class App
                                 ), 
                                 new RateTax()
                             );
+                            */
+                            if (userCategoryInput.equals("b")){ //&& item instanceof Book) {                          
+                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+                            }
+                            else if (userCategoryInput.equals("c")){ //&& item instanceof Computer) {
+                                //System.out.println(itemToPrint.PrintData());
+                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Computer.csv");
+                            }
+                            else if (userCategoryInput.equals("e")){ //&& item instanceof Powerplant) {
+                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Powerplant.csv");
                             
-                            if (userCategoryInput.equals("b") && item instanceof Book) {                          
-                                System.out.println(itemToPrint.PrintData());
                             }
-                            else if (userCategoryInput.equals("c") && item instanceof Computer) {
-                            System.out.println(itemToPrint.PrintData());
+                            else if (userCategoryInput.equals("t")){ //&& item instanceof Basketball) {
+                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Basketball.csv");
                             }
-                            else if (userCategoryInput.equals("e") && item instanceof Powerplant) {
-                                System.out.println(itemToPrint.PrintData());
-                            
-                            }
-                            else if (userCategoryInput.equals("t") && item instanceof Basketball) {
-                                System.out.println(itemToPrint.PrintData());
-                            }
-                        } 
+                        //} 
                         //if (userCategoryInput.equals("b")){validItem.add(16);validItem.add(17);validItem.add(18);validItem.add(19);validItem.add(20);validItem.add(21);validItem.add(22);validItem.add(23);validItem.add(24);validItem.add(25);}
                        // else if (userCategoryInput.equals("t")){validItem.add(7);validItem.add(8);validItem.add(9);validItem.add(10);validItem.add(11);validItem.add(12);validItem.add(13);validItem.add(14);validItem.add(15);}
                        // else if (userCategoryInput.equals("c")){validItem.add(1);validItem.add(2);validItem.add(3);validItem.add(4);validItem.add(5);validItem.add(6);}
