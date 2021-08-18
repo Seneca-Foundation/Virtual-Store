@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class ExpandCSV {
     //ability to create new objects and save to file
-    public static void saveToCSV(String name, double price, String author,String cover, String description, double weight, int itemNum, String filepath)
+    public static void saveToCSV(String name, double price, String author,String cover, String description, double weight, String filepath)
     {
         try 
         {
@@ -13,7 +13,7 @@ public class ExpandCSV {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             System.out.println("");
-            pw.println(name+","+price+","+author+","+cover+","+description+","+weight+","+itemNum);
+            pw.println(name+","+price+","+author+","+cover+","+description+","+weight+",");
             pw.flush();
             pw.close();
 
