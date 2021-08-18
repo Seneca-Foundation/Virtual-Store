@@ -136,7 +136,7 @@ public class App
             ExpandCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,newItemNum,"src/main/java/com/senecafoundation/Books.csv");
             ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
-
+        System.out.print("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
 
         // Menu
         System.out.println("Welcome! This is what we offer");
