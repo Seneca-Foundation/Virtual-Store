@@ -5,7 +5,7 @@ package com.senecafoundation;
         
     @Override
     public double ChangePriceToItem(ITextFormatter item) {
-        item.setPrice(item.getPrice() - (item.getPrice() * .03));
+        item.setPrice(item.getPrice() + (item.getPrice() - .03));
         return item.getPrice();
     }
     }
