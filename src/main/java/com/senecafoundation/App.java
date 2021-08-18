@@ -15,7 +15,7 @@ public class App
         allItems.add(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5));
         allItems.get(0).setKeywords(new ArrayList<String>() {{ add("Asus");add("ROG");add("silver");add("AMD");add("Ryzen");add("5700xt");add("5600x"); ;}}); 
         allItems.add(new Computer("HP Envy", 1000.99 , "Grey", "Window", "11th Generation Intel", "2019", 2.71));
-        allItems.get(1).setKeywords(new ArrayList<String>() {{ add("Grey");add("Intel");add("11th generation");add("HP");add("HP Envy");   ;}});         
+        allItems.get(1).setKeywords(new ArrayList<String>() {{ add("grey");add("Intel");add("11th generation");add("HP");add("HP Envy");   ;}});         
         allItems.add(new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8)); 
         allItems.get(2).setKeywords(new ArrayList<String>() {{ add("M1 chip");add("rose gold");add("MacBook");add("Mac");}}); 
         allItems.add(new Computer("Razer Blade 15", 700.00, "blue", "Windows","Advanced laptop w/ Nvidia RTX 2070", "2021",4.63));
@@ -213,35 +213,38 @@ public class App
                     boolean userIsStillAddingItemsFromMenu = true;
                     while (userIsStillAddingItemsFromMenu)
                     {
-                        //for (StoreItem item : allItems) 
-                        //{
-                            /*
+                        for (StoreItem product : allItems) 
+                        {
+                            
                             StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
                                 new StoreItemFormatter(
-                                    item.getName(),
-                                    item.getPrice(),
-                                    item.getDescription(),
-                                    item.getID(),
-                                    item.getKeywords()
+                                    product.getName(),
+                                    product.getPrice(),
+                                    product.getDescription(),
+                                    product.getID(),
+                                    product.getKeywords()
                                 ), 
                                 new RateTax()
                             );
-                            */
-                            if (userCategoryInput.equals("b")){ //&& item instanceof Book) {                          
-                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
+                            
+                            if (userCategoryInput.equals("b") && product instanceof Book) {   
+                                System.out.println(itemToPrint.PrintData());                       
+                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
                             }
-                            else if (userCategoryInput.equals("c")){ //&& item instanceof Computer) {
-                                //System.out.println(itemToPrint.PrintData());
-                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Computer.csv");
+                            else if (userCategoryInput.equals("c") && product instanceof Computer) {
+                                System.out.println(itemToPrint.PrintData());
+                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Computer.csv");
                             }
-                            else if (userCategoryInput.equals("e")){ //&& item instanceof Powerplant) {
-                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Powerplant.csv");
+                            else if (userCategoryInput.equals("e") && product instanceof Powerplant) {
+                                System.out.println(itemToPrint.PrintData());
+                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Powerplant.csv");
                             
                             }
-                            else if (userCategoryInput.equals("t")){ //&& item instanceof Basketball) {
-                                ReadCSV.readCSV("src/main/java/com/senecafoundation/Basketball.csv");
+                            else if (userCategoryInput.equals("t") && product instanceof Basketball) {
+                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Basketball.csv");
+                                System.out.println(itemToPrint.PrintData());
                             }
-                        //}
+                        }
                         System.out.println("What would you like to buy? Please write an item number.");
                         String itemNumberTheUserChose  = userInputScanner.nextLine();
                         StoreItem foundItem = allItems.stream().filter(item -> item.ID.toString().equals(itemNumberTheUserChose)).findAny().orElse(null);
