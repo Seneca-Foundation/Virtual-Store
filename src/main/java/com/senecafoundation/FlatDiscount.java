@@ -4,7 +4,7 @@ public class FlatDiscount implements IChangePrice {
 
     @Override
     public double ChangePriceToItem(ITextFormatter item) {
-        item.setPrice(5 - item.getPrice());
+        item.setPrice(item.getPrice() - 5);
         return item.getPrice();
         //Discount of 5$
     }
