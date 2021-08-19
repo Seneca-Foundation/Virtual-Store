@@ -10,7 +10,7 @@ public class DeleteData implements IDeleteData {
     //Add ability to delete objects from file
   String tempFile;
   String filepath;
-  public void Delete(UUID ID) { 
+  public void Delete(String ID) { 
   File oldFile = new File(filepath);
   File newFile = new File(tempFile);
     try  
@@ -20,8 +20,16 @@ public class DeleteData implements IDeleteData {
      PrintWriter pw = new PrintWriter(bw);
      Scanner x= new Scanner (new File(filepath));
      x.useDelimiter(",");
+     
      while(x.hasNext())
       {
+        ID = x.next();
+        name = x.next ();
+        age = x.next();
+        if(ID.equals(removeTerm))
+        (
+          pw.printIn(ID + "," + name + "," + age);
+        )
         x.close();
         pw.flush();
         pw.close ();
