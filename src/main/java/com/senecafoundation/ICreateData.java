@@ -1,5 +1,5 @@
 package com.senecafoundation;
 
-public interface ICreateData extends IHandleData{
-    public void Create(StoreItem item);
+public interface ICreateData{
+    public void Create();
 }

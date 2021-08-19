@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class StoreItem {
-    protected double price;
-    protected String name;
-    protected String description;
+    public double price;
+    public String name;
+    public String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
     public UUID ID = UUID.randomUUID();
     protected ITextFormatter textFormatter;
+    public ICreateData createData;
+    public IDeleteData deleteData;
+    public IReadData readData;
+    public IUpdateData updateData;
 
     public double getPrice() {
         return this.price;

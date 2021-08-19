@@ -1,11 +1,13 @@
 package com.senecafoundation;
 
 import java.io.*;
+
 import javax.swing.JOptionPane;
 
-public class CreateData {
+public class CreateData implements ICreateData{
     //ability to create new objects and save to file
-    public static void saveToCSV(String name, double price, String author,String cover, String description, double weight, String filepath)
+    static String filepath;
+    public void Create()
     {
         try 
         {
@@ -13,7 +15,7 @@ public class CreateData {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             System.out.println("");
-            pw.println(name+","+price+","+author+","+cover+","+description+","+weight+",");
+            pw.println(name +","+price+","+description);
             pw.flush();
             pw.close();
 
