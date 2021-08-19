@@ -91,7 +91,7 @@ public class App
             System.out.println("Incorrect password");
         }
 
-
+        UUIDToCSV.addUUIDToCSV("src/main/java/com/senecafoundation/Books.csv");
         //testing CRUD
         boolean userIsMakingNewFiles = true;
         while (userIsMakingNewFiles){
