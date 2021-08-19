@@ -1,5 +1,5 @@
 package com.senecafoundation;
 
-public class UpdateCSV {
+public class UpdateData {
     //Add ability to update existing objects from file and resave back to file
 }
