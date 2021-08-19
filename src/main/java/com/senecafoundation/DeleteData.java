@@ -6,15 +6,16 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.UUID; 
 public class DeleteData implements IDeleteData {
+  private static final String STRING = ",";
   String tempFile;
   String filepath;
   String name;
   String description;
-  double price;
+  String price;
   UUID ID;
 
   @Override
-  public void Delete(UUID ID) {
+  public void Delete(String ID, Object removeTerm) {
   
     //Add ability to delete objects from file
 
@@ -27,16 +28,17 @@ public class DeleteData implements IDeleteData {
      BufferedWriter bw = new BufferedWriter(fw);
      PrintWriter pw = new PrintWriter(bw);
      Scanner x= new Scanner (new File(filepath));
-     x.useDelimiter(",");
+     x.useDelimiter(STRING);
      
      while(x.hasNext())
       {
         ID = x.next();
         name = x.next ();
-        age = x.next();
+        price = x.next();
+        description = x.next();
         if(ID.equals(removeTerm))
         (
-          pw.printIn(ID + "," + name + "," + age);
+          pw.printIn(ID + STRING + name + STRING + price STRING + description);
         )
         x.close();
         pw.flush();
@@ -50,5 +52,11 @@ public class DeleteData implements IDeleteData {
 
     }
 
+  }
+
+  @Override
+  public void Delete(UUID ID) {
+    // TODO Auto-generated method stub
+    
   }
   }
