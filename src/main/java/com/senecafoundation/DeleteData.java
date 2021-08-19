@@ -37,9 +37,9 @@ public class DeleteData implements IDeleteData {
         price = x.next();
         description = x.next();
         if(ID.equals(removeTerm))
-        (
-          pw.printIn(ID + STRING + name + STRING + price STRING + description);
-        )
+        {
+          pw.println(ID + STRING + name + STRING + price STRING + description);
+        }
         x.close();
         pw.flush();
         pw.close ();
