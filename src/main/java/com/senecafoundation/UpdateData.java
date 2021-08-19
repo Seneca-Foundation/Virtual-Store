@@ -10,7 +10,8 @@ public Scanner x;
 public class UpdateData implements IUpdateData{
     //Add ability to update existing objects from file and resave back to file
     public StoreItem Update(StoreItem item){
-  
+  Scanner sc = new Scanner(System.in);
+
     String tempFile;
     String filepath;
     String name;
@@ -23,7 +24,7 @@ public class UpdateData implements IUpdateData{
 
    public static void StoreItem(String filepath, String name, String description, Double price, Double ID)
    {
-       String tempFile = "tempfile.txt";
+       String tempFile = "temp.txt";
        File oldFile = new File(filepath);
        File newFile = new File(tempFile);
        String name = ""; String description = ""; String price =""; String ID ="";
