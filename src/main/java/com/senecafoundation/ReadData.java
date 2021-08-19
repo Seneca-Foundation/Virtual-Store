@@ -1,43 +1,13 @@
 package com.senecafoundation;
 
-import java.io.*;
+import java.util.UUID;
 
-public class ReadData {
-    //ability to read csv file
-    public static String file = "";
+public class ReadData implements IReadData {
 
-    public static void readCSV(String newFile)
-    {
-        file = newFile;
-        BufferedReader reader = null;
-        String line = "";
-        try 
-        {
-            reader = new BufferedReader(new FileReader(file));
-            while((line = reader.readLine()) != null)
-            {
-                String[] row = line.split(",");
-                for(String index : row)
-                {
-                    System.out.printf("%-25s", index);
-                }
-                System.out.println();
-            }
-        }
-        catch(Exception e) 
-        {
-            e.printStackTrace();
-        }
-        finally 
-        {
-            try
-            {
-                reader.close();
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
+    @Override
+    public StoreItem Read(UUID ID) {
+        // TODO Auto-generated method stub
+        return null;
     }
+    
 }

@@ -106,7 +106,7 @@ public class App
                 userIsMakingNewFiles = false;
             }
         }
-        ReadData.readCSV("src/main/java/com/senecafoundation/Books.csv");
+        PrintAllData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         
         System.out.println("");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
@@ -126,8 +126,8 @@ public class App
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
             StoreItem itemToAdd = new StoreItem(userInputTitle, userInputPrice, userInputDescription);
-            .Create(itemToAdd);
-            ReadData.readCSV("src/main/java/com/senecafoundation/Books.csv");
+           // .Create(itemToAdd);
+            PrintAllData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
 

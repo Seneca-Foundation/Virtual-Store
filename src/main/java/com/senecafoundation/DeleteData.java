@@ -3,11 +3,14 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.Scanner; 
-public class DeleteData{
+import java.util.Scanner;
+import java.util.UUID; 
+public class DeleteData implements IDeleteData {
 
     //Add ability to delete objects from file
-  public static void deleteFromCSV(String tempFile, String filepath) { 
+  String tempFile;
+  String filepath;
+  public void Delete(UUID ID) { 
   File oldFile = new File(filepath);
   File newFile = new File(tempFile);
     try 
@@ -26,7 +29,6 @@ public class DeleteData{
         File dump = new File (filepath);
         newFile.renameTo(dump);
       }
-
     }
     catch(Exception e) {
 
