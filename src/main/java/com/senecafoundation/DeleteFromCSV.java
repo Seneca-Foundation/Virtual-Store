@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner; 
-public class DeleteFromCSV{}
+public class DeleteFromCSV{
 
     //Add ability to delete objects from file
   public static void deleteFromCSV(String tempFile, String filepath) { 
@@ -18,15 +18,17 @@ public class DeleteFromCSV{}
      Scanner x= new Scanner (new File(filepath));
      x.useDelimiter(",");
      while(x.hasNext())
-     {
-     x.close();
-     pw.flush();
-     pw.close ();
-    oldFile.delete();
-     File dump = new File (filepath);
-    newFile.renameTo(dump);
+      {
+        x.close();
+        pw.flush();
+        pw.close ();
+        oldFile.delete();
+        File dump = new File (filepath);
+        newFile.renameTo(dump);
+      }
+
+    }
+    catch(Exception e);
+
   }
-
 }
-catch(Exception e);
-
