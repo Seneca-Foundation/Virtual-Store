@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner; 
-public class DeleteFromCSV{
+public class DeleteData{
 
     //Add ability to delete objects from file
   public static void deleteFromCSV(String tempFile, String filepath) { 
@@ -28,7 +28,9 @@ public class DeleteFromCSV{
       }
 
     }
-    catch(Exception e);
+    catch(Exception e) {
+
+    }
 
   }
 }
