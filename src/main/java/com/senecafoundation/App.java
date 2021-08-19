@@ -126,7 +126,7 @@ public class App
             double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
-            ExpandCSV.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,"src/main/java/com/senecafoundation/Books.csv");
+            CreateData.saveToCSV(userInputTitle,userInputPrice,userInputAuthor,userInputCover,userInputDescription,userInputWeight,"src/main/java/com/senecafoundation/Books.csv");
             ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");

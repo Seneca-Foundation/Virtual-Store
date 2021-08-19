@@ -3,7 +3,7 @@ package com.senecafoundation;
 import java.io.*;
 import javax.swing.JOptionPane;
 
-public class ExpandCSV {
+public class CreateData {
     //ability to create new objects and save to file
     public static void saveToCSV(String name, double price, String author,String cover, String description, double weight, String filepath)
     {
