@@ -13,7 +13,7 @@ public class DeleteData implements IDeleteData {
   public void Delete(UUID ID) { 
   File oldFile = new File(filepath);
   File newFile = new File(tempFile);
-    try 
+    try  
     {
      FileWriter fw = new FileWriter(tempFile, true);
      BufferedWriter bw = new BufferedWriter(fw);
