@@ -2,7 +2,7 @@ package com.senecafoundation;
 
 import java.io.*;
 
-public class ReadCSV {
+public class ReadData {
     //ability to read csv file
     public static String file = "";
 
