@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class CreateData implements ICreateData{
     //ability to create new objects and save to file
     static String filepath;
-    public void Create()
+    public void Create(StoreItem item)
     {
         try 
         {
@@ -15,7 +15,7 @@ public class CreateData implements ICreateData{
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             System.out.println("");
-            pw.println(name +","+price+","+description);
+            pw.println(item.name +","+item.price+","+item.description);
             pw.flush();
             pw.close();
 

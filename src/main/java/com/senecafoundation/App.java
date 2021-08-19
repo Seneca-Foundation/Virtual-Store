@@ -126,7 +126,7 @@ public class App
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
             StoreItem itemToAdd = new StoreItem(userInputTitle, userInputPrice, userInputDescription);
-            itemToAdd.Create();
+            .Create(itemToAdd);
             ReadData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
