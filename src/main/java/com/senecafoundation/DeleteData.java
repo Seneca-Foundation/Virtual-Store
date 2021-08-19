@@ -6,14 +6,22 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.UUID; 
 public class DeleteData implements IDeleteData {
-
-    //Add ability to delete objects from file
   String tempFile;
   String filepath;
-  public void Delete(String ID) { 
+  String name;
+  String description;
+  double price;
+  UUID ID;
+
+  @Override
+  public void Delete(UUID ID) {
+  
+    //Add ability to delete objects from file
+
   File oldFile = new File(filepath);
   File newFile = new File(tempFile);
-    try  
+
+  try  
     {
      FileWriter fw = new FileWriter(tempFile, true);
      BufferedWriter bw = new BufferedWriter(fw);
@@ -43,4 +51,4 @@ public class DeleteData implements IDeleteData {
     }
 
   }
-}
+  }
