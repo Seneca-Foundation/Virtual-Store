@@ -17,48 +17,37 @@ public class UpdateData implements IUpdateData{
     UUID ID;
     Scanner fileScanner;
     public StoreItem Update(StoreItem item){
-        return null;
-    }
-        
-   //UpdateStoreItem(filepath, name, description, price, ID);
-     //Scanner fileScanner = new Scanner(System.in);
-   
-
-   //private void UpdateStoreItem(String filepath, String name, String description, String price, UUID iD) {
-    //}
-
-public static void StoreItem(String filepath, String name, String description, Double price, Double ID)
-   {
+        Scanner fileScanner = new Scanner(System.in);
        String tempFile = "temp.txt";
        File oldFile = new File(filepath);
        File newFile = new File(tempFile);
-       String name = ""; String description = ""; String price =""; String ID ="";
        try 
        {
             FileWriter fw = new FileWriter(tempFile,true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            x = new Scanner(new File(filepath));
-            x.useDelimiter("[,\n]");
+            fileScanner = new Scanner(new File(filepath));
+            fileScanner.useDelimiter("[,\n]");
 
-            while(x.hasNext())
+            while(fileScanner.hasNext())
             {
-                name = x.next();
-                description = x.next();
-                price = x.next();
-                ID = x.next();
-                if(ID.equals(StoreItem))
+                name = fileScanner.next();
+                description = fileScanner.next();
+                price = fileScanner.next();
+                ID = fileScanner.next();
+                UUID testID = item.ID;
+                if(ID.equals(testID))
                 {
-                    pw.println(newName + "," + newDescription + "," + newPrice + "," + newID);
+                    pw.println(item.name + "," + item.description + "," + item.price + "," + item.ID);
                 }
                 else
                 {
-                    pw.println(Name + "," + Description + "," + Price + "," + ID);
+                    pw.println("Did not update");//pw.println(Name + "," + Description + "," + Price + "," + ID);
                 }
                 
 
             }
-            x.close();
+            fileScanner.close();
             pw.flush();
             pw.close();
             oldFile.delete();

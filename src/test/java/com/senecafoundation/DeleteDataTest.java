@@ -10,12 +10,16 @@ public class DeleteDataTest {
     @BeforeEach
     void createDeleteDataTest() {
         this.systemUnderTest= new DeleteData();
-        this.systemUnderTest 
+        this.systemUnderTest.filepath = "./Objects.csv";
     }
 
 
     @Test
     void testStoreItemDelete() {  
+    
+    
+    
+    
     }
 }
 
