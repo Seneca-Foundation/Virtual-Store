@@ -62,13 +62,7 @@ public class StoreItem {
         this.ID = UUID.randomUUID();
         this.keywords = new ArrayList<String>();
     }
-
-    public double Calc() {
-        this.price = this.price * 0.70;
-        return this.price;
-        
-    }
-
+    
     public String GetData(ITextFormatter userTextFormatter)
     {
         this.textFormatter = userTextFormatter;

@@ -76,6 +76,7 @@ public class App
         allItems.get(27).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.add(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
+        
         //password
         System.out.println("Create password");
         Scanner userInputScanner = new Scanner(System.in);
@@ -90,43 +91,7 @@ public class App
         {
             System.out.println("Incorrect password");
         }
-        //testing CRUD
-        /*
-        boolean userIsMakingNewFiles = true;
-        while (userIsMakingNewFiles){
-            System.out.println("Would you like to make a new csv file? Type y for yes or n for no. ");
-            String userInputNewFile = userInputScanner.nextLine();
-            if (userInputNewFile.equals("y"))
-            {
-                System.out.println("What would you like the new file name to be?");
-                String userInputFileName = userInputScanner.nextLine();
-                CreateCSV.createCSV(userInputFileName);
-            }
-            else {
-                userIsMakingNewFiles = false;
-            }
-        }
-        
-        System.out.println("");
-        System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
-        String userInputAddProduct = userInputScanner.nextLine();
-        if (userInputAddProduct.equals("y"))
-        {
-            System.out.println("What is the book's title?");
-            String userInputTitle = userInputScanner.nextLine();
-            System.out.println("What is the book's price in USD?");
-            double userInputPrice = Double.parseDouble(userInputScanner.nextLine());
-            System.out.println("Who is the book's author?");
-            //String userInputAuthor= userInputScanner.nextLine();
-            System.out.println("What is the book's cover type?");
-            //String userInputCover = userInputScanner.nextLine();
-            System.out.println("What is the book's weight in pounds?");
-            //double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
-            System.out.println("Provide a brief plot summary of the book:");
-            String userInputDescription = userInputScanner.nextLine();
-            StoreItem itemToAdd = new StoreItem(userInputTitle, userInputPrice, userInputDescription);
-        }
-        */
+    
         // Menu
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
@@ -205,7 +170,6 @@ public class App
                 }
                 else if (userCategoryInput.equals("b") || userCategoryInput.equals("c") || userCategoryInput.equals("e") || userCategoryInput.equals("t"))
                 {
-                    //validItem.clear();
                     boolean userIsStillAddingItemsFromMenu = true;
                     while (userIsStillAddingItemsFromMenu)
                     {
@@ -225,27 +189,23 @@ public class App
                             
                             if (userCategoryInput.equals("b") && product instanceof Book) {   
                                 System.out.println(itemToPrint.PrintData());                       
-                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Books.csv");
                             }
                             else if (userCategoryInput.equals("c") && product instanceof Computer) {
                                 System.out.println(itemToPrint.PrintData());
-                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Computer.csv");
                             }
                             else if (userCategoryInput.equals("e") && product instanceof Powerplant) {
                                 System.out.println(itemToPrint.PrintData());
-                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Powerplant.csv");
                             
                             }
                             else if (userCategoryInput.equals("t") && product instanceof Basketball) {
-                                //ReadCSV.readCSV("src/main/java/com/senecafoundation/Basketball.csv");
                                 System.out.println(itemToPrint.PrintData());
                             }
                         }
                         System.out.println("What would you like to buy? Please write an item number.");
                         String itemNumberTheUserChose  = userInputScanner.nextLine();
                         StoreItem foundItem = allItems.stream().filter(item -> item.ID.toString().equals(itemNumberTheUserChose)).findAny().orElse(null);
-                        //Integer userItemNum = validItem.stream().filter(value -> value.equals(foundItem.ID.toString())).findAny().orElse(null);
-                        if (foundItem != null) //&& userItemNum != null) 
+                        
+                        if (foundItem != null) 
                         {
                             shopCart.AddToCart(foundItem);
                             System.out.println("This item has been added to cart: " + foundItem.name); 
