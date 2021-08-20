@@ -60,7 +60,7 @@ public class Basketball extends WeightItem
         int randomitem = rand.nextInt(list.size());
         String randomElement = list.get(randomitem);
         String winner = randomElement;
-        return "The winner is of the match is: " + winner;
+        return "The winner of the match is: " + winner;
     }
     
     public String SeatsSoldForMatch(){
