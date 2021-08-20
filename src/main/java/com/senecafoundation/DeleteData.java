@@ -46,7 +46,7 @@ public class DeleteData implements IDeleteData {
           }
         }
         catch(Exception e) {
-
+            System.out.println("Error");
         }
 
       }
