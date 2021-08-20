@@ -49,8 +49,3 @@ public class Cart{
        System.out.println("Follow us on instagram @VirtualStore21");
     }
 }
-// after displaying total, let the user select if they had a great purchase rate 1 to 5
-
-//2nd idea; after displaying total, store will display a promocode for the future
-
-//3rd idea; after displaying total store will printout "follow us on instagram etc."

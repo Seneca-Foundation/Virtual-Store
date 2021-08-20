@@ -66,7 +66,7 @@ public class App
         allItems.get(23).setKeywords(new ArrayList<String>() {{ add("To Kill A Mockingbird");add("mockingbird");add("Harper Lee");add("$14");}});
 
         //energy          
-        allItems.add(new Powerplant("100 kWh of energy", 200.00, "provides enough energy", 0.0));
+        allItems.add(new Powerplant("400 kWh of energy", 500.00, "provides enough energy", 0.0));
         allItems.get(24).setKeywords(new ArrayList<String>() {{ add("100 kWh");add("100 kWh of energy");add("$200");}}); 
         allItems.add(new Powerplant("150 kWh of energy",250, "provides enough energy", 0.0));
         allItems.get(25).setKeywords(new ArrayList<String>() {{ add("150 kWh");add("150 kWh of energy");add("$250");}}); 
