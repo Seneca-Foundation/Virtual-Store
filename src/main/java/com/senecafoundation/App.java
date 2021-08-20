@@ -90,7 +90,6 @@ public class App
         {
             System.out.println("Incorrect password");
         }
-
         //testing CRUD
         boolean userIsMakingNewFiles = true;
         while (userIsMakingNewFiles){
@@ -118,15 +117,15 @@ public class App
             System.out.println("What is the book's price in USD?");
             double userInputPrice = Double.parseDouble(userInputScanner.nextLine());
             System.out.println("Who is the book's author?");
-            String userInputAuthor= userInputScanner.nextLine();
+            //String userInputAuthor= userInputScanner.nextLine();
             System.out.println("What is the book's cover type?");
-            String userInputCover = userInputScanner.nextLine();
+            //String userInputCover = userInputScanner.nextLine();
             System.out.println("What is the book's weight in pounds?");
-            double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
+            //double userInputWeight = Double.parseDouble(userInputScanner.nextLine());
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
             StoreItem itemToAdd = new StoreItem(userInputTitle, userInputPrice, userInputDescription);
-            .Create(itemToAdd);
+            //.Create(itemToAdd);
             PrintAllData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
         System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
@@ -316,3 +315,4 @@ public class App
         userInputScanner.close();
     }
 }
+

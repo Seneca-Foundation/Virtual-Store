@@ -2,6 +2,7 @@ package com.senecafoundation; //this is the package
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Random;
 
 public class Computer extends WeightItem 
 {
@@ -45,5 +46,19 @@ public class Computer extends WeightItem
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
         return "Computer: " + name  +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Color: " + color + ", Computer Brand: "+ computerBrand + ", Description: " + description +  ", Release Date: " + releaseDate + ", Weight: "+ weight + " pounds, Item Number: " + getID();
-    }    
+    }
+
+    public String FreeHeadphones() {
+        Random rand = new Random();
+        int upperbound = 301;
+        int random = rand.nextInt(upperbound);
+        int winningNumber = 67;
+        if (random == winningNumber)
+        {
+            return "Congratulations! You have won a pair of free headphones from one of our sponsors. Contact us for more information.";
+        }
+        else {
+            return "Unfortunately, you have not won a pair of a free headphones.";
+        }
+    }
 }

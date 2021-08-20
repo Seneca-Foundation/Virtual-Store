@@ -44,5 +44,13 @@ public class Cart{
         }
         System.out.println("--------------------------------------------------------");
         System.out.println("Total w/ Tax: $" + df.format(total));
+    
+       System.out.println("Thank you for shopping with us! here's a discount code for next time 10OFF");   
+       System.out.println("Follow us on instagram @VirtualStore21");
     }
 }
+// after displaying total, let the user select if they had a great purchase rate 1 to 5
+
+//2nd idea; after displaying total, store will display a promocode for the future
+
+//3rd idea; after displaying total store will printout "follow us on instagram etc."
