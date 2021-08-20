@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.UUID;
-public Scanner x;
+
 public class UpdateData implements IUpdateData{
     //Add ability to update existing objects from file and resave back to file
     public StoreItem Update(StoreItem item){
@@ -19,10 +19,13 @@ public class UpdateData implements IUpdateData{
     String price;
     UUID ID;
         
-   StoreItem(filepath, name, description, price, ID);
+   UpdateStoreItem(filepath, name, description, price, ID);
    }
 
-   public static void StoreItem(String filepath, String name, String description, Double price, Double ID)
+   private void UpdateStoreItem(String filepath, String name, String description, String price, UUID iD) {
+    }
+
+public static void StoreItem(String filepath, String name, String description, Double price, Double ID)
    {
        String tempFile = "temp.txt";
        File oldFile = new File(filepath);

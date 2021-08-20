@@ -1,8 +1,8 @@
 package com.senecafoundation;
 
-import java.io.*;
-
-import javax.swing.JOptionPane;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 public class CreateData implements ICreateData{
     //ability to create new objects and save to file
@@ -14,16 +14,13 @@ public class CreateData implements ICreateData{
             FileWriter fw = new FileWriter(filepath, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            System.out.println("");
-            pw.println(item.name +","+item.price+","+item.description);
+            pw.println(item.toString());
             pw.flush();
             pw.close();
-
-            JOptionPane.showMessageDialog(null, "Product saved to inventory");
         }
-        catch(Exception E)
+        catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, "Product not saved to inventory");
+            e.printStackTrace();
         }
     }
 }
