@@ -18,7 +18,7 @@ public class UpdateData implements IUpdateData{
     Scanner fileScanner;
     public StoreItem Update(StoreItem item){
         Scanner fileScanner = new Scanner(System.in);
-        String tempFile = "temp.txt";
+        String tempFile = "temporary.csv";
         File oldFile = new File(filepath);
         File newFile = new File(tempFile);
         try 
