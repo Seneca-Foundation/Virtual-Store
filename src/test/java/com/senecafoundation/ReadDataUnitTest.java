@@ -16,7 +16,7 @@ public class ReadDataUnitTest {
         this.systemUnderTest = new ReadData();
         this.systemUnderTest.filepath = "./Objects.csv";
     }
-
+    
     @Test
     void testStoreItemCreate() {
         StoreItem testItem = new StoreItem("test",5.99,"a test item");

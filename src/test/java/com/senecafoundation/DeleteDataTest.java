@@ -11,15 +11,13 @@ public class DeleteDataTest {
     void createDeleteDataTest() {
         this.systemUnderTest= new DeleteData();
         this.systemUnderTest.filepath = "./Objects.csv";
+        this.systemUnderTest.tempFile = "./Temporary.csv";
     }
-
 
     @Test
     void testStoreItemDelete() {  
-    
-    
-    
-    
+        StoreItem testItem = new StoreItem("test", 5.99, "a test item");
+        this.systemUnderTest.Delete(testItem.getID());
     }
 }
 

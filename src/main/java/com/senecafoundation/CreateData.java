@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public class CreateData implements ICreateData{
     //ability to create new objects and save to file
-    static String filepath;
+    String filepath;
     public void Create(StoreItem item)
     {
         try 

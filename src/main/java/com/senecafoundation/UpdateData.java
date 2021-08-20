@@ -18,11 +18,11 @@ public class UpdateData implements IUpdateData{
     Scanner fileScanner;
     public StoreItem Update(StoreItem item){
         Scanner fileScanner = new Scanner(System.in);
-       String tempFile = "temp.txt";
-       File oldFile = new File(filepath);
-       File newFile = new File(tempFile);
-       try 
-       {
+        String tempFile = "temp.txt";
+        File oldFile = new File(filepath);
+        File newFile = new File(tempFile);
+        try 
+        {
             FileWriter fw = new FileWriter(tempFile,true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
@@ -34,7 +34,7 @@ public class UpdateData implements IUpdateData{
                 name = fileScanner.next();
                 description = fileScanner.next();
                 price = fileScanner.next();
-                ID = fileScanner.next();
+                ID = UUID.fromString(fileScanner.next());
                 UUID testID = item.ID;
                 if(ID.equals(testID))
                 {
@@ -44,8 +44,6 @@ public class UpdateData implements IUpdateData{
                 {
                     pw.println("Did not update");//pw.println(Name + "," + Description + "," + Price + "," + ID);
                 }
-                
-
             }
             fileScanner.close();
             pw.flush();
@@ -53,17 +51,11 @@ public class UpdateData implements IUpdateData{
             oldFile.delete();
             File dump = new File(filepath);
             newFile.renameTo(dump);
-        }
-
-    
-       catch(Exception e)
+            }
+        catch(Exception e)
         {
             System.out.println("Error");
+        } 
+        return item;
         }
-    }
-
-
-
-
-
 }

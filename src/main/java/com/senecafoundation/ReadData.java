@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class ReadData implements IReadData {
 
-    static String filepath;
+    String filepath;
     private File file;
     private Scanner fileScanner;
 
