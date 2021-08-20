@@ -91,6 +91,7 @@ public class App
             System.out.println("Incorrect password");
         }
         //testing CRUD
+        /*
         boolean userIsMakingNewFiles = true;
         while (userIsMakingNewFiles){
             System.out.println("Would you like to make a new csv file? Type y for yes or n for no. ");
@@ -105,7 +106,6 @@ public class App
                 userIsMakingNewFiles = false;
             }
         }
-        PrintAllData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         
         System.out.println("");
         System.out.print("Would you like to add a book to the store's inventory? Type y for yes or n for no. ");
@@ -125,11 +125,8 @@ public class App
             System.out.println("Provide a brief plot summary of the book:");
             String userInputDescription = userInputScanner.nextLine();
             StoreItem itemToAdd = new StoreItem(userInputTitle, userInputPrice, userInputDescription);
-            //.Create(itemToAdd);
-            PrintAllData.readCSV("src/main/java/com/senecafoundation/Books.csv");
         }
-        System.out.println("Would you like to delete a book from the store's inventory? Type y for yes or n for no.");
-
+        */
         // Menu
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
