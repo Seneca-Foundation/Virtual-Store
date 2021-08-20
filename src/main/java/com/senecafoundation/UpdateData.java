@@ -9,21 +9,23 @@ import java.util.UUID;
 
 public class UpdateData implements IUpdateData{
     //Add ability to update existing objects from file and resave back to file
-    public StoreItem Update(StoreItem item){
-  Scanner sc = new Scanner(System.in);
-
     String tempFile;
     String filepath;
     String name;
     String description;
     String price;
     UUID ID;
-        
-   UpdateStoreItem(filepath, name, description, price, ID);
-   }
-
-   private void UpdateStoreItem(String filepath, String name, String description, String price, UUID iD) {
+    Scanner fileScanner;
+    public StoreItem Update(StoreItem item){
+        return null;
     }
+        
+   //UpdateStoreItem(filepath, name, description, price, ID);
+     //Scanner fileScanner = new Scanner(System.in);
+   
+
+   //private void UpdateStoreItem(String filepath, String name, String description, String price, UUID iD) {
+    //}
 
 public static void StoreItem(String filepath, String name, String description, Double price, Double ID)
    {

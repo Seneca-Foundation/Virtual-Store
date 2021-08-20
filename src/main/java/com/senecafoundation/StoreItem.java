@@ -43,8 +43,8 @@ public class StoreItem {
         this.price = price;
     }
 
-    public void setID() {
-        ID = UUID.randomUUID();
+    public void setID(UUID ID) {
+        this.ID = ID;
     }
 
     public void setName(String name) {
