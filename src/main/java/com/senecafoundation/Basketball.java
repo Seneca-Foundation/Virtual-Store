@@ -69,4 +69,8 @@ public class Basketball extends WeightItem
         int seats = rand.nextInt(upperBound);
         return "The amount of seats sold for the match is" + seats;
     }
+   @Override 
+   public String toString() {
+       return this.getClass().getSimpleName() + ", " + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + String.valueOf(this.getDate()) + "," + String.valueOf(this.getSection()) + "," + String.valueOf(this.getSeat()) + "," + this.getWeight();
+    }
 }

@@ -7,8 +7,6 @@ import java.util.Random;
 public class Book extends WeightItem {
     protected String cover; 
     protected String author;
-    protected String award;
-    protected String copiessold;
 
     public Book(String name, double price, String author,String cover, String description, double weight) {
         //inherited ame, price, description, weight, itemNum
@@ -52,5 +50,8 @@ public class Book extends WeightItem {
             return "This book is in fantastic condition";
         }
     }
-
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + this.getAuthor() + "," + this.getCover() + "," + this.getDescription() + "," + this.getWeight();
+    }
 }

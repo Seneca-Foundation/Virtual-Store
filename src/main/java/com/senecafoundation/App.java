@@ -12,6 +12,7 @@ public class App
         List<StoreItem> allItems = new ArrayList<StoreItem>();
 
         //computers
+
         allItems.add(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5));
         allItems.get(0).setKeywords(new ArrayList<String>() {{ add("Asus");add("ROG");add("silver");add("AMD");add("Ryzen");add("5700xt");add("5600x"); ;}}); 
         allItems.add(new Computer("HP Envy", 1000.99 , "Grey", "Window", "11th Generation Intel", "2019", 2.71));

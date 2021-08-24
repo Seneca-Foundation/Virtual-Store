@@ -40,4 +40,9 @@ public class Powerplant extends WeightItem
     
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + this.getDescription();
+    }
+
 }

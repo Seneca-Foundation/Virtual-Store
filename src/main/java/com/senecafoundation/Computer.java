@@ -61,4 +61,9 @@ public class Computer extends WeightItem
             return "Unfortunately, you have not won a pair of a free headphones.";
         }
     }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + this.getColor() + "," + this.getComputerBrand() + "," + this.getDescription() + "," + this.getReleaseDate() + "," + this.getWeight();
+    }
 }
