@@ -2,6 +2,9 @@ package com.senecafoundation;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.BeforeEach;
 
 public class ReadDataUnitTest {
@@ -23,5 +26,11 @@ public class ReadDataUnitTest {
         this.createItem.Create(testItem);
         StoreItem readItem = this.systemUnderTest.Read(testItem.getID());
         assertEquals(testItem.getID(), readItem.getID());
+    }
+
+    @Test
+    void testReadAll() {
+        ArrayList<StoreItem> allItemsFromFile = (ArrayList<StoreItem>) this.systemUnderTest.ReadAll();
+        assertEquals(allItemsFromFile.size(), 29);
     }
 }

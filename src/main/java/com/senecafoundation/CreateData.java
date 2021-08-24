@@ -3,11 +3,12 @@ package com.senecafoundation;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.UUID;
 
 public class CreateData implements ICreateData{
     //ability to create new objects and save to file
     String filepath;
-    public void Create(StoreItem item)
+    public UUID Create(StoreItem item)
     {
         try 
         {
@@ -17,10 +18,12 @@ public class CreateData implements ICreateData{
             pw.println(item.toString());
             pw.flush();
             pw.close();
+            return item.ID;
         }
         catch(Exception e)
         {
             e.printStackTrace();
+            return null;
         }
     }
 }
