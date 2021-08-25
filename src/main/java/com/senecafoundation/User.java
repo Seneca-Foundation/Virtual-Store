@@ -11,7 +11,7 @@ public class User {
         String tempUsername = "";
         String tempPassword = "";
         try {
-            userScanner = new Scanner(new File("src/main/java/com/senecafoundation/User.csv"));
+            userScanner = new Scanner(new File("src/main/java/com/senecafoundation/Users.csv"));
             userScanner.useDelimiter("[,\n]");
             while (userScanner.hasNext() && !found)
             {
