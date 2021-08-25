@@ -11,7 +11,7 @@ public class BasketballTest {
 
     @BeforeEach
     void assignMonster() {
-        this.systemUnderTest = new Basketball("Chicago Bulls vs Phoenix Suns", 250.00,109, 30, "section is selling out fast","July 30", 0.2, 8);
+        this.systemUnderTest = new Basketball("Chicago Bulls vs Phoenix Suns", 250.00,109, 30, "section is selling out fast","July 30", 0.2);
     }
 
     @Test
@@ -22,7 +22,6 @@ public class BasketballTest {
         assertEquals(30, this.systemUnderTest.getSeat());
         assertEquals("section is selling out fast", this.systemUnderTest.getDescription());
         assertEquals(0.2, this.systemUnderTest.getWeight());
-        assertEquals(8, this.systemUnderTest.getItemNum());
         assertEquals("July 30", this.systemUnderTest.getDate());
     }
     

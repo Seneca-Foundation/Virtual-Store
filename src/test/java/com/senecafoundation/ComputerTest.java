@@ -10,7 +10,7 @@ public class ComputerTest {
 
     @BeforeEach
     void assignMonster() {
-        this.systemUnderTest = new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8, 3);
+        this.systemUnderTest = new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8);
     }
 
     @Test
@@ -22,7 +22,6 @@ public class ComputerTest {
         assertEquals("New with M1 chip", this.systemUnderTest.getDescription());
         assertEquals("2021", this.systemUnderTest.getReleaseDate());
         assertEquals(2.8, this.systemUnderTest.getWeight());
-        assertEquals(3, this.systemUnderTest.getItemNum());
     }
 
     @Test

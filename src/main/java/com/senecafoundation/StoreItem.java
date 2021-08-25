@@ -1,14 +1,19 @@
 package com.senecafoundation;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class StoreItem {
-    protected double price;
-    protected String name;
-    protected String description;
+    public double price;
+    public String name;
+    public String description;
     protected ArrayList<String> keywords = new ArrayList<String>();
-    protected int itemNum;
+    public UUID ID = UUID.randomUUID();
     protected ITextFormatter textFormatter;
+    public ICreateData createData;
+    public IDeleteData deleteData;
+    public IReadData readData;
+    public IUpdateData updateData;
 
     public double getPrice() {
         return this.price;
@@ -22,8 +27,8 @@ public class StoreItem {
         this.keywords = keywords;
     }
 
-    public int getItemNum() {
-        return itemNum;
+    public UUID getID() {
+        return ID;
     }
 
     public String getName() {
@@ -38,8 +43,8 @@ public class StoreItem {
         this.price = price;
     }
 
-    public void setItemNum(int itemNum) {
-        this.itemNum = itemNum;
+    public void setID(UUID ID) {
+        this.ID = ID;
     }
 
     public void setName(String name) {
@@ -50,24 +55,23 @@ public class StoreItem {
         this.description = description;
     }
 
-    public StoreItem(String name, double price, String description, int itemNum) {
+    public StoreItem(String name, double price, String description) {
         this.price = price;
         this.name = name; 
         this.description = description;
-        this.itemNum = itemNum;
+        this.ID = UUID.randomUUID();
         this.keywords = new ArrayList<String>();
     }
-
-    public double Calc() {
-        this.price = this.price * 0.70;
-        return this.price;
-        
-    }
-
+    
     public String GetData(ITextFormatter userTextFormatter)
     {
         this.textFormatter = userTextFormatter;
         return this.textFormatter.GetData();
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + this.getDescription();
     }
     //dependency injection is that you're depending on another class (or interface), and injecting, passing, the dependency in as parameter
     //hard coded is if you cannot change the value of a variable
