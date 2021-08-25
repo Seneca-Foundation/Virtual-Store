@@ -71,6 +71,7 @@ public class Basketball extends WeightItem
 
     @Override 
     public String toString() {
-        return this.getClass().getSimpleName() + ", " + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + String.valueOf(this.getDate()) + "," + String.valueOf(this.getSection()) + "," + String.valueOf(this.getSeat()) + "," + this.getWeight();
+        //String name, double price, int section, int seat, String description, String date, double weight
+        return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + String.valueOf(this.getSection()) + "," + String.valueOf(this.getSeat()) + "," +this.getDescription() + "," + String.valueOf(this.getDate()) + "," + this.getWeight();
     }
 }
