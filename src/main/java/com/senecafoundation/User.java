@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class User {
     private static Scanner userScanner;
-    public static boolean verifyLogin(String username, String password)
+    public static String verifyLogin(String username, String password)
     {
         boolean found  = false;
         String tempUsername = "";
@@ -23,10 +23,10 @@ public class User {
                 }
             }
             userScanner.close();
-            return found;
+            return "Correct user ID and password.";
         }
         catch (Exception e) {
-            return found;
+            return "Incorrect user ID or password.";
         }
     }
     

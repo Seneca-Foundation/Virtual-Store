@@ -62,6 +62,7 @@ public class App
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
     
         // Menu
+        System.out.println("");
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
         System.out.println("Computers");
