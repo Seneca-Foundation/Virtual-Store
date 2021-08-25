@@ -9,10 +9,18 @@ import java.util.UUID;
 
 public class ReadData implements IReadData {
 
-    String filepath;
+    private String filepath;
     private File file;
     private Scanner fileScanner;
 
+    public String getFilepath() {
+        return filepath;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
+    }
+    
     @Override
     public StoreItem Read(UUID ID) {
         // open the file

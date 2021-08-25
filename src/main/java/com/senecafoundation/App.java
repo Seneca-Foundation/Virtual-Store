@@ -13,8 +13,8 @@ public class App
         List<StoreItem> allItems;
 
         // Data creators and readers
-        IReadData dataReader = new ReadData();
-        
+        ReadData dataReader = new ReadData();
+        dataReader.setFilepath("./Objects.csv");
         allItems = dataReader.ReadAll();
 
         //use Create for all the hardcoded StoreItems below
