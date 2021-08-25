@@ -9,6 +9,14 @@ public class App
 {
     public static void main( String[] args )
     {
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.println("Enter username.");
+        String userInputUsername = userInputScanner.nextLine();
+        System.out.println("Enter password");
+        String userInputPassword = userInputScanner.nextLine();
+        System.out.println(User.verifyLogin(userInputUsername, userInputPassword));
+        //have option for creating username & password too;
+
         Cart shopCart = new Cart();
         List<StoreItem> allItems;
 
@@ -53,21 +61,6 @@ public class App
         allItems.get(26).setKeywords(new ArrayList<String>() {{ add("200 kWh");add("200 kWh of energy");add("$300");}});
         allItems.get(27).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
-        
-        //password
-        System.out.println("Create password");
-        Scanner userInputScanner = new Scanner(System.in);
-        String passwordscanned = userInputScanner.nextLine();
-        System.out.println("Enter password");
-        String userInputscanned = userInputScanner.nextLine();
-        if (userInputscanned.equals(passwordscanned))
-        {
-            System.out.println("Correct password");
-        }
-        else 
-        {
-            System.out.println("Incorrect password");
-        }
     
         // Menu
         System.out.println("Welcome! This is what we offer");
