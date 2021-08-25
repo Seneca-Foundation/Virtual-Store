@@ -1,29 +1,29 @@
-Computer,2e3d276e-4af9-4ab0-b6bf-add3a2f667f1,Asus ROG Zephyrus,1549.99,silver,Windows,AMD 5700xt and Ryzen 5600x,2021,3.5
-Computer,352345a1-d3a4-4dba-8b54-8d55016a5940,HP Envy,1000.99,Grey,Window,11th Generation Intel,2019,2.71
-Computer,fe217bb8-69b7-4afc-b3e9-c3827b709016,MacBook Air,900.0,rose gold,Apple,New with M1 chip,2021,2.8
-Computer,69513d4c-7c05-4c51-9ac9-390413d9a6fb,Razer Blade 15,700.0,blue,Windows,Advanced laptop w/ Nvidia RTX 2070,2021,4.63
-Computer,64d4b837-252f-4e3e-95f4-c62b509beeba,Surface Book 3,1599.99,black,Windows,Touch screen ,2020,4.2
-Computer,bc88202c-3281-41f1-8125-540c30532dff,Surface Pro 7,700.0,red,Windows,laptop and tablet in one,2021,1.74
-Basketball, 7948a50c-09be-4055-aad7-f17f18469d97,Brooklyn Nets vs Denver Nuggets,100.0,October 11,50,24,0.2
-Basketball, 7f000a52-a881-4c28-8ff3-069ef136f342,Chicago Bulls vs Phoenix Suns,250.0,July 30,109,30,0.2
-Basketball, 97f597cc-05fa-4e4b-b9a3-14624209216a,Denver Nuggets vs Utah Jazz,139.0,April 6,194,49,0.2
-Basketball, a67dae26-d386-47f3-9c4a-cc3493569057,Indiana Pacers vs Milwaukee Bucks,194.0,June 3,103,53,0.2
-Basketball, e1a27c0a-c71d-44a5-a4ed-f70485021a56,LA Lakers vs Boston Celtics,250.0,September 24,48,15,0.2
-Basketball, 1b4af185-3279-4e63-aa6c-75bdac96988f,New York Knicks vs Philadelphia 76ers,183.0,July 3,140,49,0.2
-Basketball, ec6cbcb5-c3b8-4448-8c01-9957d33e0198,Oklahoma City Thunder vs LA Clippers,192.0,January 3,102,43,0.2
-Basketball, 82476a45-9624-4934-a395-5a08fc0d44b7,Phoenix Suns vs Bucks,150.0,August 2,80,20,0.2
-Basketball, ad40b890-09b7-481d-a77a-105a7b53c7ec,San Antonio Spurs vs Memphis Grizzles,195.0,January 5,34,193,0.2
-Book,86885118-72f2-4edd-92e8-49756a17d37f,Giovanni's Room,30.0,James Baldwin,paperback,young, engaged man has an affair with a bartender,0.51
-Book,d60d68fa-2f9a-4a50-a8e2-2a1b61569548,Hunger Games,15.0,Suzanne Collins,hardcover,24 teens fight each other until one is left standing,0.7
-Book,1912a697-6e0b-4135-a0f3-d1ea550103e9,Lord of the Flies,11.3,William Colding,paperback,young boys are stranded on an island & chaos ensues,0.3
-Book,9cb31475-7c42-4d63-ad3c-6b7ddeb7a0e5,The Book Thief,11.99,Markus Zusak,paperback,a girl steals books during WWII,0.97
-Book,b8780251-5375-40bf-9e56-f56eb7d87c84,The Color Purple,12.99,Alice Walker,paperback,a black woman suffers abuse in the South,0.55
-Book,3e9b3964-0d91-40ed-90a0-6f502d2f24b4,The Great Gatsby,9.5,F Scott Fitzgerald,hardcover,a millionare is obsessed with reuniting with his former love,0.34
-Book,5a7fcc47-2b9a-4635-bb78-b565074b3b62,The Hate U Give,11.99,Angie Thomas,hardcover,a girl witnesses the tragic death of her friend, sparking protests,0.95
-Book,4c8688ee-0c20-4229-a0a2-0959537c229d,Things Fall Apart,14.5,Chinua Achebe,hardcover,depicts pre-colonial life in Nigeria,1.36
-Book,8a4e2eeb-63a7-4cd2-b8e2-7be156364f57,To Kill a Mockingbird,14.0,Harper Lee,paperback,a lawyer defends a black man who was falsely accused by racists,0.37
-Powerplant,fe124abd-7a13-4579-8c2b-e747a115436b,400 kWh of energy,500.0,provides enough energy
-Powerplant,2afd9c40-7db9-462c-82a4-d7b506f3f506,150 kWh of energy,250.0,provides enough energy
-Powerplant,ee043c44-0473-4cab-b39e-072e3c4234f9,200 kWh of energy,300.0,provides enough energy
-Powerplant,e8af269b-814f-4879-a68f-eb481a81b791,250 kWh of energy,350.0,provides enough energy
-Powerplant,e4c1cdc6-4a17-4ca4-a83b-d8c408df3312,300 kwh of energy,400.0,provides enough energy
+Computer,6c903b0b-27f4-45bd-abd9-2ccc4d4d7968,Asus ROG Zephyrus,1549.99,silver,Windows,AMD 5700xt and Ryzen 5600x,2021,3.5
+Computer,c83b9e71-1db3-467d-b6ec-448da18e016d,HP Envy,1000.99,Grey,Window,11th Generation Intel,2019,2.71
+Computer,b2fd4b80-3950-4dbe-887f-eb111f04d948,MacBook Air,900.0,rose gold,Apple,New with M1 chip,2021,2.8
+Computer,9465d2dc-f49f-46e8-a790-1f78252042a8,Razer Blade 15,700.0,blue,Windows,Advanced laptop w/ Nvidia RTX 2070,2021,4.63
+Computer,d008ecd9-e406-4400-90b4-3edce1b83341,Surface Book 3,1599.99,black,Windows,Touch screen ,2020,4.2
+Computer,becd4434-fe27-471d-aabd-97e00b769e89,Surface Pro 7,700.0,red,Windows,laptop and tablet in one,2021,1.74
+Basketball,3d9b34ce-5361-4f1f-bc3f-c5221388dcfb,Brooklyn Nets vs Denver Nuggets,100.0,50,24,empty,October 11,0.2
+Basketball,caf3c208-3db6-4065-8187-07fcef696cae,Chicago Bulls vs Phoenix Suns,250.0,109,30,section is selling out fast,July 30,0.2
+Basketball,23605da2-853e-46e6-a3f2-7e1296004253,Denver Nuggets vs Utah Jazz,139.0,194,49,empty,April 6,0.2
+Basketball,91464cfa-ea9b-4e38-9045-40258664806d,Indiana Pacers vs Milwaukee Bucks,194.0,103,53,empty,June 3,0.2
+Basketball,042f5e18-7980-43bb-a6d0-c2c1d4681e24,LA Lakers vs Boston Celtics,250.0,48,15,empty,September 24,0.2
+Basketball,0d2339d0-febb-4d19-98bd-1cab95fda644,New York Knicks vs Philadelphia 76ers,183.0,140,49,empty,July 3,0.2
+Basketball,8216fa21-7b9f-4027-8e59-d3ab7e0d9b86,Oklahoma City Thunder vs LA Clippers,192.0,102,43,empty,January 3,0.2
+Basketball,a1185aa9-e6d6-49f0-86b2-cb960cecfd67,Phoenix Suns vs Bucks,150.0,80,20,empty,August 2,0.2
+Basketball,44c30c86-694f-4b86-85d5-daf29b11112e,San Antonio Spurs vs Memphis Grizzles,195.0,34,193,empty,January 5,0.2
+Book,cae2dc89-4e69-44ca-8724-370bd6f281a7,Giovanni's Room,30.0,James Baldwin,paperback,engaged man has an affair with a bartender,0.51
+Book,becebea7-761f-4f75-a145-d5629e3c909d,Hunger Games,15.0,Suzanne Collins,hardcover,24 teens fight each other until one is left standing,0.7
+Book,54420790-4476-43c6-8b3e-23d4a0375028,Lord of the Flies,11.3,William Colding,paperback,young boys are stranded on an island & chaos ensues,0.3
+Book,32fe61aa-eca0-4edf-853c-0107627e91bd,The Book Thief,11.99,Markus Zusak,paperback,a girl steals books during WWII,0.97
+Book,c93452ff-c673-4d3f-b3e9-5cc3b9a88ff3,The Color Purple,12.99,Alice Walker,paperback,a black woman suffers abuse in the South,0.55
+Book,6a54b3de-d636-412e-9702-cf9e6ced5042,The Great Gatsby,9.5,F Scott Fitzgerald,hardcover,a millionare is obsessed with reuniting with his former love,0.34
+Book,b0bf8923-9a71-40a6-afa4-32a3551cac3c,The Hate U Give,11.99,Angie Thomas,hardcover,a girl witnesses the tragic death of her friend which sparks protests,0.95
+Book,adca5b95-497f-43a0-a466-14dce14dffc5,Things Fall Apart,14.5,Chinua Achebe,hardcover,depicts pre-colonial life in Nigeria,1.36
+Book,0a55007f-6988-4a4d-a976-58af3587e5c0,To Kill a Mockingbird,14.0,Harper Lee,paperback,a lawyer defends a black man who was falsely accused by racists,0.37
+Powerplant,0b7fa47b-59ad-41c4-ab6e-06a3d8a185c4,400 kWh of energy,500.0,provides enough energy,0.0
+Powerplant,58109501-f315-4a66-acca-00da24171447,150 kWh of energy,250.0,provides enough energy,0.0
+Powerplant,1e011877-3f8b-43e8-ac3c-00b6b20eac67,200 kWh of energy,300.0,provides enough energy,0.0
+Powerplant,a73e800f-fc8f-4e2b-af94-64ca8c462cbd,250 kWh of energy,350.0,provides enough energy,0.0
+Powerplant,5f251a69-6f4c-44e8-8671-68713edd5325,300 kwh of energy,400.0,provides enough energy,0.0
