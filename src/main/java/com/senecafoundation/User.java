@@ -56,11 +56,11 @@ public class User {
             pw.println(toUser());
             pw.flush();
             pw.close();
-            return "Account has been created";
+            return "Account has been created.";
         }
         catch(Exception e)
         {
-            return "Something went wrong";
+            return "Something went wrong. Account was not created.";
         }
     }
     
