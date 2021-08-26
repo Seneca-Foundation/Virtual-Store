@@ -1,29 +1,7 @@
-Computer,6c903b0b-27f4-45bd-abd9-2ccc4d4d7968,Asus ROG Zephyrus,1549.99,silver,Windows,AMD 5700xt and Ryzen 5600x,2021,3.5
-Computer,c83b9e71-1db3-467d-b6ec-448da18e016d,HP Envy,1000.99,Grey,Window,11th Generation Intel,2019,2.71
-Computer,b2fd4b80-3950-4dbe-887f-eb111f04d948,MacBook Air,900.0,rose gold,Apple,New with M1 chip,2021,2.8
-Computer,9465d2dc-f49f-46e8-a790-1f78252042a8,Razer Blade 15,700.0,blue,Windows,Advanced laptop w/ Nvidia RTX 2070,2021,4.63
-Computer,d008ecd9-e406-4400-90b4-3edce1b83341,Surface Book 3,1599.99,black,Windows,Touch screen ,2020,4.2
-Computer,becd4434-fe27-471d-aabd-97e00b769e89,Surface Pro 7,700.0,red,Windows,laptop and tablet in one,2021,1.74
-Basketball,3d9b34ce-5361-4f1f-bc3f-c5221388dcfb,Brooklyn Nets vs Denver Nuggets,100.0,50,24,empty,October 11,0.2
-Basketball,caf3c208-3db6-4065-8187-07fcef696cae,Chicago Bulls vs Phoenix Suns,250.0,109,30,section is selling out fast,July 30,0.2
-Basketball,23605da2-853e-46e6-a3f2-7e1296004253,Denver Nuggets vs Utah Jazz,139.0,194,49,empty,April 6,0.2
-Basketball,91464cfa-ea9b-4e38-9045-40258664806d,Indiana Pacers vs Milwaukee Bucks,194.0,103,53,empty,June 3,0.2
-Basketball,042f5e18-7980-43bb-a6d0-c2c1d4681e24,LA Lakers vs Boston Celtics,250.0,48,15,empty,September 24,0.2
-Basketball,0d2339d0-febb-4d19-98bd-1cab95fda644,New York Knicks vs Philadelphia 76ers,183.0,140,49,empty,July 3,0.2
-Basketball,8216fa21-7b9f-4027-8e59-d3ab7e0d9b86,Oklahoma City Thunder vs LA Clippers,192.0,102,43,empty,January 3,0.2
-Basketball,a1185aa9-e6d6-49f0-86b2-cb960cecfd67,Phoenix Suns vs Bucks,150.0,80,20,empty,August 2,0.2
-Basketball,44c30c86-694f-4b86-85d5-daf29b11112e,San Antonio Spurs vs Memphis Grizzles,195.0,34,193,empty,January 5,0.2
-Book,cae2dc89-4e69-44ca-8724-370bd6f281a7,Giovanni's Room,30.0,James Baldwin,paperback,engaged man has an affair with a bartender,0.51
-Book,becebea7-761f-4f75-a145-d5629e3c909d,Hunger Games,15.0,Suzanne Collins,hardcover,24 teens fight each other until one is left standing,0.7
-Book,54420790-4476-43c6-8b3e-23d4a0375028,Lord of the Flies,11.3,William Colding,paperback,young boys are stranded on an island & chaos ensues,0.3
-Book,32fe61aa-eca0-4edf-853c-0107627e91bd,The Book Thief,11.99,Markus Zusak,paperback,a girl steals books during WWII,0.97
-Book,c93452ff-c673-4d3f-b3e9-5cc3b9a88ff3,The Color Purple,12.99,Alice Walker,paperback,a black woman suffers abuse in the South,0.55
-Book,6a54b3de-d636-412e-9702-cf9e6ced5042,The Great Gatsby,9.5,F Scott Fitzgerald,hardcover,a millionare is obsessed with reuniting with his former love,0.34
-Book,b0bf8923-9a71-40a6-afa4-32a3551cac3c,The Hate U Give,11.99,Angie Thomas,hardcover,a girl witnesses the tragic death of her friend which sparks protests,0.95
-Book,adca5b95-497f-43a0-a466-14dce14dffc5,Things Fall Apart,14.5,Chinua Achebe,hardcover,depicts pre-colonial life in Nigeria,1.36
-Book,0a55007f-6988-4a4d-a976-58af3587e5c0,To Kill a Mockingbird,14.0,Harper Lee,paperback,a lawyer defends a black man who was falsely accused by racists,0.37
-Powerplant,0b7fa47b-59ad-41c4-ab6e-06a3d8a185c4,400 kWh of energy,500.0,provides enough energy,0.0
-Powerplant,58109501-f315-4a66-acca-00da24171447,150 kWh of energy,250.0,provides enough energy,0.0
-Powerplant,1e011877-3f8b-43e8-ac3c-00b6b20eac67,200 kWh of energy,300.0,provides enough energy,0.0
-Powerplant,a73e800f-fc8f-4e2b-af94-64ca8c462cbd,250 kWh of energy,350.0,provides enough energy,0.0
-Powerplant,5f251a69-6f4c-44e8-8671-68713edd5325,300 kwh of energy,400.0,provides enough energy,0.0
+Computer,eee84758-81e2-4e8b-ac80-5d9869af404c,Asus ROG Zephyrus,1549.99,silver,Windows,AMD 5700xt and Ryzen 5600x,2021,3.5
+Computer,792dab92-6c57-4535-8cff-4df3ca67c142,HP Envy,1000.99,Grey,Window,11th Generation Intel,2019,2.71
+Basketball,d8af97c2-0090-413b-98ea-4251f90cc18c,Brooklyn Nets vs Denver Nuggets,100.0,50,24,empty,October 11,0.2
+Basketball,93f57ee3-3ed2-4e1d-9ae5-55537512a5c8,Chicago Bulls vs Phoenix Suns,250.0,109,30,section is selling out fast,July 30,0.2
+Book,7d9422f0-2c0c-4626-b07b-1d10a7002033,Giovanni's Room,30.0,James Baldwin,paperback,engaged man has an affair with a bartender,0.51
+Book,a65fc2e3-7f15-451c-b78b-d00247ed8348,Hunger Games,15.0,Suzanne Collins,hardcover,24 teens fight each other until one is left standing,0.7
+Powerplant,ad10502f-1e6f-4695-a0e7-bd4ba89f092d,400 kWh of energy,500.0,provides enough energy,0.0

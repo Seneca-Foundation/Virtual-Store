@@ -29,7 +29,8 @@ public class Book extends WeightItem {
         this.author = author;
     }
 
-    public String GetData() {
+    public String GetData(ITextFormatter userTextFormatter) {
+        this.textFormatter = userTextFormatter;
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
         return "Title: " + name +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Author: " + author + ", Cover: " + cover + ", Description: " + description+", Weight: " + weight + ", Item Number: " + getID();

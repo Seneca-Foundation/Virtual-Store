@@ -22,19 +22,17 @@ public class BookTest {
 
     @Test 
     void testBookCreate() {
-        assertEquals("Wuthering Heights", this.systemUnderTest.name);
-        assertEquals(19.99, this.systemUnderTest.price);
-        assertEquals("Emily Bronte", this.systemUnderTest.author);
-        assertEquals("Something cool", this.systemUnderTest.cover);
-        assertEquals("Gothic romance set in the moors of Haworth", this.systemUnderTest.description);
-        assertEquals(.5, this.systemUnderTest.weight);
+        assertEquals("Wuthering Heights", this.systemUnderTest.getName());
+        assertEquals(19.99, this.systemUnderTest.getPrice());
+        assertEquals("Emily Bronte", this.systemUnderTest.getAuthor());
+        assertEquals("Something cool", this.systemUnderTest.getCover());
+        assertEquals("Gothic romance set in the moors of Haworth", this.systemUnderTest.getDescription());
+        assertEquals(.5, this.systemUnderTest.getWeight());
     }
 
     @Test
     void getData() {
-        assertEquals(
-            "Title: Wuthering Heights, Price: $19.99, Author: Emily Bronte, Cover: Something cool, Description: Gothic romance set in the moors of Haworth, Weight: 0.5, Item Number: 5",
-            this.systemUnderTest.GetData()
-        );
+        StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);
+        assertEquals("Title: Wuthering Heights, Price: $19.99, Author: Emily Bronte, Cover: Something cool, Description: Gothic romance set in the moors of Haworth, Weight: 0.5, Item Number: " + this.systemUnderTest.getID(), this.systemUnderTest.GetData(formatter));
     }
 }
