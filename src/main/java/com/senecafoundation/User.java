@@ -46,8 +46,8 @@ public class User {
         return username + "," + password;
     }
     public String createAccount(String username, String password) {
-       this.username = username;
-       this.password = password;
+       User.username = username;
+       User.password = password;
         try 
         {
             FileWriter fw = new FileWriter(userpath, true);
