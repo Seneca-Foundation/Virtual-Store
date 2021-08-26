@@ -41,6 +41,7 @@ public class Computer extends WeightItem
     public void setComputerBrand(String computerBrand) {
         this.computerBrand = computerBrand;
     }
+    
     public String GetData(ITextFormatter userTextFormatter)
     {
         this.textFormatter = userTextFormatter;
