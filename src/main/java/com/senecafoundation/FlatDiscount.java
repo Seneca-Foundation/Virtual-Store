@@ -1,5 +1,7 @@
 package com.senecafoundation;
 
+import com.senecafoundation.PriceChanger.IChangePrice;
+
 public class FlatDiscount implements IChangePrice {
 
     @Override
