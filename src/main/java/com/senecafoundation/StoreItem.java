@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 import com.senecafoundation.DataHandlers.ICreateData;
+import com.senecafoundation.DataHandlers.IDeleteData;
 
 public class StoreItem {
     public double price;

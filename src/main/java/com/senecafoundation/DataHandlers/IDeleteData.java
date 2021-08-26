@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlers;
 
 import java.util.UUID;
 

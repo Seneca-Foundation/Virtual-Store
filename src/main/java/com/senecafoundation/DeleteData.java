@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.UUID; 
+import java.util.UUID;
+
+import com.senecafoundation.DataHandlers.IDeleteData; 
 public class DeleteData implements IDeleteData {
     String tempFile;
     String filepath;
