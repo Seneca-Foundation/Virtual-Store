@@ -1,6 +1,8 @@
 package com.senecafoundation;
 
-    public class RateDiscount implements IChangePrice{ 
+import com.senecafoundation.PriceHandlers.IChangePrice;
+
+public class RateDiscount implements IChangePrice{ 
 
         
     @Override

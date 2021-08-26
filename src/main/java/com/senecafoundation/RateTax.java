@@ -1,5 +1,7 @@
 package com.senecafoundation;
 
+import com.senecafoundation.PriceHandlers.IChangePrice;
+
 public class RateTax implements IChangePrice {
 
     @Override
