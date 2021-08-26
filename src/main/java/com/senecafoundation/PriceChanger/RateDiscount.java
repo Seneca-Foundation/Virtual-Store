@@ -1,6 +1,6 @@
-package com.senecafoundation;
+package com.senecafoundation.PriceChanger;
 
-import com.senecafoundation.PriceChanger.IChangePrice;
+import com.senecafoundation.ITextFormatter;
 
 public class RateDiscount implements IChangePrice{ 
 
