@@ -13,7 +13,7 @@ public class App
         String userInputUsername = userInputScanner.nextLine();
         System.out.println("Enter password");
         String userInputPassword = userInputScanner.nextLine();
-        System.out.println(User.verifyLogin(userInputUsername, userInputPassword));
+        //System.out.println(User.verifyLogin(userInputUsername, userInputPassword));
         //have option for creating username & password too;
 
         Cart shopCart = new Cart();
@@ -218,6 +218,7 @@ public class App
                     String doneShoppingInput = userInputScanner.nextLine();
                     if (doneShoppingInput.equals("y"))
                     {
+                        System.out.println("To checkout, you need to login or create an account.");
                         shopCart.PrintItems();
                         didUserEnterValidInput = true;
                         userIsStillShopping = false;
