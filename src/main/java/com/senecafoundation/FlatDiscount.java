@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-import com.senecafoundation.PriceHandlers.IChangePrice;
+import com.senecafoundation.PriceChanger.IChangePrice;
 
 public class FlatDiscount implements IChangePrice {
 
