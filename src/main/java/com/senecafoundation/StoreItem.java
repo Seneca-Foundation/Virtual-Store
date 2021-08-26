@@ -3,6 +3,8 @@ package com.senecafoundation;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import com.senecafoundation.DataHandlers.ICreateData;
+
 public class StoreItem {
     public double price;
     public String name;
