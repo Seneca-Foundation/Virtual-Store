@@ -24,8 +24,7 @@ public class CreateDataUnitTest {
         this.systemUnderTest.Create(testComp);
     }
     
-    @Test
-    void testSeedStoreData() {
+    public void testSeedStoreData() {
         this.systemUnderTest.Create(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5));
         this.systemUnderTest.Create(new Computer("HP Envy", 1000.99 , "Grey", "Window", "11th Generation Intel", "2019", 2.71));
         this.systemUnderTest.Create(new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8)); 
@@ -60,8 +59,7 @@ public class CreateDataUnitTest {
         this.systemUnderTest.Create(new Powerplant("150 kWh of energy",250, "provides enough energy", 0.0));
         this.systemUnderTest.Create(new Powerplant("200 kWh of energy", 300, "provides enough energy", 0.0));
         this.systemUnderTest.Create(new Powerplant("250 kWh of energy", 350, "provides enough energy", 0.0));
-        this.systemUnderTest.Create(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));
-        
+        this.systemUnderTest.Create(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));  
     }
 
 }

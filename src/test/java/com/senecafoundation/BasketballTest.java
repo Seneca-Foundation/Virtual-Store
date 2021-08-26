@@ -27,6 +27,7 @@ public class BasketballTest {
     
     @Test
     void getData() {
-        assertEquals("Match: Chicago Bulls vs Phoenix Suns, Price: $250, Date: July 30, Section: 109, Seat: 30, Weight: 0.2, Item Number: 8", this.systemUnderTest.GetData());
+        StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);
+        assertEquals("Match: Chicago Bulls vs Phoenix Suns, Price: $250, Date: July 30, Section: 109, Seat: 30, Weight: 0.2, Item Number: " + this.systemUnderTest.ID, this.systemUnderTest.GetData(formatter));
     }
 }

@@ -11,7 +11,8 @@ public class Powerplant extends WeightItem
         super(name,price,description, weight);
     }
 
-    public String GetData(){
+    public String GetData(ITextFormatter userTextFormatter){
+        this.textFormatter = userTextFormatter;
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
         return "Product: " + name + ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Weight:" + weight + ", Item Number: " + getID();

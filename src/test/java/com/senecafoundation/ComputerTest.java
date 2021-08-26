@@ -26,7 +26,7 @@ public class ComputerTest {
 
     @Test
     void testComputerGetData() {
-        assertEquals("Computer: MacBook Air, Price: $900, Color: rose gold, Computer Brand: Apple, Description: New with M1 chip, Release Date: 2021, Weight: 2.8 pounds, Item Number: 3", this.systemUnderTest.GetData());
-
+        StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);
+        assertEquals("Computer: MacBook Air, Price: $900, Color: rose gold, Computer Brand: Apple, Description: New with M1 chip, Release Date: 2021, Weight: 2.8 pounds, Item Number: " + this.systemUnderTest.ID, this.systemUnderTest.GetData(formatter));
     }
 }

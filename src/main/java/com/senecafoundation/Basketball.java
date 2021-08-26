@@ -42,7 +42,9 @@ public class Basketball extends WeightItem
     public void setDate(String date) {
         this.date = date;
     }
-    public String GetData(){
+
+    public String GetData(ITextFormatter userTextFormatter){
+        this.textFormatter = userTextFormatter;
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
         return "Match: " + name + ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Date: " + date + ", Section: " + section + ", Seat: " + seat + ", Weight: " + weight + ", Item Number: " + getID();
