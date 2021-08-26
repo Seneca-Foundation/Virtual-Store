@@ -9,12 +9,6 @@ public class App
     public static void main( String[] args )
     {
         Scanner userInputScanner = new Scanner(System.in);
-        System.out.println("Enter username.");
-        String userInputUsername = userInputScanner.nextLine();
-        System.out.println("Enter password");
-        String userInputPassword = userInputScanner.nextLine();
-        //System.out.println(User.verifyLogin(userInputUsername, userInputPassword));
-        //have option for creating username & password too;
 
         Cart shopCart = new Cart();
         List<StoreItem> allItems;
@@ -23,7 +17,7 @@ public class App
         ReadData dataReader = new ReadData();
         dataReader.setFilepath("./Objects.csv");
         allItems = dataReader.ReadAll();
-
+        User userThings = new User();
         //use Create for all the hardcoded StoreItems below
         allItems.get(0).setKeywords(new ArrayList<String>() {{ add("Asus");add("ROG");add("silver");add("AMD");add("Ryzen");add("5700xt");add("5600x"); ;}}); 
         allItems.get(1).setKeywords(new ArrayList<String>() {{ add("grey");add("Intel");add("11th generation");add("HP");add("HP Envy");   ;}});         
@@ -218,7 +212,23 @@ public class App
                     String doneShoppingInput = userInputScanner.nextLine();
                     if (doneShoppingInput.equals("y"))
                     {
-                        System.out.println("To checkout, you need to login or create an account.");
+                        System.out.println("To checkout, you need to login or create an account. Press l to login or c to create account.");
+                        String userCheckout = userInputScanner.nextLine();
+                        if (userCheckout.equals("l"))
+                        {
+                            System.out.println("Enter username.");
+                            String userInputUsername = userInputScanner.nextLine();
+                            System.out.println("Enter password");
+                            String userInputPassword = userInputScanner.nextLine();
+                            userThings.verifyLogin(userInputUsername, userInputPassword);
+                        }
+                        else if (userCheckout.equals("c")) {
+                            System.out.println("Enter the username you would like.");
+                            String usernameCreated = userInputScanner.nextLine();
+                            System.out.println("Enter the password you would like.");
+                            String passwordCreated = userInputScanner.nextLine();
+                            userThings.createAccount(usernameCreated, passwordCreated);
+                        }
                         shopCart.PrintItems();
                         didUserEnterValidInput = true;
                         userIsStillShopping = false;
