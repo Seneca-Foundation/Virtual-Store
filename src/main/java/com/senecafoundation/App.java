@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.senecafoundation.PriceChanger.RateTax;
+
 public class App 
 {
     public static void main( String[] args )
