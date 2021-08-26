@@ -87,3 +87,6 @@ nb-configuration.xml
 ##############################
 ## Our own project specific stuff.
 ##############################
+Objects.csv
+temporary.csv
+User.csv
