@@ -1,8 +1,10 @@
-package com.senecafoundation;
+package com.senecafoundation.ProductObjectsTests;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
+
+import com.senecafoundation.StoreItemFormatter;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
 
 public class BookTest {

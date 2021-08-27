@@ -1,7 +1,8 @@
-package com.senecafoundation;
+package com.senecafoundation.ProductObjectsTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.senecafoundation.StoreItemFormatter;
 import com.senecafoundation.ProductObjects.Basketball;
 
 import org.junit.jupiter.api.BeforeEach;
