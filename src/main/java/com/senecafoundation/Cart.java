@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.senecafoundation.PriceChanger.RateTax;
+import com.senecafoundation.PriceChangers.RateTax;
 
 public class Cart{
 

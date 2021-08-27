@@ -2,7 +2,7 @@ package com.senecafoundation;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-import com.senecafoundation.PriceChanger.IChangePrice;
+import com.senecafoundation.PriceChangers.IChangePrice;
 
 public class StoreItemDataPrinter {
     

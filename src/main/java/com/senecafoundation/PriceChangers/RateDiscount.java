@@ -1,4 +1,4 @@
-package com.senecafoundation.PriceChanger;
+package com.senecafoundation.PriceChangers;
 
 import com.senecafoundation.ITextFormatter;
 
