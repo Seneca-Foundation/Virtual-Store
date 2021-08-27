@@ -3,6 +3,9 @@ package com.senecafoundation;
 import org.junit.jupiter.api.Test;
 
 import com.senecafoundation.DataHandlers.CreateData;
+import com.senecafoundation.ProductObjects.Basketball;
+import com.senecafoundation.ProductObjects.Computer;
+import com.senecafoundation.ProductObjects.Book;
 
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;

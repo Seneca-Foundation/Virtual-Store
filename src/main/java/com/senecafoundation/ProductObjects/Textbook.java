@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.ProductObjects;
 
 import java.util.ArrayList;
 import java.util.List;

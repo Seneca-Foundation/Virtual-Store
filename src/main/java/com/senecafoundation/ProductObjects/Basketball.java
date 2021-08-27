@@ -1,10 +1,13 @@
-package com.senecafoundation;
+package com.senecafoundation.ProductObjects;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import com.senecafoundation.ITextFormatter;
+import com.senecafoundation.WeightItem;
 
 public class Basketball extends WeightItem
 {

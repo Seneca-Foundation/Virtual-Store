@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 import com.senecafoundation.DataHandlers.CreateData;
 import com.senecafoundation.DataHandlers.ReadData;
+import com.senecafoundation.ProductObjects.Basketball;
+import com.senecafoundation.ProductObjects.Computer;
+import com.senecafoundation.ProductObjects.Book;
 
 import org.junit.jupiter.api.BeforeEach;
 

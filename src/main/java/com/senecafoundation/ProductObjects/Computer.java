@@ -1,8 +1,11 @@
-package com.senecafoundation; //this is the package
+package com.senecafoundation.ProductObjects; //this is the package
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Random;
+
+import com.senecafoundation.ITextFormatter;
+import com.senecafoundation.WeightItem;
 
 public class Computer extends WeightItem 
 {

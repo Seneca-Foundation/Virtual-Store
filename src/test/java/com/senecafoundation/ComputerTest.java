@@ -2,6 +2,9 @@ package com.senecafoundation;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.senecafoundation.ProductObjects.Computer;
+
 import org.junit.jupiter.api.BeforeEach;
 
 public class ComputerTest {
