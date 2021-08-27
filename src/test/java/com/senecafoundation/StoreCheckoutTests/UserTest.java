@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.StoreCheckoutTests;
 
 import org.junit.jupiter.api.Test;
 
