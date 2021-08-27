@@ -1,15 +1,13 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlers;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.UUID;
-
-import com.senecafoundation.DataHandlers.IDeleteData; 
+import java.util.UUID; 
 public class DeleteData implements IDeleteData {
-    String tempFile;
-    String filepath;
+    public String tempFile;
+    public String filepath;
     String name;
     String description;
     String price;

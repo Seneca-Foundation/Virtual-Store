@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlers;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,11 +6,12 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.UUID;
+import com.senecafoundation.StoreItem;
 
 public class UpdateData implements IUpdateData{
     //Add ability to update existing objects from file and resave back to file
     String tempFile;
-    String filepath;
+    public String filepath;
     String name;
     String description;
     String price;
