@@ -1,7 +1,10 @@
-package com.senecafoundation;
+package com.senecafoundation.ProductObjects;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+
+import com.senecafoundation.ITextFormatter;
+import com.senecafoundation.WeightItem;
 
 public class Powerplant extends WeightItem
 

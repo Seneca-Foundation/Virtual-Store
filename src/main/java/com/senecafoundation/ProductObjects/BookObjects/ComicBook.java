@@ -1,4 +1,4 @@
-package com.senecafoundation.ProductObjects;
+package com.senecafoundation.ProductObjects.BookObjects;
 
 public class ComicBook extends Book {
     protected String artist;

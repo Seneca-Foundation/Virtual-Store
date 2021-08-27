@@ -1,4 +1,4 @@
-package com.senecafoundation.ProductObjects;
+package com.senecafoundation.ProductObjects.BookObjects;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;

@@ -1,4 +1,4 @@
-package com.senecafoundation.ProductObjects;
+package com.senecafoundation.ProductObjects.BookObjects;
 
 public class UsedBooks extends Book {
 

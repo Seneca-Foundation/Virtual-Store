@@ -8,9 +8,9 @@ import java.util.Scanner;
 import java.util.UUID;
 import com.senecafoundation.StoreItem;
 import com.senecafoundation.ProductObjects.Basketball;
-import com.senecafoundation.ProductObjects.Book;
+import com.senecafoundation.ProductObjects.BookObjects.Book;
 import com.senecafoundation.ProductObjects.Computer;
-import com.senecafoundation.Powerplant;
+import com.senecafoundation.ProductObjects.Powerplant;
 
 public class ReadData implements IReadData {
 

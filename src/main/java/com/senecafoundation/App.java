@@ -7,8 +7,9 @@ import java.util.Scanner;
 import com.senecafoundation.DataHandlers.ReadData;
 import com.senecafoundation.PriceChanger.RateTax;
 import com.senecafoundation.ProductObjects.Basketball;
-import com.senecafoundation.ProductObjects.Book;
+import com.senecafoundation.ProductObjects.BookObjects.Book;
 import com.senecafoundation.ProductObjects.Computer;
+import com.senecafoundation.ProductObjects.Powerplant;
 
 
 public class App 

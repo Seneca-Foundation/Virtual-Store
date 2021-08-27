@@ -2,6 +2,9 @@ package com.senecafoundation;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.senecafoundation.ProductObjects.Powerplant;
+
 import org.junit.jupiter.api.BeforeEach;
 
 public class PowerPlantTest {
