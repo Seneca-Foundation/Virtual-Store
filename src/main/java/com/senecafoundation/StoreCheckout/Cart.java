@@ -1,10 +1,13 @@
-package com.senecafoundation;
+package com.senecafoundation.StoreCheckout;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.senecafoundation.StoreItem;
+import com.senecafoundation.StoreItemDataPrinter;
+import com.senecafoundation.StoreItemFormatter;
 import com.senecafoundation.PriceChangers.RateTax;
 
 public class Cart{

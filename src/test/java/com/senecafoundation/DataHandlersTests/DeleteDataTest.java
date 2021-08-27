@@ -1,5 +1,6 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlersTests;
 
+import com.senecafoundation.StoreItem;
 import com.senecafoundation.DataHandlers.DeleteData;
 
 import org.junit.jupiter.api.BeforeEach;

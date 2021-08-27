@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.StoreCheckout;
 
 import java.io.BufferedWriter;
 import java.io.File;

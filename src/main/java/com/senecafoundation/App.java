@@ -10,7 +10,8 @@ import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
 import com.senecafoundation.ProductObjects.Computer;
 import com.senecafoundation.ProductObjects.Powerplant;
-
+import com.senecafoundation.StoreCheckout.Cart;
+import com.senecafoundation.StoreCheckout.User;
 
 public class App 
 {

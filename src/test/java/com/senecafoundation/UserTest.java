@@ -1,6 +1,9 @@
 package com.senecafoundation;
 
 import org.junit.jupiter.api.Test;
+
+import com.senecafoundation.StoreCheckout.User;
+
 import org.junit.jupiter.api.BeforeEach;
 
 public class UserTest {

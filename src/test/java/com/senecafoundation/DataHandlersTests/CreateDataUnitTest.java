@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlersTests;
 
 import org.junit.jupiter.api.Test;
 
