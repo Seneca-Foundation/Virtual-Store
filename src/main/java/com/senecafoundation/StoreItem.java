@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import com.senecafoundation.DataHandlers.ICreateData;
 import com.senecafoundation.DataHandlers.IDeleteData;
+import com.senecafoundation.DataHandlers.IReadData;
+import com.senecafoundation.DataHandlers.IUpdateData;
 
 public class StoreItem {
     public double price;

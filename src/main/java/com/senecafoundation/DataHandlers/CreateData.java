@@ -1,15 +1,14 @@
-package com.senecafoundation;
+package com.senecafoundation.DataHandlers;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.UUID;
-
-import com.senecafoundation.DataHandlers.ICreateData;
+import com.senecafoundation.StoreItem;
 
 public class CreateData implements ICreateData{
     //ability to create new objects and save to file
-    String filepath;
+    public String filepath;
     public UUID Create(StoreItem item)
     {
         try 
