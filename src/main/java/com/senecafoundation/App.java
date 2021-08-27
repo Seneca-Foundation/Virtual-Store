@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.senecafoundation.DataHandlers.ReadData;
+import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.PriceChangers.RateTax;
 import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.BookObjects.Book;

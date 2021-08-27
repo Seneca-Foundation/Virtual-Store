@@ -3,7 +3,7 @@ package com.senecafoundation.ProductObjects.BookObjects;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Random;
-import com.senecafoundation.WeightItem;
+import com.senecafoundation.FundamentalObjects.WeightItem;
 import com.senecafoundation.ITextFormatter;
 
 public class Book extends WeightItem {

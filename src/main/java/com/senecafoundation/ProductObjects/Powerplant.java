@@ -4,7 +4,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 import com.senecafoundation.ITextFormatter;
-import com.senecafoundation.WeightItem;
+import com.senecafoundation.FundamentalObjects.WeightItem;
 
 public class Powerplant extends WeightItem
 

@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.FundamentalObjects;
 
 public class WeightItem extends StoreItem
 {

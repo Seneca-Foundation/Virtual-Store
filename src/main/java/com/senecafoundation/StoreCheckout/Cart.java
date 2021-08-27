@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.senecafoundation.StoreItem;
+import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.StoreItemDataPrinter;
 import com.senecafoundation.StoreItemFormatter;
 import com.senecafoundation.PriceChangers.RateTax;

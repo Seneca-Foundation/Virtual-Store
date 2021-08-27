@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.UUID;
-import com.senecafoundation.StoreItem;
+import com.senecafoundation.FundamentalObjects.StoreItem;
 
 public class UpdateData implements IUpdateData{
     //Add ability to update existing objects from file and resave back to file

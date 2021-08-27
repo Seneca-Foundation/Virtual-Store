@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.senecafoundation.ITextFormatter;
-import com.senecafoundation.WeightItem;
+import com.senecafoundation.FundamentalObjects.WeightItem;
 
 public class Basketball extends WeightItem
 {

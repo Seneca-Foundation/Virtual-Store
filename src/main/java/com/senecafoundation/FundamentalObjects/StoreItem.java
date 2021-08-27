@@ -1,8 +1,9 @@
-package com.senecafoundation;
+package com.senecafoundation.FundamentalObjects;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
+import com.senecafoundation.ITextFormatter;
 import com.senecafoundation.DataHandlers.ICreateData;
 import com.senecafoundation.DataHandlers.IDeleteData;
 import com.senecafoundation.DataHandlers.IReadData;
@@ -12,7 +13,7 @@ public class StoreItem {
     public double price;
     public String name;
     public String description;
-    protected ArrayList<String> keywords = new ArrayList<String>();
+    public ArrayList<String> keywords = new ArrayList<String>();
     public UUID ID = UUID.randomUUID();
     protected ITextFormatter textFormatter;
     public ICreateData createData;

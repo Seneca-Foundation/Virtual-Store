@@ -1,6 +1,6 @@
 package com.senecafoundation.DataHandlersTests;
 
-import com.senecafoundation.StoreItem;
+import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.DataHandlers.UpdateData;
 
 import org.junit.jupiter.api.BeforeEach;

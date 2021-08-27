@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
-import com.senecafoundation.StoreItem;
+import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
 import com.senecafoundation.ProductObjects.Computer;
