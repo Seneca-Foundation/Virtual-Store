@@ -1,12 +1,11 @@
 package com.senecafoundation.ProductObjects.BookObjects;
 
-public class UsedBooks extends Book 
+public class UsedBook extends Book 
 {
     protected String condition;
     
-    public UsedBooks(String name, double price, String author, String cover, String description, String condition, double weight) {
-            
-    super(name, price, author, cover, description, weight);
+    public UsedBook(String name, double price, String author, String cover, String description, String condition, double weight) {    
+        super(name, price, author, cover, description, weight);
         this.condition = condition;
     }
 
