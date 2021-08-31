@@ -83,3 +83,10 @@ nb-configuration.xml
 ##############################
 .DS_Store
 {"mode":"full","isActive":false}
+
+##############################
+## Our own project specific stuff.
+##############################
+Objects.csv
+Temporary.csv
+Users.csv

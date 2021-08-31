@@ -3,12 +3,23 @@ package com.senecafoundation;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
+
+import com.senecafoundation.DataHandlers.ReadData;
+import com.senecafoundation.FundamentalObjects.StoreItem;
+import com.senecafoundation.PriceChangers.RateTax;
+import com.senecafoundation.ProductObjects.Basketball;
+import com.senecafoundation.ProductObjects.BookObjects.Book;
+import com.senecafoundation.ProductObjects.Computer;
+import com.senecafoundation.ProductObjects.Powerplant;
+import com.senecafoundation.StoreCheckout.Cart;
+import com.senecafoundation.StoreCheckout.User;
 
 public class App 
 {
     public static void main( String[] args )
     {
+        Scanner userInputScanner = new Scanner(System.in);
+
         Cart shopCart = new Cart();
         List<StoreItem> allItems;
 
@@ -16,7 +27,7 @@ public class App
         ReadData dataReader = new ReadData();
         dataReader.setFilepath("./Objects.csv");
         allItems = dataReader.ReadAll();
-
+        User userThings = new User();
         //use Create for all the hardcoded StoreItems below
         allItems.get(0).setKeywords(new ArrayList<String>() {{ add("Asus");add("ROG");add("silver");add("AMD");add("Ryzen");add("5700xt");add("5600x"); ;}}); 
         allItems.get(1).setKeywords(new ArrayList<String>() {{ add("grey");add("Intel");add("11th generation");add("HP");add("HP Envy");   ;}});         
@@ -53,23 +64,9 @@ public class App
         allItems.get(26).setKeywords(new ArrayList<String>() {{ add("200 kWh");add("200 kWh of energy");add("$300");}});
         allItems.get(27).setKeywords(new ArrayList<String>() {{ add("250 kWh");add("250 kWh of energy");add("$350");}}); 
         allItems.get(28).setKeywords(new ArrayList<String>() {{ add("300kWh");add("300 kWh of energy");add("$400");}});
-        
-        //password
-        System.out.println("Create password");
-        Scanner userInputScanner = new Scanner(System.in);
-        String passwordscanned = userInputScanner.nextLine();
-        System.out.println("Enter password");
-        String userInputscanned = userInputScanner.nextLine();
-        if (userInputscanned.equals(passwordscanned))
-        {
-            System.out.println("Correct password");
-        }
-        else 
-        {
-            System.out.println("Incorrect password");
-        }
     
         // Menu
+        System.out.println("");
         System.out.println("Welcome! This is what we offer");
         System.out.println("Books");
         System.out.println("Computers");
@@ -225,6 +222,23 @@ public class App
                     String doneShoppingInput = userInputScanner.nextLine();
                     if (doneShoppingInput.equals("y"))
                     {
+                        System.out.println("To checkout, you need to login or create an account. Press l to login or c to create account.");
+                        String userCheckout = userInputScanner.nextLine();
+                        if (userCheckout.equals("l"))
+                        {
+                            System.out.println("Enter username.");
+                            String userInputUsername = userInputScanner.nextLine();
+                            System.out.println("Enter password");
+                            String userInputPassword = userInputScanner.nextLine();
+                            userThings.verifyLogin(userInputUsername, userInputPassword);
+                        }
+                        else if (userCheckout.equals("c")) {
+                            System.out.println("Enter the username you would like.");
+                            String usernameCreated = userInputScanner.nextLine();
+                            System.out.println("Enter the password you would like.");
+                            String passwordCreated = userInputScanner.nextLine();
+                            userThings.createAccount(usernameCreated, passwordCreated);
+                        }
                         shopCart.PrintItems();
                         didUserEnterValidInput = true;
                         userIsStillShopping = false;
