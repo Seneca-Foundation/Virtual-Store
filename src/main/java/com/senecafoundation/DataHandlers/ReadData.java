@@ -3,7 +3,9 @@ package com.senecafoundation.DataHandlers;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.lang.String;
 import java.util.Scanner;
 import java.util.UUID;
 import com.senecafoundation.FundamentalObjects.StoreItem;
@@ -111,7 +113,6 @@ public class ReadData implements IReadData {
                 itemsToReturn.add(energyToReturn);
             }
             else if (props[0].equals("ComicBook")) {
-                //String name, double price, String author, String cover, String description, String artist, double weight
                 ComicBook comicBooktoReturn = new ComicBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
                 comicBooktoReturn.setID(UUID.fromString(props[1])); 
                 itemsToReturn.add(comicBooktoReturn);
@@ -123,12 +124,14 @@ public class ReadData implements IReadData {
             }
             else if (props[0].equals("Textbook")) {
                 //String name, double price, String author, String cover, String description, List<String> authors, double weight
-                Textbook textbooktoReturn = new Textbook(props[2], Double.parseDouble(props[3]), props[4],props[5], props[6], props[7], Double.parseDouble(props[8]));
+                String str[] = props[7].split(",");
+	            List<String> textbookAuthors = new ArrayList<String>();
+	            textbookAuthors = Arrays.asList(str);
+                Textbook textbooktoReturn = new Textbook(props[2], Double.parseDouble(props[3]), props[4],props[5], props[6], textbookAuthors, Double.parseDouble(props[8]));
                 textbooktoReturn.setID(UUID.fromString(props[1])); 
                 itemsToReturn.add(textbooktoReturn);
             }
             else if (props[0].equals("UsedBook")) {
-                //tring name, double price, String author, String cover, String description, String condition, double weight
                 UsedBook usedBooktoReturn = new UsedBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
                 usedBooktoReturn.setID(UUID.fromString(props[1]));
                 itemsToReturn.add(usedBooktoReturn);
