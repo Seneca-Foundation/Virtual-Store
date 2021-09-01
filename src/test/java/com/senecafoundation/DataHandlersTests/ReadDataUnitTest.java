@@ -13,6 +13,7 @@ import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.Computer;
 import com.senecafoundation.ProductObjects.Powerplant;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
+import com.senecafoundation.ProductObjects.BookObjects.Textbook;
 
 import org.junit.jupiter.api.BeforeEach;
 
@@ -54,7 +55,7 @@ public class ReadDataUnitTest {
 
         //energy          
         this.createItem.Create(new Powerplant("400 kWh of energy", 500.00, "provides enough energy", 0.0));
-
+        this.createItem.Create(new Textbook("Electronics Fundamentals",143.99,"empty","hardcover","dc/ac circuits & basic sold state circuits",new ArrayList<String>(){{add("Thomas L. Floyd");add("David M. Buchla");}},2.50));
         ArrayList<StoreItem> allItemsFromFile = (ArrayList<StoreItem>) this.systemUnderTest.ReadAll();
         assertEquals(allItemsFromFile.size(), 7);
     }
