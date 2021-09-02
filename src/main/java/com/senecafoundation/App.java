@@ -18,6 +18,10 @@ public class App
 {
     public static void main( String[] args )
     {
+        /*
+        mvn clean jacoco:prepare-agent test jacoco:report
+        paste this to be able to get coverage report
+        */
         Scanner userInputScanner = new Scanner(System.in);
 
         Cart shopCart = new Cart();
