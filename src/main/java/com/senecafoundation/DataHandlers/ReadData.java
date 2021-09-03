@@ -86,55 +86,63 @@ public class ReadData implements IReadData {
             
             // read the line with the id
             String line = this.fileScanner.nextLine();
-                
-            // separate the line by commas into properties
-            String[] props = line.split(",");
 
-            // if the first property is a StoreItem
-            if (props[0].equals("StoreItem")) {                
-                StoreItem storeItemToReturn = new StoreItem(props[2], Double.parseDouble(props[3]), props[4]);
-                storeItemToReturn.setID(UUID.fromString(props[1]));       
-                itemsToReturn.add(storeItemToReturn);
-            }
-            //in alphabetical order henceforth
-            else if (props[0].equals("Basketball")) {
-                Basketball basketballToReturn = new Basketball(props[2], Double.parseDouble(props[3]), Integer.parseInt(props[4]), Integer.parseInt(props[5]), props[6], props[7], Double.parseDouble(props[8]));
-                basketballToReturn.setID(UUID.fromString(props[1]));
-                itemsToReturn.add(basketballToReturn);
-            }
-            else if (props[0].equals("Book")) {
-                Book booktoReturn = new Book(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], Double.parseDouble(props[7]));
-                booktoReturn.setID(UUID.fromString(props[1]));
-                itemsToReturn.add(booktoReturn);
-            }
-            else if (props[0].equals("Powerplant")){
-                Powerplant energyToReturn = new Powerplant(props[2], Double.parseDouble(props[3]), props[4], Double.parseDouble(props[5]));
-                energyToReturn.setID(UUID.fromString(props[1]));       
-                itemsToReturn.add(energyToReturn);
-            }
-            else if (props[0].equals("ComicBook")) {
-                ComicBook comicBooktoReturn = new ComicBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
-                comicBooktoReturn.setID(UUID.fromString(props[1])); 
-                itemsToReturn.add(comicBooktoReturn);
-            }
-            else if (props[0].equals("Computer")) {                
-                Computer computerToReturn = new Computer(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
-                computerToReturn.setID(UUID.fromString(props[1]));       
-                itemsToReturn.add(computerToReturn);
-            }
-            else if (props[0].equals("Textbook")) {
-                //String name, double price, String author, String cover, String description, List<String> authors, double weight
-                String str[] = props[7].split(",");
-	            List<String> textbookAuthors = new ArrayList<String>();
-	            textbookAuthors = Arrays.asList(str);
-                Textbook textbooktoReturn = new Textbook(props[2], Double.parseDouble(props[3]), props[4],props[5], props[6], textbookAuthors, Double.parseDouble(props[8]));
+            String datatype = line.split(",")[0]; //split in first comma to have data type
+            if (datatype.equals("Textbook")) 
+            {
+                String[] splitLine = line.split(",");
+                String[] props = Arrays.copyOfRange(splitLine, 0, 7);
+                String[] secondPart = Arrays.copyOfRange(splitLine, 7, splitLine.length);
+                
+                String[] authorsToRead = Arrays.copyOfRange(secondPart,0, secondPart.length - 1);
+                String weightToRead = secondPart[secondPart.length - 1];
+                
+                List<String> authorsList = new ArrayList<String>(Arrays.asList(authorsToRead));
+
+                Textbook textbooktoReturn = new Textbook(props[2], Double.parseDouble(props[3]), props[4],props[5], props[6], authorsList , Double.parseDouble(weightToRead));
                 textbooktoReturn.setID(UUID.fromString(props[1])); 
                 itemsToReturn.add(textbooktoReturn);
             }
-            else if (props[0].equals("UsedBook")) {
-                UsedBook usedBooktoReturn = new UsedBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
-                usedBooktoReturn.setID(UUID.fromString(props[1]));
-                itemsToReturn.add(usedBooktoReturn);
+            else {
+                // separate the line by commas into properties
+                String[] props = line.split(",");
+                // if the first property is a StoreItem
+                if (props[0].equals("StoreItem")) {                
+                    StoreItem storeItemToReturn = new StoreItem(props[2], Double.parseDouble(props[3]), props[4]);
+                    storeItemToReturn.setID(UUID.fromString(props[1]));       
+                    itemsToReturn.add(storeItemToReturn);
+                }
+                //in alphabetical order henceforth
+                else if (props[0].equals("Basketball")) {
+                    Basketball basketballToReturn = new Basketball(props[2], Double.parseDouble(props[3]), Integer.parseInt(props[4]), Integer.parseInt(props[5]), props[6], props[7], Double.parseDouble(props[8]));
+                    basketballToReturn.setID(UUID.fromString(props[1]));
+                    itemsToReturn.add(basketballToReturn);
+                }
+                else if (props[0].equals("Book")) {
+                    Book booktoReturn = new Book(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], Double.parseDouble(props[7]));
+                    booktoReturn.setID(UUID.fromString(props[1]));
+                    itemsToReturn.add(booktoReturn);
+                }
+                else if (props[0].equals("Powerplant")){
+                    Powerplant energyToReturn = new Powerplant(props[2], Double.parseDouble(props[3]), props[4], Double.parseDouble(props[5]));
+                    energyToReturn.setID(UUID.fromString(props[1]));       
+                    itemsToReturn.add(energyToReturn);
+                }
+                else if (props[0].equals("ComicBook")) {
+                    ComicBook comicBooktoReturn = new ComicBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
+                    comicBooktoReturn.setID(UUID.fromString(props[1])); 
+                    itemsToReturn.add(comicBooktoReturn);
+                }
+                else if (props[0].equals("Computer")) {                
+                    Computer computerToReturn = new Computer(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
+                    computerToReturn.setID(UUID.fromString(props[1]));       
+                    itemsToReturn.add(computerToReturn);
+                }
+                else if (props[0].equals("UsedBook")) {
+                    UsedBook usedBooktoReturn = new UsedBook(props[2], Double.parseDouble(props[3]), props[4], props[5], props[6], props[7], Double.parseDouble(props[8]));
+                    usedBooktoReturn.setID(UUID.fromString(props[1]));
+                    itemsToReturn.add(usedBooktoReturn);
+                }
             }
         }
         return itemsToReturn;

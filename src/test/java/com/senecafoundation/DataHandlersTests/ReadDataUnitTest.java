@@ -57,6 +57,6 @@ public class ReadDataUnitTest {
         this.createItem.Create(new Powerplant("400 kWh of energy", 500.00, "provides enough energy", 0.0));
         this.createItem.Create(new Textbook("Electronics Fundamentals",143.99,"empty","hardcover","dc/ac circuits & basic sold state circuits",new ArrayList<String>(){{add("Thomas L. Floyd");add("David M. Buchla");}},2.50));
         ArrayList<StoreItem> allItemsFromFile = (ArrayList<StoreItem>) this.systemUnderTest.ReadAll();
-        assertEquals(allItemsFromFile.size(), 7);
+        assertEquals(allItemsFromFile.size(), 8);
     }
 }
