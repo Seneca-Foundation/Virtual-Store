@@ -14,6 +14,6 @@ public class FlatDiscountTest {
     }
     @Test
     void testFlatDiscount() {
-        this.systemUnderTest
+        //this.systemUnderTest
     }
 }

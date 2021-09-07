@@ -14,6 +14,6 @@ public class FlatTaxTest {
     }
     @Test
     void testFlatTax() {
-        this.systemUnderTest
+        //this.systemUnderTest
     }
 }

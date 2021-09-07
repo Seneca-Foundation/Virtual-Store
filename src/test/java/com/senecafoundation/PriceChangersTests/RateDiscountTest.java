@@ -14,6 +14,6 @@ public class RateDiscountTest {
     }
     @Test
     void testRateDiscount() {
-        this.systemUnderTest
+        //this.systemUnderTest
     }
 }
