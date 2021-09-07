@@ -42,4 +42,5 @@ public class RateDiscountTest {
         StoreItemFormatter realItem = new StoreItemFormatter("Test Item", 10.00, "This is a test item", UUID.randomUUID(), keywords);
         double priceReturned = this.systemUnderTest.ChangePriceToItem(realItem);
         assertEquals(9.7, priceReturned);
-    }}
+    }
+}
