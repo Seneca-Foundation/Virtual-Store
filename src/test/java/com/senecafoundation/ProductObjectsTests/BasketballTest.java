@@ -27,7 +27,14 @@ public class BasketballTest {
         assertEquals(0.2, this.systemUnderTest.getWeight());
         assertEquals("July 30", this.systemUnderTest.getDate());
     }
-    
+    @Test
+    void testWinnerofMatch() {
+        this.systemUnderTest.WinnerOfMatch();
+    }
+    @Test
+    void testSeatsSoldForMatch(){
+        this.systemUnderTest.SeatsSoldForMatch();
+    }
     @Test
     void getData() {
         StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);
