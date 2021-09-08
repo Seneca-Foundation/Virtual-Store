@@ -32,7 +32,10 @@ public class BookTest {
         assertEquals("Gothic romance set in the moors of Haworth", this.systemUnderTest.getDescription());
         assertEquals(.5, this.systemUnderTest.getWeight());
     }
-
+    @Test
+    void testDetermineCondition(){
+        this.systemUnderTest.determineCondition();
+    }
     @Test
     void getData() {
         StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);
