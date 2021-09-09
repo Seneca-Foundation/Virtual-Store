@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.UUID;
 
 import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.DataHandlers.CreateData;
@@ -39,7 +40,14 @@ public class ReadDataUnitTest {
         StoreItem readItem = this.systemUnderTest.Read(testItem.getID());
         assertEquals(testItem.getID(), readItem.getID());
     }
-
+    /*
+    void testRead() {
+        this.createItem.Create(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5));
+        String numToTest = "3f29db87-80e8-4556bb8c-4f0caba2a7da";
+        UUID idToTest = UUID.fromString(numToTest);
+        this.systemUnderTest.Read(idToTest);
+    }
+    */
     @Test
     void testReadAll() {
         File toDelete = new File(this.createItem.filepath);
