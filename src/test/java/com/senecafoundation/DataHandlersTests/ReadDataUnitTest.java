@@ -13,7 +13,9 @@ import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.Computer;
 import com.senecafoundation.ProductObjects.Powerplant;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
+import com.senecafoundation.ProductObjects.BookObjects.ComicBook;
 import com.senecafoundation.ProductObjects.BookObjects.Textbook;
+import com.senecafoundation.ProductObjects.BookObjects.UsedBook;
 
 import org.junit.jupiter.api.BeforeEach;
 
@@ -56,7 +58,9 @@ public class ReadDataUnitTest {
         //energy          
         this.createItem.Create(new Powerplant("400 kWh of energy", 500.00, "provides enough energy", 0.0));
         this.createItem.Create(new Textbook("Electronics Fundamentals",143.99,"empty","hardcover","dc/ac circuits & basic sold state circuits",new ArrayList<String>(){{add("Thomas L. Floyd");add("David M. Buchla");}},2.50));
+        this.createItem.Create(new ComicBook("The Amazing Spider-Man",11.00,"David Morrell","paperback","Spider-man saves the city","Stan Lee",0.20));
+        this.createItem.Create(new UsedBook("Fahrenheit 451",3.36,"Ray Bradbury","paperback","authoritarian government outlaws & burns books","acceptable",0.55));
         ArrayList<StoreItem> allItemsFromFile = (ArrayList<StoreItem>) this.systemUnderTest.ReadAll();
-        assertEquals(allItemsFromFile.size(), 8);
+        assertEquals(allItemsFromFile.size(), 10);
     }
 }
