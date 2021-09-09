@@ -27,7 +27,10 @@ public class ComputerTest {
         assertEquals("2021", this.systemUnderTest.getReleaseDate());
         assertEquals(2.8, this.systemUnderTest.getWeight());
     }
-
+    @Test 
+    void testFreeHeadphones() {
+        this.systemUnderTest.FreeHeadphones();
+    }
     @Test
     void testComputerGetData() {
         StoreItemFormatter formatter = new StoreItemFormatter(this.systemUnderTest.name, this.systemUnderTest.price, this.systemUnderTest.description, this.systemUnderTest.ID, this.systemUnderTest.keywords);

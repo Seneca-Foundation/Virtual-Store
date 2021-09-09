@@ -50,7 +50,7 @@ public class Cart{
         System.out.println("--------------------------------------------------------");
         System.out.println("Total w/ Tax: $" + df.format(total));
     
-       System.out.println("Thank you for shopping with us! here's a discount code for next time 10OFF");   
-       System.out.println("Follow us on instagram @VirtualStore21");
+        System.out.println("Thank you for shopping with us! here's a discount code for next time 10OFF");   
+        System.out.println("Follow us on instagram @VirtualStore21");
     }
 }

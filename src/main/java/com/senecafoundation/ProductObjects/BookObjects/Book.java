@@ -6,7 +6,8 @@ import java.util.Random;
 import com.senecafoundation.FundamentalObjects.WeightItem;
 import com.senecafoundation.ITextFormatter;
 
-public class Book extends WeightItem {
+public class Book extends WeightItem 
+{
     protected String cover; 
     protected String author;
 
@@ -16,6 +17,7 @@ public class Book extends WeightItem {
         this.author = author;
         this.cover = cover;
     }
+
     public String getCover() {
         return cover;
     }
@@ -38,7 +40,7 @@ public class Book extends WeightItem {
         return "Title: " + name +  ", Price: $" + df.format(this.textFormatter.getPrice()) + ", Author: " + author + ", Cover: " + cover + ", Description: " + description+", Weight: " + weight + ", Item Number: " + getID();
     }
 
-    public String Condition(){
+    public String determineCondition(){
         Random rand = new Random();
         int upperBound = 365;
         int timeInStore = rand.nextInt(upperBound); 
@@ -53,6 +55,7 @@ public class Book extends WeightItem {
             return "This book is in fantastic condition";
         }
     }
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + "," + this.getID() + "," + this.getName() + "," + String.valueOf(this.getPrice()) + "," + this.getAuthor() + "," + this.getCover() + "," + this.getDescription() + "," + this.getWeight();

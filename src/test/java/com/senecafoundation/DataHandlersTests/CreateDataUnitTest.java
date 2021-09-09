@@ -2,11 +2,15 @@ package com.senecafoundation.DataHandlersTests;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.lang.String;
+
 import com.senecafoundation.DataHandlers.CreateData;
 import com.senecafoundation.ProductObjects.Basketball;
 import com.senecafoundation.ProductObjects.Computer;
 import com.senecafoundation.ProductObjects.Powerplant;
 import com.senecafoundation.ProductObjects.BookObjects.Book;
+import com.senecafoundation.ProductObjects.BookObjects.Textbook;
 
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,8 +31,8 @@ public class CreateDataUnitTest {
         Computer testComp = new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5);
         this.systemUnderTest.Create(testComp);
     }
-    
-    public void testSeedStoreData() {
+    @Test
+    void testSeedStoreData() {
         this.systemUnderTest.Create(new Computer("Asus ROG Zephyrus", 1549.99, "silver", "Windows", "AMD 5700xt and Ryzen 5600x", "2021",3.5));
         this.systemUnderTest.Create(new Computer("HP Envy", 1000.99 , "Grey", "Window", "11th Generation Intel", "2019", 2.71));
         this.systemUnderTest.Create(new Computer("MacBook Air",900.00, "rose gold","Apple", "New with M1 chip", "2021",2.8)); 
@@ -60,10 +64,12 @@ public class CreateDataUnitTest {
 
         //energy          
         this.systemUnderTest.Create(new Powerplant("400 kWh of energy", 500.00, "provides enough energy", 0.0));
-        this.systemUnderTest.Create(new Powerplant("150 kWh of energy",250, "provides enough energy", 0.0));
+        this.systemUnderTest.Create(new Powerplant("150 kWh of energy", 250, "provides enough energy", 0.0));
         this.systemUnderTest.Create(new Powerplant("200 kWh of energy", 300, "provides enough energy", 0.0));
         this.systemUnderTest.Create(new Powerplant("250 kWh of energy", 350, "provides enough energy", 0.0));
         this.systemUnderTest.Create(new Powerplant("300 kwh of energy", 400, "provides enough energy", 0.0));  
+        //String name, double price, String author, String cover, String description, List<String> authors, double weight
+        this.systemUnderTest.Create(new Textbook("Electronics Fundamentals",143.99,"empty","hardcover","dc/ac circuits & basic sold state circuits",new ArrayList<String>(){{add("Thomas L. Floyd");add("David M. Buchla");}},2.50));
     }
 
 }
