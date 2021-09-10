@@ -1,10 +1,10 @@
 package com.senecafoundation;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.lang.String;
-import java.util.UUID;
+//import java.util.UUID;
 import com.senecafoundation.DataHandlers.ReadData;
 import com.senecafoundation.FundamentalObjects.StoreItem;
 import com.senecafoundation.PriceChangers.RateTax;
