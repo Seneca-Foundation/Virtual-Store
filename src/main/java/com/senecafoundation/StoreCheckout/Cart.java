@@ -49,7 +49,7 @@ public class Cart{
         }
         String bottomMessage = String.join("\n","--------------------------------------------------------",
                     "Total w/ Tax: $"+df.format(total),
-                    "Thank you for shopping with us! here's a discount code for next time 10OFF",  
+                    "Here's a discount code for your next purchase: 10OFF",  
                     "Follow us on instagram @VirtualStore21");
         String all = String.join("\n",topMessage,bottomMessage);
         return all;

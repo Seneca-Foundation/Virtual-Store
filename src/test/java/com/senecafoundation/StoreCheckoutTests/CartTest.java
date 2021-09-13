@@ -37,7 +37,7 @@ public class CartTest {
                     "Hunger Games $5.10\n"+
                     "--------------------------------------------------------\n" +
                     "Total w/ Tax: $5.10\n"+
-                    "Thank you for shopping with us! here's a discount code for next time 10OFF\n" +  
+                    "Here's a discount code for your next purchase: 10OFF\n" +  
                     "Follow us on instagram @VirtualStore21", 
                     this.systemUnderTest.PrintItems());
     }
