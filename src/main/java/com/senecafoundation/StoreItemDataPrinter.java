@@ -21,12 +21,12 @@ public class StoreItemDataPrinter {
     
     public String PrintDataForCart() {
         this.taxToAdd.ChangePriceToItem(itemToPrint);
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.00");
         df.setRoundingMode(RoundingMode.CEILING);
         return this.itemToPrint.getName() + " $" + df.format(this.itemToPrint.getPrice());
     }
 
     public double getPrice() {
-        return this.taxToAdd.ChangePriceToItem(itemToPrint);
+        return this.itemToPrint.getPrice();
     }
 }

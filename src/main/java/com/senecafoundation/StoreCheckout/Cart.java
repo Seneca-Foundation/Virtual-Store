@@ -24,13 +24,13 @@ public class Cart{
         storeItemsToPurchase.add(itemToAdd);
     }
 
-    public void PrintItems() {
-        System.out.println("Thank you for shopping with us. Here are your items and total:");
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Item, Price" );
-        System.out.println("--------------------------------------------------------");
-        DecimalFormat df = new DecimalFormat("#.##");
+    public String PrintItems() {
+        DecimalFormat df = new DecimalFormat("#.00");
         df.setRoundingMode(RoundingMode.CEILING);
+        String topMessage = String.join("\n", "Thank you for shopping with us. Here are your items and total:",
+                    "--------------------------------------------------------",
+                    "Item, Price",
+                    "--------------------------------------------------------");
         for (StoreItem item : storeItemsToPurchase)
         {
             StoreItemDataPrinter itemToPrint = new StoreItemDataPrinter(
@@ -44,13 +44,14 @@ public class Cart{
                                 new RateTax()
                             );
             
-            System.out.println(itemToPrint.PrintDataForCart());
+            topMessage = topMessage + "\n"+itemToPrint.PrintDataForCart();
             total = total + itemToPrint.getPrice();
         }
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Total w/ Tax: $" + df.format(total));
-    
-        System.out.println("Thank you for shopping with us! here's a discount code for next time 10OFF");   
-        System.out.println("Follow us on instagram @VirtualStore21");
+        String bottomMessage = String.join("\n","--------------------------------------------------------",
+                    "Total w/ Tax: $"+df.format(total),
+                    "Here's a discount code for your next purchase: 10OFF",  
+                    "Follow us on instagram @VirtualStore21");
+        String all = String.join("\n",topMessage,bottomMessage);
+        return all;
     }
 }
